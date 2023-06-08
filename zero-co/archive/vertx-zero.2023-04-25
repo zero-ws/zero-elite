@@ -1,0 +1,318 @@
+2023-04-25 13:03:29,720 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 13:04:53,384 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 13:04:53,549 [main] ERROR                      io.vertx.up.fn.ZeroErr - argument type mismatch
+2023-04-25 13:04:53,550 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 13:04:53,551 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:04:53,551 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:04:53,551 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 13:04:53,551 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:04:53,551 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:04:53,551 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 13:05:44,911 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 13:05:45,071 [main] ERROR                      io.vertx.up.fn.ZeroErr - argument type mismatch
+2023-04-25 13:05:45,072 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 13:05:45,073 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:05:45,073 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:05:45,073 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 13:05:45,073 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:05:45,073 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:05:45,073 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 13:07:34,223 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 13:07:34,383 [main] ERROR                      io.vertx.up.fn.ZeroErr - argument type mismatch
+2023-04-25 13:07:34,391 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 13:07:34,392 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:07:34,393 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:07:34,393 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 13:07:34,393 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:07:34,393 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:07:34,393 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 13:08:05,265 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 13:08:17,262 [main] ERROR                      io.vertx.up.fn.ZeroErr - argument type mismatch
+2023-04-25 13:08:18,842 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 13:08:18,844 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:08:18,844 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:08:18,844 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 13:08:18,844 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:08:18,844 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:08:18,845 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 13:09:06,816 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 13:09:13,420 [main] ERROR                      io.vertx.up.fn.ZeroErr - argument type mismatch
+2023-04-25 13:10:37,393 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 13:10:37,397 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:10:37,398 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:10:37,399 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 13:10:37,400 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:10:37,401 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:10:37,402 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 13:11:25,101 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 13:11:25,256 [main] ERROR                      io.vertx.up.fn.ZeroErr - argument type mismatch
+2023-04-25 13:12:03,783 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 13:12:03,785 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:12:03,785 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:12:03,785 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 13:12:03,785 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:12:03,785 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 13:12:03,785 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 13:21:40,556 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 13:21:40,704 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mMessage
+2023-04-25 13:22:14,794 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 13:22:14,970 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mMessage
+2023-04-25 13:22:35,779 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 13:22:35,946 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mMessage
+2023-04-25 13:22:35,946 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mMessage: Hello
+2023-04-25 13:23:01,902 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 13:23:02,068 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mMessage
+2023-04-25 13:23:02,069 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mMessage: Hello
+2023-04-25 13:23:02,070 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mMessage: Hello
+2023-04-25 13:23:33,483 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 13:23:33,634 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 13:23:33,634 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 13:23:33,635 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:00:37,006 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:00:37,178 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:00:37,178 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:00:37,179 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:01:21,344 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:01:45,584 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:01:45,584 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:01:45,585 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:02:02,846 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:02:22,779 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:02:22,779 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:02:22,780 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:02:49,112 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:03:25,170 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:03:25,171 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:03:25,172 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:04:00,328 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:04:55,677 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:05:19,992 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:05:19,993 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:05:19,994 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:06:01,805 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:06:19,228 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:06:19,229 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:06:19,230 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:06:59,742 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:07:37,061 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:07:37,062 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:07:37,063 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:07:43,331 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:07:48,679 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:07:48,680 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:07:48,681 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:08:17,957 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:08:24,384 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:08:24,384 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:08:24,385 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:08:31,438 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:08:58,508 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:08:58,509 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:08:58,510 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:09:26,239 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:09:56,065 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:09:56,066 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:09:56,066 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:10:01,256 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:10:13,944 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:10:13,945 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:10:13,946 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:10:38,733 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:11:40,180 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:11:40,181 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:11:40,181 [main] INFO                    io.vertx.up.util.Types - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:11:53,411 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:12:02,641 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:12:02,642 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:12:02,643 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:13:05,011 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:13:05,181 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:13:05,182 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:13:05,183 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:27:21,322 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:28:28,660 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:28:28,828 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:28:28,828 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:28:28,829 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:32:52,257 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:32:52,425 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:32:52,425 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:32:52,426 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:37:26,370 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:37:26,540 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:37:26,540 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:37:26,542 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:45:34,527 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:45:34,698 [main] ERROR                      io.vertx.up.fn.ZeroErr - argument type mismatch
+2023-04-25 15:45:34,700 [main] ERROR                      io.vertx.up.fn.ZeroErr - argument type mismatch
+2023-04-25 15:45:34,701 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 15:45:34,701 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 15:45:34,701 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 15:45:34,701 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 15:45:34,701 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 15:45:34,701 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 15:45:34,701 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 15:45:34,701 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 15:45:44,157 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:45:44,322 [main] ERROR                      io.vertx.up.fn.ZeroErr - argument type mismatch
+2023-04-25 15:45:44,324 [main] ERROR                      io.vertx.up.fn.ZeroErr - argument type mismatch
+2023-04-25 15:45:44,324 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 15:45:44,324 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 15:45:44,324 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 15:45:44,324 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 15:45:44,324 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 15:45:44,324 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 15:45:44,324 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 15:45:44,325 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 15:46:54,962 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:46:55,123 [main] ERROR                      io.vertx.up.fn.ZeroErr - argument type mismatch
+2023-04-25 15:46:55,124 [main] ERROR                      io.vertx.up.fn.ZeroErr - argument type mismatch
+2023-04-25 15:46:55,124 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 15:46:55,124 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 15:46:55,124 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 15:46:55,124 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 15:46:55,124 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 15:46:55,124 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 15:46:55,124 [main] ERROR                      io.vertx.up.fn.ZeroErr - Cannot invoke "io.vertx.up.runtime.env.DiagnosisOption.getDevJvmStack()" because "io.vertx.up.log.DevEnv.OPTION" is null
+2023-04-25 15:46:55,125 [main] ERROR                      io.vertx.up.fn.ZeroErr - null
+2023-04-25 15:49:33,731 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:49:33,894 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:49:33,894 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:49:33,895 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 15:50:55,455 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 15:50:55,628 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 15:50:55,628 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 15:50:55,628 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 16:43:23,781 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 16:43:23,949 [main] ERROR                      io.vertx.up.fn.ZeroErr - non-null object for public io.horizon.log.internal.Log4JAnnal(java.lang.Class)
+2023-04-25 16:43:23,949 [main] ERROR                      io.vertx.up.fn.ZeroErr - non-null object for public io.vertx.up.uca.yaml.ZeroUniform()
+2023-04-25 16:43:53,160 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 16:43:53,322 [main] ERROR                      io.vertx.up.fn.ZeroErr - non-null object for public io.horizon.log.internal.Log4JAnnal(java.lang.Class)
+2023-04-25 16:43:53,323 [main] ERROR                      io.vertx.up.fn.ZeroErr - non-null object for public io.vertx.up.uca.yaml.ZeroUniform()
+2023-04-25 16:45:27,108 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 16:45:27,269 [main] ERROR                      io.vertx.up.fn.ZeroErr - non-null object for public io.horizon.log.internal.Log4JAnnal(java.lang.Class)
+2023-04-25 16:45:27,270 [main] ERROR                      io.vertx.up.fn.ZeroErr - non-null object for public io.vertx.up.uca.yaml.ZeroUniform()
+2023-04-25 16:45:44,480 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 16:46:23,558 [main] ERROR                      io.vertx.up.fn.ZeroErr - non-null object for public io.horizon.log.internal.Log4JAnnal(java.lang.Class)
+2023-04-25 16:46:23,564 [main] ERROR                      io.vertx.up.fn.ZeroErr - non-null object for public io.vertx.up.uca.yaml.ZeroUniform()
+2023-04-25 16:48:34,305 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 16:48:34,469 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLogger with No
+2023-04-25 16:48:34,469 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLogger with Args: Hello
+2023-04-25 16:48:34,470 [main] INFO                   io.vertx.up.log.AnnalTk - [1;30m[ μηδέν ] [mLog.info : Hello
+2023-04-25 23:23:31,030 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 23:23:31,175 [main] INFO                io.vertx.up.util.net.NetTc - [1;30m[ μηδέν ] [m[ ZERO TK ] Ip v4 Address = 198.18.1.123.
+2023-04-25 23:23:31,188 [main] INFO                io.vertx.up.util.net.NetTc - [1;30m[ μηδέν ] [m[ ZERO TK ] Ip v6 Address = fe80:0:0:0:86f9:dbab:8643:5f56%utun6.
+2023-04-25 23:23:31,192 [main] INFO                io.vertx.up.util.net.NetTc - [1;30m[ μηδέν ] [m[ ZERO TK ] Ip Address = fe80:0:0:0:86f9:dbab:8643:5f56%utun6.
+2023-04-25 23:23:31,228 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-testInt.json
+2023-04-25 23:23:31,248 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-json.json
+2023-04-25 23:23:31,260 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/from.json
+2023-04-25 23:23:31,261 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/to.json
+2023-04-25 23:23:31,294 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-testInt.json
+2023-04-25 23:23:31,297 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-testInt.json
+2023-04-25 23:23:31,301 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-json.json
+2023-04-25 23:23:31,305 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-testInt.json
+2023-04-25 23:23:31,308 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/subset-source.json
+2023-04-25 23:23:31,308 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/subset-target.json
+2023-04-25 23:23:31,312 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-testInt.json
+2023-04-25 23:23:31,318 [main] INFO                 io.vertx.up.util.StreamTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/in.txt
+2023-04-25 23:23:31,323 [main] INFO                 io.vertx.up.util.StreamTe - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/ini.txt
+2023-04-25 23:23:31,328 [main] INFO                     io.vertx.up.util.User - [1;30m[ μηδέν ] [mUser: invoke. 
+2023-04-25 23:23:31,332 [main] INFO                    io.vertx.up.util.Email - [1;30m[ μηδέν ] [mEmail: invoke(int)22
+2023-04-25 23:23:31,335 [main] INFO                     io.vertx.up.util.User - [1;30m[ μηδέν ] [mUser: invoke(String)String
+2023-04-25 23:23:31,337 [main] INFO                    io.vertx.up.util.Email - [1;30m[ μηδέν ] [mEmail: invoke(int)22
+2023-04-25 23:23:31,341 [main] INFO                     io.vertx.up.util.IOTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/in.properties
+2023-04-25 23:23:31,343 [main] INFO                     io.vertx.up.util.IOTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/test.yaml
+2023-04-25 23:23:31,346 [main] INFO                   io.vertx.up.util.StepTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/input.json
+2023-04-25 23:23:31,367 [main] INFO            io.vertx.up.atom.unity.BladeTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.unity/From.json
+2023-04-25 23:23:31,367 [main] INFO            io.vertx.up.atom.unity.BladeTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.unity/To.json
+2023-04-25 23:23:31,396 [main] INFO            io.vertx.up.atom.unity.BladeTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.unity/Uson.json
+2023-04-25 23:23:31,414 [main] INFO                 io.vertx.up.atom.MirrorTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom/user.json
+2023-04-25 23:23:31,415 [main] INFO                 io.vertx.up.atom.MirrorTc - [1;30m[ μηδέν ] [mMount pojo configuration file user
+2023-04-25 23:23:31,425 [main] INFO                 io.vertx.up.atom.MirrorTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom/user.json
+2023-04-25 23:23:31,444 [main] INFO                 io.vertx.up.atom.MirrorTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom/user.json
+2023-04-25 23:23:31,447 [main] INFO                 io.vertx.up.atom.MirrorTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom/to.json
+2023-04-25 23:23:31,451 [main] INFO               io.vertx.up.atom.query.QrTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.query/cond-add.json
+2023-04-25 23:23:31,459 [main] INFO               io.vertx.up.atom.query.QrTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.query/cond-simple.json
+2023-04-25 23:23:31,460 [main] INFO               io.vertx.up.atom.query.QrTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.query/cond-complex.json
+2023-04-25 23:23:31,461 [main] INFO               io.vertx.up.atom.query.QrTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.query/cond-complex.json
+2023-04-25 23:23:31,465 [main] INFO              io.vertx.up.runtime.ZeroPack - [1;30m[ μηδέν ] [mIgnored packages: `["android.annotation","aj.org.objectweb","camundajar","camundafeel","cglib","ch.qos.logback","co.paralleluniverse","connectjar","com.aliyun","com.carrotsearch","com.eclipsesource","com.esotericsoftware","com.fasterxml","com.github","com.google","com.graphbuilder","com.hazelcast","com.hp","com.intellij","com.jcraft.jzlib","com.microfocus","com.microsoft","com.mysql","com.netflix","com.oracle","com.sun","com.tdunning","com.zaxxer","com.codahale","de.javakaffee","de.odysseus","examples","fastparse","geny","io.github","io.github.jklingsporn","io.grpc","io.micrometer","io.netty","io.opentracing","io.prometheus","io.perfmark","io.reactivex","io.r2dbc","io.termd","io.vertx.codegen","io.vertx.config","io.vertx.core","io.vertx.ext","io.vertx.lang","io.vertx.spi","io.vertx.zero","io.zero","jakarta","joptsimple","java","java.util.concurrent","javassist","javax","jdk","junit","kotlin","me.escofflier","mousio","net","oracle","org.HdrHistogram","org.aopalliance","org.aspectj","org.apache","org.camunda","org.checkerframework","org.cliffc","org.conscrypt","org.codehaus","org.eclipse","org.elasticsearch","org.etsi","org.glassfish","org.hamcrest","org.hibernate","org.intellij","org.infinispan","org.jboss","org.jetbrains","org.jgroups","org.joda","org.jooq","org.json","org.junit","org.jvnet","org.mvel2","org.neo4j","org.objenesis","org.objectweb","org.openxmlformats","org.osgi","org.reactivestreams","org.reflections","org.slf4j","org.tartarus","org.w3c","org.w3","org.wildfly","org.xml","org.yaml","protostream","picocli","redis","scala","sourcecode","schemaorg_apache_xmlbeans","sun","META-INF"]`, please check whether contains yours
+2023-04-25 23:23:31,691 [main] INFO              io.vertx.up.runtime.ZeroPack - [1;30m[ μηδέν ] [mZero system scanned `271` classes in total.
+2023-04-25 23:23:31,699 [main] INFO         io.vertx.up.commune.rule.UniqueTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.commune.rule/data.json
+2023-04-25 23:39:29,579 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 23:39:29,745 [main] INFO                io.vertx.up.util.net.NetTc - [1;30m[ μηδέν ] [m[ ZERO TK ] Ip v4 Address = 198.18.1.123.
+2023-04-25 23:39:29,759 [main] INFO                io.vertx.up.util.net.NetTc - [1;30m[ μηδέν ] [m[ ZERO TK ] Ip v6 Address = fe80:0:0:0:86f9:dbab:8643:5f56%utun6.
+2023-04-25 23:39:29,765 [main] INFO                io.vertx.up.util.net.NetTc - [1;30m[ μηδέν ] [m[ ZERO TK ] Ip Address = fe80:0:0:0:86f9:dbab:8643:5f56%utun6.
+2023-04-25 23:39:29,815 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-testInt.json
+2023-04-25 23:39:29,837 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-json.json
+2023-04-25 23:39:29,850 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/from.json
+2023-04-25 23:39:29,851 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/to.json
+2023-04-25 23:39:29,893 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-testInt.json
+2023-04-25 23:39:29,898 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-testInt.json
+2023-04-25 23:39:29,903 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-json.json
+2023-04-25 23:39:29,908 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-testInt.json
+2023-04-25 23:39:29,912 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/subset-source.json
+2023-04-25 23:39:29,912 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/subset-target.json
+2023-04-25 23:39:29,918 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-testInt.json
+2023-04-25 23:39:29,924 [main] INFO                 io.vertx.up.util.StreamTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/in.txt
+2023-04-25 23:39:29,930 [main] INFO                 io.vertx.up.util.StreamTe - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/ini.txt
+2023-04-25 23:39:29,936 [main] INFO                     io.vertx.up.util.User - [1;30m[ μηδέν ] [mUser: invoke. 
+2023-04-25 23:39:29,941 [main] INFO                    io.vertx.up.util.Email - [1;30m[ μηδέν ] [mEmail: invoke(int)22
+2023-04-25 23:39:29,945 [main] INFO                     io.vertx.up.util.User - [1;30m[ μηδέν ] [mUser: invoke(String)String
+2023-04-25 23:39:29,948 [main] INFO                    io.vertx.up.util.Email - [1;30m[ μηδέν ] [mEmail: invoke(int)22
+2023-04-25 23:39:29,953 [main] INFO                     io.vertx.up.util.IOTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/in.properties
+2023-04-25 23:39:29,957 [main] INFO                     io.vertx.up.util.IOTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/test.yaml
+2023-04-25 23:39:29,964 [main] INFO                   io.vertx.up.util.StepTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/input.json
+2023-04-25 23:39:29,993 [main] INFO            io.vertx.up.atom.unity.BladeTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.unity/From.json
+2023-04-25 23:39:29,994 [main] INFO            io.vertx.up.atom.unity.BladeTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.unity/To.json
+2023-04-25 23:39:30,026 [main] INFO            io.vertx.up.atom.unity.BladeTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.unity/Uson.json
+2023-04-25 23:39:30,050 [main] INFO                 io.vertx.up.atom.MirrorTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom/user.json
+2023-04-25 23:39:30,052 [main] INFO                 io.vertx.up.atom.MirrorTc - [1;30m[ μηδέν ] [mMount pojo configuration file user
+2023-04-25 23:39:30,066 [main] INFO                 io.vertx.up.atom.MirrorTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom/user.json
+2023-04-25 23:39:30,094 [main] INFO                 io.vertx.up.atom.MirrorTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom/user.json
+2023-04-25 23:39:30,097 [main] INFO                 io.vertx.up.atom.MirrorTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom/to.json
+2023-04-25 23:39:30,102 [main] INFO               io.vertx.up.atom.query.QrTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.query/cond-add.json
+2023-04-25 23:39:30,113 [main] INFO               io.vertx.up.atom.query.QrTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.query/cond-simple.json
+2023-04-25 23:39:30,114 [main] INFO               io.vertx.up.atom.query.QrTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.query/cond-complex.json
+2023-04-25 23:39:30,115 [main] INFO               io.vertx.up.atom.query.QrTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.query/cond-complex.json
+2023-04-25 23:39:30,120 [main] INFO              io.vertx.up.runtime.ZeroPack - [1;30m[ μηδέν ] [mIgnored packages: `["android.annotation","aj.org.objectweb","camundajar","camundafeel","cglib","ch.qos.logback","co.paralleluniverse","connectjar","com.aliyun","com.carrotsearch","com.eclipsesource","com.esotericsoftware","com.fasterxml","com.github","com.google","com.graphbuilder","com.hazelcast","com.hp","com.intellij","com.jcraft.jzlib","com.microfocus","com.microsoft","com.mysql","com.netflix","com.oracle","com.sun","com.tdunning","com.zaxxer","com.codahale","de.javakaffee","de.odysseus","examples","fastparse","geny","io.github","io.github.jklingsporn","io.grpc","io.micrometer","io.netty","io.opentracing","io.prometheus","io.perfmark","io.reactivex","io.r2dbc","io.termd","io.vertx.codegen","io.vertx.config","io.vertx.core","io.vertx.ext","io.vertx.lang","io.vertx.spi","io.vertx.zero","io.zero","jakarta","joptsimple","java","java.util.concurrent","javassist","javax","jdk","junit","kotlin","me.escofflier","mousio","net","oracle","org.HdrHistogram","org.aopalliance","org.aspectj","org.apache","org.camunda","org.checkerframework","org.cliffc","org.conscrypt","org.codehaus","org.eclipse","org.elasticsearch","org.etsi","org.glassfish","org.hamcrest","org.hibernate","org.intellij","org.infinispan","org.jboss","org.jetbrains","org.jgroups","org.joda","org.jooq","org.json","org.junit","org.jvnet","org.mvel2","org.neo4j","org.objenesis","org.objectweb","org.openxmlformats","org.osgi","org.reactivestreams","org.reflections","org.slf4j","org.tartarus","org.w3c","org.w3","org.wildfly","org.xml","org.yaml","protostream","picocli","redis","scala","sourcecode","schemaorg_apache_xmlbeans","sun","META-INF"]`, please check whether contains yours
+2023-04-25 23:39:30,476 [main] INFO              io.vertx.up.runtime.ZeroPack - [1;30m[ μηδέν ] [mZero system scanned `271` classes in total.
+2023-04-25 23:39:30,491 [main] INFO         io.vertx.up.commune.rule.UniqueTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.commune.rule/data.json
+2023-04-25 23:48:24,872 [main] WARN   i.n.r.d.DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2023-04-25 23:48:25,015 [main] INFO                io.vertx.up.util.net.NetTc - [1;30m[ μηδέν ] [m[ ZERO TK ] Ip v4 Address = 198.18.1.123.
+2023-04-25 23:48:25,027 [main] INFO                io.vertx.up.util.net.NetTc - [1;30m[ μηδέν ] [m[ ZERO TK ] Ip v6 Address = fe80:0:0:0:86f9:dbab:8643:5f56%utun6.
+2023-04-25 23:48:25,032 [main] INFO                io.vertx.up.util.net.NetTc - [1;30m[ μηδέν ] [m[ ZERO TK ] Ip Address = fe80:0:0:0:86f9:dbab:8643:5f56%utun6.
+2023-04-25 23:48:25,071 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-testInt.json
+2023-04-25 23:48:25,093 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-json.json
+2023-04-25 23:48:25,106 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/from.json
+2023-04-25 23:48:25,107 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/to.json
+2023-04-25 23:48:25,135 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-testInt.json
+2023-04-25 23:48:25,139 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-testInt.json
+2023-04-25 23:48:25,142 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-json.json
+2023-04-25 23:48:25,147 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-testInt.json
+2023-04-25 23:48:25,150 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/subset-source.json
+2023-04-25 23:48:25,150 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/subset-target.json
+2023-04-25 23:48:25,155 [main] INFO                io.vertx.up.util.JacksonTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/jackson-testInt.json
+2023-04-25 23:48:25,160 [main] INFO                 io.vertx.up.util.StreamTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/in.txt
+2023-04-25 23:48:25,165 [main] INFO                 io.vertx.up.util.StreamTe - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/ini.txt
+2023-04-25 23:48:25,170 [main] INFO                     io.vertx.up.util.User - [1;30m[ μηδέν ] [mUser: invoke. 
+2023-04-25 23:48:25,174 [main] INFO                    io.vertx.up.util.Email - [1;30m[ μηδέν ] [mEmail: invoke(int)22
+2023-04-25 23:48:25,176 [main] INFO                     io.vertx.up.util.User - [1;30m[ μηδέν ] [mUser: invoke(String)String
+2023-04-25 23:48:25,179 [main] INFO                    io.vertx.up.util.Email - [1;30m[ μηδέν ] [mEmail: invoke(int)22
+2023-04-25 23:48:25,183 [main] INFO                     io.vertx.up.util.IOTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/in.properties
+2023-04-25 23:48:25,187 [main] INFO                     io.vertx.up.util.IOTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/test.yaml
+2023-04-25 23:48:25,191 [main] INFO                   io.vertx.up.util.StepTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.util/input.json
+2023-04-25 23:48:25,213 [main] INFO            io.vertx.up.atom.unity.BladeTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.unity/From.json
+2023-04-25 23:48:25,214 [main] INFO            io.vertx.up.atom.unity.BladeTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.unity/To.json
+2023-04-25 23:48:25,245 [main] INFO            io.vertx.up.atom.unity.BladeTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.unity/Uson.json
+2023-04-25 23:48:25,263 [main] INFO                 io.vertx.up.atom.MirrorTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom/user.json
+2023-04-25 23:48:25,264 [main] INFO                 io.vertx.up.atom.MirrorTc - [1;30m[ μηδέν ] [mMount pojo configuration file user
+2023-04-25 23:48:25,273 [main] INFO                 io.vertx.up.atom.MirrorTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom/user.json
+2023-04-25 23:48:25,289 [main] INFO                 io.vertx.up.atom.MirrorTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom/user.json
+2023-04-25 23:48:25,292 [main] INFO                 io.vertx.up.atom.MirrorTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom/to.json
+2023-04-25 23:48:25,296 [main] INFO               io.vertx.up.atom.query.QrTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.query/cond-add.json
+2023-04-25 23:48:25,305 [main] INFO               io.vertx.up.atom.query.QrTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.query/cond-simple.json
+2023-04-25 23:48:25,305 [main] INFO               io.vertx.up.atom.query.QrTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.query/cond-complex.json
+2023-04-25 23:48:25,306 [main] INFO               io.vertx.up.atom.query.QrTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.atom.query/cond-complex.json
+2023-04-25 23:48:25,311 [main] INFO              io.vertx.up.runtime.ZeroPack - [1;30m[ μηδέν ] [mIgnored packages: `["android.annotation","aj.org.objectweb","camundajar","camundafeel","cglib","ch.qos.logback","co.paralleluniverse","connectjar","com.aliyun","com.carrotsearch","com.eclipsesource","com.esotericsoftware","com.fasterxml","com.github","com.google","com.graphbuilder","com.hazelcast","com.hp","com.intellij","com.jcraft.jzlib","com.microfocus","com.microsoft","com.mysql","com.netflix","com.oracle","com.sun","com.tdunning","com.zaxxer","com.codahale","de.javakaffee","de.odysseus","examples","fastparse","geny","io.github","io.github.jklingsporn","io.grpc","io.micrometer","io.netty","io.opentracing","io.prometheus","io.perfmark","io.reactivex","io.r2dbc","io.termd","io.vertx.codegen","io.vertx.config","io.vertx.core","io.vertx.ext","io.vertx.lang","io.vertx.spi","io.vertx.zero","io.zero","jakarta","joptsimple","java","java.util.concurrent","javassist","javax","jdk","junit","kotlin","me.escofflier","mousio","net","oracle","org.HdrHistogram","org.aopalliance","org.aspectj","org.apache","org.camunda","org.checkerframework","org.cliffc","org.conscrypt","org.codehaus","org.eclipse","org.elasticsearch","org.etsi","org.glassfish","org.hamcrest","org.hibernate","org.intellij","org.infinispan","org.jboss","org.jetbrains","org.jgroups","org.joda","org.jooq","org.json","org.junit","org.jvnet","org.mvel2","org.neo4j","org.objenesis","org.objectweb","org.openxmlformats","org.osgi","org.reactivestreams","org.reflections","org.slf4j","org.tartarus","org.w3c","org.w3","org.wildfly","org.xml","org.yaml","protostream","picocli","redis","scala","sourcecode","schemaorg_apache_xmlbeans","sun","META-INF"]`, please check whether contains yours
+2023-04-25 23:48:25,522 [main] INFO              io.vertx.up.runtime.ZeroPack - [1;30m[ μηδέν ] [mZero system scanned `271` classes in total.
+2023-04-25 23:48:25,531 [main] INFO         io.vertx.up.commune.rule.UniqueTc - [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.commune.rule/data.json
