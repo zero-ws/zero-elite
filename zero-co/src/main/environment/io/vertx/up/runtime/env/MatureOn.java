@@ -84,7 +84,7 @@ public class MatureOn implements Macrocosm {
         // JdbcUrl
         final String jdbcUrl = Ut.valueString(normJ, "jdbcUrl");
         final String replaced;
-        if (jdbcUrl.contains(VString.DOLLAR)) {
+        if (Objects.nonNull(jdbcUrl) && jdbcUrl.contains(VString.DOLLAR)) {
             final JsonObject parameters = normJ.copy();
             replaced = Ut.fromExpression("`" + jdbcUrl + "`", parameters);
         } else {
