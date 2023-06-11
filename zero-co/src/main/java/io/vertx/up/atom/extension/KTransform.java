@@ -65,7 +65,7 @@ public class KTransform implements Serializable {
 
     public ConcurrentMap<String, KDictUse> epsilon() {
         final JsonObject dictionary = Ut.valueJObject(this.fabric);
-        return KDictUse.mapEpsilon(Ut.valueJObject(dictionary.getJsonObject(KName.EPSILON)));
+        return KDictUse.epsilon(Ut.valueJObject(dictionary.getJsonObject(KName.EPSILON)));
     }
 
     public KDictConfig source() {

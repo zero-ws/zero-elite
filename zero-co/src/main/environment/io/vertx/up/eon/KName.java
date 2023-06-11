@@ -182,7 +182,6 @@ public interface KName extends VName {
 
     // 「Tenant Field Definition」, When you enable multi tenants environment, it will be used
     interface Tenant {
-        String STELLAR = "stellar";                  /* Business */
         String TENANT = "tenant";
         String ID = "tenantId";
         String VENDORS = "vendors";
