@@ -19,13 +19,13 @@ import java.util.concurrent.ConcurrentMap;
 import java.util.function.Supplier;
 
 /**
- * ZeroSerializer the request by different type.
+ * ZeroType the request by different type.
  * 1. String -> T
  * 2. T -> JsonObject ( Envelop request )
  * 3. T -> String ( Generate resonse )
  * 4. Checking the request type to see where support serialization
  */
-public class ZeroSerializer {
+public class ZeroType {
 
     private static final Cc<String, Saber> CC_SABER = Cc.openThread();
     private static final ConcurrentMap<Class<?>, Supplier<Saber>> SABERS =
@@ -89,8 +89,8 @@ public class ZeroSerializer {
      *
      * @return deserialized object.
      */
-    public static Object getValue(final Class<?> paramType,
-                                  final String literal) {
+    public static Object value(final Class<?> paramType,
+                               final String literal) {
         Object reference = null;
         if (null != literal) {
             Saber saber;
@@ -113,12 +113,12 @@ public class ZeroSerializer {
     }
 
     @SuppressWarnings("unchecked")
-    public static <T> T getValueT(final Class<?> paramType,
-                                  final String literal) {
-        return (T) getValue(paramType, literal);
+    public static <T> T valueT(final Class<?> paramType,
+                               final String literal) {
+        return (T) value(paramType, literal);
     }
 
-    public static <T> boolean isDirect(final T input) {
+    public static <T> boolean isSupport(final T input) {
         boolean result = false;
         if (null != input) {
             final Class<?> cls = input.getClass();
@@ -137,7 +137,7 @@ public class ZeroSerializer {
      *
      * @return returned values.
      */
-    public static <T> Object toSupport(final T input) {
+    public static <T> Object valueSupport(final T input) {
         try {
             Object reference = null;
             if (null != input) {
