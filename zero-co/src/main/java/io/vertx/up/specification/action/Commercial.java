@@ -3,7 +3,7 @@ package io.vertx.up.specification.action;
 import io.horizon.specification.typed.TJson;
 import io.modello.specification.atom.HRule;
 import io.vertx.up.commune.config.Database;
-import io.vertx.up.commune.config.Integration;
+import io.modello.atom.app.KIntegration;
 import io.vertx.up.eon.em.EmTraffic;
 
 /*
@@ -45,7 +45,7 @@ public interface Commercial extends Application, ServiceDefinition, TJson {
     /*
      * Get integration reference
      */
-    Integration integration();
+    KIntegration integration();
 
     /*
      * Get channel RuleUnique

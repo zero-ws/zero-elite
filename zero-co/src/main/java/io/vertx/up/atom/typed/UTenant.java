@@ -10,7 +10,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.horizon.specification.typed.TCopy;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.commune.config.Integration;
+import io.modello.atom.app.KIntegration;
 import io.vertx.up.eon.KName;
 import io.vertx.up.util.Ut;
 
@@ -25,7 +25,7 @@ import java.util.concurrent.ConcurrentMap;
  */
 public class UTenant implements Serializable, TCopy<UTenant> {
     @JsonIgnore
-    private final ConcurrentMap<String, Integration> integrationMap = new ConcurrentHashMap<>();
+    private final ConcurrentMap<String, KIntegration> integrationMap = new ConcurrentHashMap<>();
     @JsonIgnore
     private final ConcurrentMap<String, String> vendorMap = new ConcurrentHashMap<>();
     @JsonSerialize(using = JsonObjectSerializer.class)
@@ -70,12 +70,12 @@ public class UTenant implements Serializable, TCopy<UTenant> {
     public void setIntegration(final JsonObject integration) {
         this.integration = integration;
         if (Ut.isNotNil(integration)) {
-            // Integration Configuration
+            // KIntegration Configuration
             Ut.<JsonObject>itJObject(integration, (vendor, name) -> {
                 final String configFile = vendor.getString(KName.CONFIG, null);
                 Objects.requireNonNull(configFile);
                 // Basic Information of
-                final Integration config = new Integration();
+                final KIntegration config = new KIntegration();
                 config.fromFile(configFile);
                 // Vendor Name
                 final String vendorName = vendor.getString(KName.NAME);
@@ -86,7 +86,7 @@ public class UTenant implements Serializable, TCopy<UTenant> {
         }
     }
 
-    public Integration integration(final String key) {
+    public KIntegration integration(final String key) {
         return this.integrationMap.getOrDefault(key, null);
     }
 
@@ -147,7 +147,7 @@ public class UTenant implements Serializable, TCopy<UTenant> {
         // Mapping
         tenant.mapping.clear();
         this.mapping.forEach((key, item) -> tenant.mapping.put(key, item.copy()));
-        // Integration
+        // KIntegration
         tenant.integrationMap.clear();
         this.integrationMap.forEach((key, integration) -> tenant.integrationMap.put(key, integration.copy()));
         return (CHILD) tenant;

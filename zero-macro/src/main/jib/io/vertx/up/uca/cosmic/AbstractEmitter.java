@@ -1,10 +1,10 @@
 package io.vertx.up.uca.cosmic;
 
 import io.horizon.uca.log.Annal;
+import io.modello.atom.app.KIntegration;
 import io.vertx.core.MultiMap;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.commune.config.Integration;
 import io.vertx.up.eon.em.EmTraffic;
 import io.vertx.up.util.Ut;
 
@@ -21,9 +21,9 @@ import java.security.SecureRandom;
  */
 public abstract class AbstractEmitter implements Emitter {
 
-    private final transient Integration integration;
+    private final transient KIntegration integration;
 
-    public AbstractEmitter(final Integration integration) {
+    public AbstractEmitter(final KIntegration integration) {
         this.integration = integration;
     }
 
@@ -36,7 +36,7 @@ public abstract class AbstractEmitter implements Emitter {
 
         /* 设置完全信任的信任管理器 */
         /*
-         * 直接在 Integration 中设置
+         * 直接在 KIntegration 中设置
          * options:
          * {
          *     "https": "TLS"
@@ -58,7 +58,7 @@ public abstract class AbstractEmitter implements Emitter {
         return Annal.get(this.getClass());
     }
 
-    protected Integration integration() {
+    protected KIntegration integration() {
         return this.integration;
     }
 

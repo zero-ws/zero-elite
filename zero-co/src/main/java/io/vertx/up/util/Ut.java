@@ -1,6 +1,7 @@
 package io.vertx.up.util;
 
 import io.aeon.runtime.channel.AeonService;
+import io.horizon.atom.datamation.KMapping;
 import io.horizon.eon.em.typed.ChangeFlag;
 import io.horizon.uca.qr.syntax.Ir;
 import io.horizon.util.HUt;
@@ -10,7 +11,6 @@ import io.vertx.core.MultiMap;
 import io.vertx.core.http.HttpMethod;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.exchange.BMapping;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -364,19 +364,19 @@ public final class Ut extends HUt {
         return Jackson.aiJArray(literal);
     }
 
-    public static JsonObject aiIn(final JsonObject in, final BMapping mapping, final boolean keepNil) {
+    public static JsonObject aiIn(final JsonObject in, final KMapping mapping, final boolean keepNil) {
         return Value.aiIn(in, mapping, keepNil);
     }
 
-    public static JsonObject aiIn(final JsonObject in, final BMapping mapping) {
+    public static JsonObject aiIn(final JsonObject in, final KMapping mapping) {
         return Value.aiIn(in, mapping, true);
     }
 
-    public static JsonObject aiOut(final JsonObject out, final BMapping mapping, final boolean keepNil) {
+    public static JsonObject aiOut(final JsonObject out, final KMapping mapping, final boolean keepNil) {
         return Value.aiOut(out, mapping, keepNil);
     }
 
-    public static JsonObject aiOut(final JsonObject out, final BMapping mapping) {
+    public static JsonObject aiOut(final JsonObject out, final KMapping mapping) {
         return Value.aiOut(out, mapping, true);
     }
 

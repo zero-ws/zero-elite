@@ -4,9 +4,9 @@ import com.fasterxml.jackson.databind.JsonObjectDeserializer;
 import com.fasterxml.jackson.databind.JsonObjectSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import io.horizon.atom.datamation.KDictConfig;
+import io.horizon.atom.datamation.KDictUse;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.exchange.DConsumer;
-import io.vertx.up.atom.exchange.DSetting;
 import io.vertx.up.eon.KName;
 import io.vertx.up.util.Ut;
 
@@ -63,13 +63,13 @@ public class KTransform implements Serializable {
         this.mapping = mapping;
     }
 
-    public ConcurrentMap<String, DConsumer> epsilon() {
+    public ConcurrentMap<String, KDictUse> epsilon() {
         final JsonObject dictionary = Ut.valueJObject(this.fabric);
-        return DConsumer.mapEpsilon(Ut.valueJObject(dictionary.getJsonObject(KName.EPSILON)));
+        return KDictUse.mapEpsilon(Ut.valueJObject(dictionary.getJsonObject(KName.EPSILON)));
     }
 
-    public DSetting source() {
+    public KDictConfig source() {
         final JsonObject dictionary = Ut.valueJObject(this.fabric);
-        return new DSetting(Ut.valueJArray(dictionary.getJsonArray(KName.SOURCE)));
+        return new KDictConfig(Ut.valueJArray(dictionary.getJsonArray(KName.SOURCE)));
     }
 }

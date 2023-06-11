@@ -1,13 +1,13 @@
 package io.vertx.up.uca.cosmic;
 
+import io.modello.atom.app.KIntegration;
 import io.modello.atom.app.KIntegrationApi;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.commune.config.Integration;
 import org.apache.http.client.methods.HttpDelete;
 
 public class DeleteRotator extends AbstractRotator {
 
-    DeleteRotator(final Integration integration) {
+    DeleteRotator(final KIntegration integration) {
         super(integration);
     }
 

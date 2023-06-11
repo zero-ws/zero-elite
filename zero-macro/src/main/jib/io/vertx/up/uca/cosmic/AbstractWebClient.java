@@ -1,7 +1,7 @@
 package io.vertx.up.uca.cosmic;
 
+import io.modello.atom.app.KIntegration;
 import io.vertx.core.MultiMap;
-import io.vertx.up.commune.config.Integration;
 import io.vertx.up.uca.cosmic.security.WebToken;
 import org.apache.http.HttpHeaders;
 
@@ -9,9 +9,9 @@ import java.util.Objects;
 
 public abstract class AbstractWebClient {
     protected final transient Emitter emitter;
-    protected final transient Integration integration;
+    protected final transient KIntegration integration;
 
-    public AbstractWebClient(final Integration integration) {
+    public AbstractWebClient(final KIntegration integration) {
         this.emitter = Emitter.create(integration);
         this.integration = integration;
     }

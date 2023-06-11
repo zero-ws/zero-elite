@@ -2,10 +2,10 @@ package io.vertx.up.uca.cosmic;
 
 import io.horizon.eon.VPath;
 import io.horizon.eon.VString;
+import io.modello.atom.app.KIntegration;
 import io.modello.atom.app.KIntegrationApi;
 import io.vertx.core.MultiMap;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.commune.config.Integration;
 import io.vertx.up.util.Ut;
 import org.apache.http.config.Registry;
 import org.apache.http.config.RegistryBuilder;
@@ -25,7 +25,7 @@ class StandardEmitter extends AbstractEmitter {
 
     private transient CloseableHttpClient client;
 
-    StandardEmitter(final Integration integration) {
+    StandardEmitter(final KIntegration integration) {
         super(integration);
         /* Call initialize here */
         this.initialize();
@@ -63,7 +63,7 @@ class StandardEmitter extends AbstractEmitter {
         /*
          * Build Rotator instances
          */
-        final Function<Integration, Rotator> executor = CACHE.POOL_ROTATOR_FN.get(request.getMethod());
+        final Function<KIntegration, Rotator> executor = CACHE.POOL_ROTATOR_FN.get(request.getMethod());
         if (Objects.isNull(executor)) {
             return VString.EMPTY;
         } else {

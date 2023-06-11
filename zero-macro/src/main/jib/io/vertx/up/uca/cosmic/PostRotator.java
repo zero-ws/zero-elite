@@ -1,14 +1,14 @@
 package io.vertx.up.uca.cosmic;
 
+import io.modello.atom.app.KIntegration;
 import io.modello.atom.app.KIntegrationApi;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.commune.config.Integration;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 
 public class PostRotator extends AbstractRotator {
 
-    PostRotator(final Integration integration) {
+    PostRotator(final KIntegration integration) {
         super(integration);
     }
 

@@ -1,6 +1,6 @@
 package io.vertx.up.specification.action;
 
-import io.vertx.up.atom.exchange.DSetting;
+import io.horizon.atom.datamation.KDictConfig;
 
 /*
  * Service
@@ -14,5 +14,5 @@ public interface ServiceDefinition extends Service {
      * Here `dictComponent` is required if configured.
      * Dictionary configuration for current Job / Component
      */
-    DSetting dict();
+    KDictConfig dict();
 }

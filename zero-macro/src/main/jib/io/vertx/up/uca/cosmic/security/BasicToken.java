@@ -1,6 +1,6 @@
 package io.vertx.up.uca.cosmic.security;
 
-import io.vertx.up.commune.config.Integration;
+import io.modello.atom.app.KIntegration;
 import io.vertx.up.util.Ut;
 
 /*
@@ -12,7 +12,7 @@ import io.vertx.up.util.Ut;
 public class BasicToken implements WebToken {
     private final transient String token;
 
-    public BasicToken(final Integration integration) {
+    public BasicToken(final KIntegration integration) {
         this.token = Ut.encryptBase64(integration.getUsername(), integration.getPassword());
     }
 

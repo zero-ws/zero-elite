@@ -1,7 +1,7 @@
 package io.vertx.up.uca.adminicle;
 
+import io.horizon.atom.datamation.KMapping;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.exchange.BMapping;
 import io.vertx.up.util.Ut;
 
 public class FieldMapper implements Mapper {
@@ -17,12 +17,12 @@ public class FieldMapper implements Mapper {
     }
 
     @Override
-    public JsonObject in(final JsonObject in, final BMapping mapping) {
+    public JsonObject in(final JsonObject in, final KMapping mapping) {
         return Ut.aiIn(in, mapping, this.keepNil);
     }
 
     @Override
-    public JsonObject out(final JsonObject out, final BMapping mapping) {
+    public JsonObject out(final JsonObject out, final KMapping mapping) {
         return Ut.aiOut(out, mapping, this.keepNil);
     }
 }

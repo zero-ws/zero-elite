@@ -2,11 +2,11 @@ package io.vertx.quiz;
 
 import io.horizon.uca.log.Annal;
 import io.horizon.uca.qr.Criteria;
+import io.modello.atom.app.KIntegration;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.commune.config.Database;
-import io.vertx.up.commune.config.Integration;
 import io.vertx.up.util.Ut;
 
 /**
@@ -35,7 +35,7 @@ import io.vertx.up.util.Ut;
  * 3. ioJObject(filename) - Json Object Content
  * 4. ioJArray(filename) - Json Array Content
  * 5. ioDatabase(filename) - Database from file ( Json Format )
- * 6. ioIntegration(filename) - Integration from file ( Json Format )
+ * 6. ioIntegration(filename) - KIntegration from file ( Json Format )
  *
  * @author <a href="http://www.origin-x.cn">Lang</a>
  */
@@ -63,9 +63,9 @@ public abstract class EpicBase {
         return database;
     }
 
-    protected Integration ioIntegration(final String filename) {
+    protected KIntegration ioIntegration(final String filename) {
         final JsonObject fileJson = this.ioJObject(filename);
-        final Integration integration = new Integration();
+        final KIntegration integration = new KIntegration();
         integration.fromJson(fileJson);
         return integration;
     }

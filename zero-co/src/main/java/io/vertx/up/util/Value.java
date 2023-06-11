@@ -1,9 +1,9 @@
 package io.vertx.up.util;
 
+import io.horizon.atom.datamation.KMapping;
 import io.horizon.uca.convert.V;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.exchange.BMapping;
 
 import java.math.BigDecimal;
 import java.time.Instant;
@@ -268,7 +268,7 @@ class Value {
         return null;
     }
 
-    static JsonObject aiIn(final JsonObject in, final BMapping mapping, final boolean keepNil) {
+    static JsonObject aiIn(final JsonObject in, final KMapping mapping, final boolean keepNil) {
         if (Objects.isNull(mapping)) {
             /*
              * No mapping
@@ -297,7 +297,7 @@ class Value {
         }
     }
 
-    static JsonObject aiOut(final JsonObject out, final BMapping mapping, final boolean keepNil) {
+    static JsonObject aiOut(final JsonObject out, final KMapping mapping, final boolean keepNil) {
         if (Objects.isNull(mapping)) {
             /*
              * No mapping

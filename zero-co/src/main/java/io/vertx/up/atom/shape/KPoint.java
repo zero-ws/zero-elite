@@ -7,9 +7,9 @@ import com.fasterxml.jackson.databind.JsonObjectDeserializer;
 import com.fasterxml.jackson.databind.JsonObjectSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import io.horizon.atom.datamation.KMapping;
 import io.modello.eon.em.EmModel;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.exchange.BMapping;
 import io.vertx.up.exception.web._409JoinTargetException;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
@@ -136,8 +136,8 @@ public class KPoint implements Serializable {
         this.synonym = synonym;
     }
 
-    public BMapping synonym() {
-        return new BMapping(this.synonym);
+    public KMapping synonym() {
+        return new KMapping(this.synonym);
     }
 
     /**

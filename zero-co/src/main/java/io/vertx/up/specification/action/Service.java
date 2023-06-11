@@ -1,9 +1,9 @@
 package io.vertx.up.specification.action;
 
+import io.horizon.atom.datamation.KMap;
+import io.modello.atom.normalize.KIdentity;
 import io.modello.specification.atom.HRule;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.exchange.BTree;
-import io.vertx.up.commune.config.Identity;
 
 /*
  * Uniform interface for Job/Component definition
@@ -34,7 +34,7 @@ public interface Service {
      * 2) Check whether there exist `identifierComponent` to determine the final
      * used `identifier` instead of static
      */
-    Identity identity();
+    KIdentity identity();
 
     /*
      * `mappingConfig`
@@ -42,7 +42,7 @@ public interface Service {
      * `mappingComponent` of I_SERVICE
      * It's also for Job / Component here
      */
-    BTree mapping();
+    KMap mapping();
 
     /*
      * `rule`

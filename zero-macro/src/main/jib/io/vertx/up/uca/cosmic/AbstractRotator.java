@@ -2,9 +2,9 @@ package io.vertx.up.uca.cosmic;
 
 import io.horizon.eon.VString;
 import io.horizon.uca.log.Annal;
+import io.modello.atom.app.KIntegration;
 import io.modello.atom.app.KIntegrationApi;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.commune.config.Integration;
 import io.vertx.up.eon.KWeb;
 import io.vertx.up.exception.internal.JexlExpressionException;
 import io.vertx.up.exception.web._500RequestConfigException;
@@ -28,10 +28,10 @@ import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 
 public abstract class AbstractRotator implements Rotator {
-    private final transient Integration integration;
+    private final transient KIntegration integration;
     private transient CloseableHttpClient client;
 
-    public AbstractRotator(final Integration integration) {
+    public AbstractRotator(final KIntegration integration) {
         this.integration = integration;
     }
 

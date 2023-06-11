@@ -2,12 +2,12 @@ package io.vertx.up.uca.cosmic;
 
 import io.modello.atom.app.KIntegrationApi;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.commune.config.Integration;
+import io.modello.atom.app.KIntegration;
 import org.apache.http.client.methods.HttpGet;
 
 public class GetRotator extends AbstractRotator {
 
-    GetRotator(final Integration integration) {
+    GetRotator(final KIntegration integration) {
         super(integration);
     }
 

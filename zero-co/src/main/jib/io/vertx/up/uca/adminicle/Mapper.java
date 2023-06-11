@@ -1,8 +1,8 @@
 package io.vertx.up.uca.adminicle;
 
+import io.horizon.atom.datamation.KMapping;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.exchange.BMapping;
 import io.vertx.up.util.Ut;
 
 /*
@@ -14,9 +14,9 @@ public interface Mapper {
      * Mapping
      * to -> from
      */
-    JsonObject in(JsonObject in, BMapping mapping);
+    JsonObject in(JsonObject in, KMapping mapping);
 
-    default JsonArray in(final JsonArray in, final BMapping mapping) {
+    default JsonArray in(final JsonArray in, final KMapping mapping) {
         final JsonArray normalized = new JsonArray();
         Ut.itJArray(in).map(each -> this.in(each, mapping)).forEach(normalized::add);
         return normalized;
@@ -26,9 +26,9 @@ public interface Mapper {
      * Mapping
      * from -> to
      */
-    JsonObject out(JsonObject out, BMapping mapping);
+    JsonObject out(JsonObject out, KMapping mapping);
 
-    default JsonArray out(final JsonArray out, final BMapping mapping) {
+    default JsonArray out(final JsonArray out, final KMapping mapping) {
         final JsonArray normalized = new JsonArray();
         Ut.itJArray(out).map(each -> this.out(each, mapping)).forEach(normalized::add);
         return normalized;

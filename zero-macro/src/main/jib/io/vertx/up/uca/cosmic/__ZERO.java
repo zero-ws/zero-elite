@@ -3,7 +3,7 @@ package io.vertx.up.uca.cosmic;
 import io.horizon.annotations.Memory;
 import io.horizon.uca.cache.Cc;
 import io.vertx.core.http.HttpMethod;
-import io.vertx.up.commune.config.Integration;
+import io.modello.atom.app.KIntegration;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -17,8 +17,8 @@ interface CACHE {
     @Memory(Rotator.class)
     Cc<Integer, Rotator> CC_ROTATOR = Cc.open();
 
-    ConcurrentMap<HttpMethod, Function<Integration, Rotator>> POOL_ROTATOR_FN =
-        new ConcurrentHashMap<HttpMethod, Function<Integration, Rotator>>() {
+    ConcurrentMap<HttpMethod, Function<KIntegration, Rotator>> POOL_ROTATOR_FN =
+        new ConcurrentHashMap<HttpMethod, Function<KIntegration, Rotator>>() {
             {
                 this.put(HttpMethod.GET, GetRotator::new);
                 this.put(HttpMethod.DELETE, DeleteRotator::new);

@@ -1,11 +1,11 @@
 package io.vertx.up.uca.cosmic;
 
 import io.horizon.eon.VString;
+import io.modello.atom.app.KIntegration;
 import io.modello.atom.app.KIntegrationApi;
 import io.vertx.core.MultiMap;
 import io.vertx.core.http.HttpMethod;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.commune.config.Integration;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
 import jakarta.ws.rs.core.MediaType;
@@ -20,7 +20,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 
 class LegacyEmitter extends AbstractEmitter {
-    LegacyEmitter(final Integration integration) {
+    LegacyEmitter(final KIntegration integration) {
         super(integration);
     }
 

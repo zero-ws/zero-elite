@@ -4,20 +4,20 @@ import io.vertx.core.Future;
 import io.vertx.core.MultiMap;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.commune.config.Integration;
+import io.modello.atom.app.KIntegration;
 import io.vertx.up.util.Ut;
 
 import java.util.Objects;
 
 /*
- * Communicate with Integration/KIntegrationApi structure for
+ * Communicate with KIntegration/KIntegrationApi structure for
  * Http / Https client build
  */
 public interface Emitter {
     /*
      * Get Emitter reference
      */
-    static Emitter create(final Integration integration) {
+    static Emitter create(final KIntegration integration) {
         if (Objects.isNull(integration)) {
             /*
              * null reference
