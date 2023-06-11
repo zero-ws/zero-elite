@@ -1,8 +1,8 @@
 package io.vertx.up.uca.cosmic;
 
+import io.modello.atom.app.KIntegrationApi;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.commune.config.Integration;
-import io.vertx.up.commune.config.IntegrationRequest;
 import org.apache.http.client.methods.HttpGet;
 
 public class GetRotator extends AbstractRotator {
@@ -12,7 +12,7 @@ public class GetRotator extends AbstractRotator {
     }
 
     @Override
-    public String request(final IntegrationRequest request, final JsonObject params) {
+    public String request(final KIntegrationApi request, final JsonObject params) {
         /*
          * Turn On mock workflow when integration is `debug`
          */

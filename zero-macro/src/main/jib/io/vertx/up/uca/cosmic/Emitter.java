@@ -10,7 +10,7 @@ import io.vertx.up.util.Ut;
 import java.util.Objects;
 
 /*
- * Communicate with Integration/IntegrationRequest structure for
+ * Communicate with Integration/KIntegrationApi structure for
  * Http / Https client build
  */
 public interface Emitter {

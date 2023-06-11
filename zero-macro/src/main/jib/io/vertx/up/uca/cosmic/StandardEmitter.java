@@ -2,10 +2,10 @@ package io.vertx.up.uca.cosmic;
 
 import io.horizon.eon.VPath;
 import io.horizon.eon.VString;
+import io.modello.atom.app.KIntegrationApi;
 import io.vertx.core.MultiMap;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.commune.config.Integration;
-import io.vertx.up.commune.config.IntegrationRequest;
 import io.vertx.up.util.Ut;
 import org.apache.http.config.Registry;
 import org.apache.http.config.RegistryBuilder;
@@ -54,9 +54,9 @@ class StandardEmitter extends AbstractEmitter {
     @Override
     public String request(final String apiKey, final JsonObject params, final MultiMap headers) {
         /*
-         * Read IntegrationRequest object
+         * Read KIntegrationApi object
          */
-        final IntegrationRequest request = this.integration().createRequest(apiKey);
+        final KIntegrationApi request = this.integration().createRequest(apiKey);
         if (Objects.nonNull(headers)) {
             request.setHeaders(Ut.toJObject(headers));
         }

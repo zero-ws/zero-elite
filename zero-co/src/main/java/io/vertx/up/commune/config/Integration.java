@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.horizon.eon.VString;
 import io.horizon.specification.typed.TCopy;
 import io.horizon.specification.typed.TJson;
+import io.modello.atom.app.KIntegrationApi;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.atom.exchange.DConsumer;
 import io.vertx.up.util.Ut;
@@ -45,11 +46,11 @@ import java.util.concurrent.ConcurrentMap;
  */
 public class Integration implements TJson, Serializable, TCopy<Integration> {
 
-    private final ConcurrentMap<String, IntegrationRequest> apis
+    private final ConcurrentMap<String, KIntegrationApi> apis
         = new ConcurrentHashMap<>();
     /*
      * Restful / Web Service information ( such as jdbcUrl )
-     * The target service should be: endpoint + api ( IntegrationRequest )
+     * The target service should be: endpoint + api ( KIntegrationApi )
      */
     private String endpoint;
     private Integer port;
@@ -101,7 +102,7 @@ public class Integration implements TJson, Serializable, TCopy<Integration> {
         this.epsilon = epsilon;
     }
 
-    public ConcurrentMap<String, IntegrationRequest> getApis() {
+    public ConcurrentMap<String, KIntegrationApi> getApis() {
         return this.apis;
     }
 
@@ -228,7 +229,7 @@ public class Integration implements TJson, Serializable, TCopy<Integration> {
         final JsonObject apis = data.getJsonObject("apis");
         if (Ut.isNotNil(apis)) {
             Ut.<JsonObject>itJObject(apis, (json, field) -> {
-                final IntegrationRequest request = Ut.deserialize(json, IntegrationRequest.class);
+                final KIntegrationApi request = Ut.deserialize(json, KIntegrationApi.class);
                 this.apis.put(field, request);
             });
         }
@@ -238,9 +239,9 @@ public class Integration implements TJson, Serializable, TCopy<Integration> {
         }
     }
 
-    public IntegrationRequest createRequest(final String key) {
-        final IntegrationRequest request = new IntegrationRequest();
-        final IntegrationRequest original = this.apis.get(key);
+    public KIntegrationApi createRequest(final String key) {
+        final KIntegrationApi request = new KIntegrationApi();
+        final KIntegrationApi original = this.apis.get(key);
         request.setHeaders(original.getHeaders().copy());
         request.setMethod(original.getMethod());
         if (0 <= original.getPath().indexOf('`')) {

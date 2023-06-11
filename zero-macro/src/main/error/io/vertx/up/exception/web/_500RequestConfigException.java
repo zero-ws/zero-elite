@@ -2,13 +2,13 @@ package io.vertx.up.exception.web;
 
 import io.horizon.eon.em.web.HttpStatusCode;
 import io.horizon.exception.WebException;
+import io.modello.atom.app.KIntegrationApi;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.commune.config.IntegrationRequest;
 
 public class _500RequestConfigException extends WebException {
 
     public _500RequestConfigException(final Class<?> clazz,
-                                      final IntegrationRequest request,
+                                      final KIntegrationApi request,
                                       final JsonObject data) {
         super(clazz, request.toString(), data.encode());
     }

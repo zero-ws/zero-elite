@@ -1,11 +1,11 @@
 package io.vertx.up.uca.cosmic;
 
 import io.horizon.eon.VString;
+import io.modello.atom.app.KIntegrationApi;
 import io.vertx.core.MultiMap;
 import io.vertx.core.http.HttpMethod;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.commune.config.Integration;
-import io.vertx.up.commune.config.IntegrationRequest;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
 import jakarta.ws.rs.core.MediaType;
@@ -42,9 +42,9 @@ class LegacyEmitter extends AbstractEmitter {
     public String request(final String apiKey, final JsonObject params, final MultiMap headers) {
         return Fn.runOr(VString.EMPTY, () -> {
             /*
-             * Read IntegrationRequest object
+             * Read KIntegrationApi object
              */
-            final IntegrationRequest request = this.integration().createRequest(apiKey);
+            final KIntegrationApi request = this.integration().createRequest(apiKey);
             /*
              * Encrypt content with public key of RSA
              * Replace the method `getPublicKeyFile` with `getPublicKey` for content extracting

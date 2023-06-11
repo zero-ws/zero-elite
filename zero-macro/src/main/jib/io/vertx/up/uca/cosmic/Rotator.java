@@ -1,7 +1,7 @@
 package io.vertx.up.uca.cosmic;
 
+import io.modello.atom.app.KIntegrationApi;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.commune.config.IntegrationRequest;
 import org.apache.http.impl.client.CloseableHttpClient;
 
 /*
@@ -21,5 +21,5 @@ public interface Rotator {
     /*
      * Request data with `Json` parameters, get string response
      */
-    String request(IntegrationRequest request, JsonObject params);
+    String request(KIntegrationApi request, JsonObject params);
 }
