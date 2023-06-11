@@ -149,7 +149,7 @@ public class Apt {
 
     /*
      * 「Initialize Data」
-     * Old Refer, default value, I - Initialized
+     * Old KRef, default value, I - Initialized
      * */
     public <T> T dataI() {
         return this.isBatch ? (T) this.batch.dataI() : (T) this.single.dataI();

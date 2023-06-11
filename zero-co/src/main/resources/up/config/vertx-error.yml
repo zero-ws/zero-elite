@@ -277,7 +277,7 @@ E80302: "(500) - (Ambient) The Init implementation class = {0} does not `impleme
 E80303: "(500) - (Ambient) The Prerequisite class = {0} does not satisfy specification"
 E80304: "(409) - (Atom) The atom (`{0}`) could not generate `Activity` record because trackable is FALSE"
 E80305: "(501) - (Atom) The `indent` field of configuration missing, config =`{0}`"
-E80306: "(403) - (Refer) Linked records could not be deleted because it''s referenced by other records, identifier = {}"
+E80306: "(403) - (KRef) Linked records could not be deleted because it''s referenced by other records, identifier = {}"
 
 # Jet
 E80401: "(501) - (Jet) The infix of parameter `ingest` is null, could not be used in `DEFINE` mode"

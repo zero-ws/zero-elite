@@ -1,6 +1,6 @@
 package io.vertx.up.runtime.env;
 
-import io.horizon.atom.common.AttrSet;
+import io.horizon.atom.program.KVarSet;
 import io.horizon.eon.VString;
 import io.horizon.eon.VValue;
 import io.horizon.eon.em.EmDS;
@@ -27,7 +27,7 @@ public class MatureOn implements Macrocosm {
 
     // Cloud Connected
     public static JsonObject envPlot(final JsonObject plot) {
-        final AttrSet set = AttrSet.of()
+        final KVarSet set = KVarSet.of()
             .save(KName.CLOUD, AEON_CLOUD)                                  // AEON_CLOUD
             .save(KName.CHILD, AEON_APP)                                    // AEON_APP
             .save(KName.NAME, Z_APP)                                        // Z_APP
@@ -42,7 +42,7 @@ public class MatureOn implements Macrocosm {
 
     // Restful Connected ( Multi Support )
     public static JsonObject envApi(final JsonObject api, final Integer index) {
-        final AttrSet set = envServer(API_HOST, API_PORT, index);
+        final KVarSet set = envServer(API_HOST, API_PORT, index);
         // 创建拷贝
         final JsonObject apiJ = Ut.valueJObject(api, true);
         final HMature mature = CC_MATURE.pick(MatureEnv::new, MatureEnv.class.getName());
@@ -51,7 +51,7 @@ public class MatureOn implements Macrocosm {
 
     // Socket Connected ( Multi Support )
     public static JsonObject envSock(final JsonObject sock, final Integer index) {
-        final AttrSet set = envServer(SOCK_HOST, SOCK_PORT, index);
+        final KVarSet set = envServer(SOCK_HOST, SOCK_PORT, index);
         // 创建拷贝
         final JsonObject sockJ = Ut.valueJObject(sock, true);
         final HMature mature = CC_MATURE.pick(MatureEnv::new, MatureEnv.class.getName());
@@ -66,7 +66,7 @@ public class MatureOn implements Macrocosm {
 
     // Database Connected ( Multi Support )
     public static JsonObject envDatabase(final JsonObject database, final EmDS.Stored mode) {
-        final AttrSet set;
+        final KVarSet set;
         if (EmDS.Stored.WORKFLOW == mode) {
             // Workflow
             set = envDatabase(DBW_HOST, DBW_PORT, DBW_INSTANCE);
@@ -110,14 +110,14 @@ public class MatureOn implements Macrocosm {
         return replaced;
     }
 
-    private static AttrSet envDatabase(final String host, final String port, final String instance) {
-        return AttrSet.of()
+    private static KVarSet envDatabase(final String host, final String port, final String instance) {
+        return KVarSet.of()
             .save(KName.HOSTNAME, host)
             .save(KName.PORT, port, Integer.class)
             .save(KName.INSTANCE, instance);
     }
 
-    private static AttrSet envServer(final String host, final String port, final Integer index) {
+    private static KVarSet envServer(final String host, final String port, final Integer index) {
         final String envHost;
         final String envPort;
         if (Objects.isNull(index) || VValue.IDX == index) {
@@ -129,7 +129,7 @@ public class MatureOn implements Macrocosm {
             envHost = API_HOST + index;
             envPort = API_PORT + index;
         }
-        return AttrSet.of()
+        return KVarSet.of()
             .saveWith(KName.HOST, envHost, KWeb.DEPLOY.HOST)       // Z_API_HOSTX
             .save(KName.PORT, envPort, Integer.class);                     // Z_API_PORTX
     }

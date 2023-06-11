@@ -1,6 +1,6 @@
 package io.vertx.up.plugin.shared;
 
-import io.horizon.atom.common.Kv;
+import io.horizon.atom.program.Kv;
 import io.horizon.uca.log.Annal;
 import io.vertx.core.Future;
 import io.vertx.up.exception.web._500PoolInternalException;

@@ -1,7 +1,7 @@
 package io.vertx.up.runtime.env;
 
-import io.horizon.atom.common.Attr;
-import io.horizon.atom.common.AttrSet;
+import io.horizon.atom.program.KVar;
+import io.horizon.atom.program.KVarSet;
 import io.macrocosm.specification.boot.HMature;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.util.Ut;
@@ -21,11 +21,11 @@ class MatureEnv implements HMature {
      *   field2 = ENV_NAME2
      */
     @Override
-    public JsonObject configure(final JsonObject configJ, final AttrSet set) {
+    public JsonObject configure(final JsonObject configJ, final KVarSet set) {
         final Set<String> names = set.names();
         names.stream().filter(field -> {
             // 过滤 envName 为空的情况
-            final Attr attribute = set.attribute(field);
+            final KVar attribute = set.attribute(field);
             final String envName = attribute.alias();
             return Ut.isNotNil(envName);
         }).forEach(field -> {
@@ -35,14 +35,14 @@ class MatureEnv implements HMature {
              * 1）先从环境变量中提取 ENV_NAME 的值
              * 2）值不存在考虑默认值
              */
-            final Attr attribute = set.attribute(field);
+            final KVar attribute = set.attribute(field);
             this.normalizeValue(configJ, attribute, field);
         });
         return configJ;
     }
 
     private void normalizeValue(final JsonObject configJ,
-                                final Attr attribute, final String field) {
+                                final KVar attribute, final String field) {
         final String envName = attribute.alias();
 
         // Default String.class

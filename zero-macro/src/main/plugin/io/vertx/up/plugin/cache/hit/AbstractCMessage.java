@@ -72,7 +72,7 @@ public abstract class AbstractCMessage implements CMessage {
         delivery.put("key", Ut.toJArray(this.primarySet));
 
         /*
-         * Refer
+         * KRef
          */
         if (this.isRef()) {
             delivery.put("refer", Boolean.TRUE);

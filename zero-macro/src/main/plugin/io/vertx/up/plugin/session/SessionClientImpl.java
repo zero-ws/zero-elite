@@ -73,7 +73,7 @@ public class SessionClientImpl implements SessionClient {
     public SessionHandler getHandler() {
         return SessionHandler.create(STORE)
             /*
-             * Refer: https://vertx.io/blog/writing-secure-vert-x-web-apps/
+             * KRef: https://vertx.io/blog/writing-secure-vert-x-web-apps/
              * */
             // .setCookieSecureFlag(true)
             .setCookieHttpOnlyFlag(true);

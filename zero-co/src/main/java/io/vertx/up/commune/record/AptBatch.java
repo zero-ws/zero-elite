@@ -14,7 +14,7 @@ class AptBatch implements AptOp<JsonArray> {
 
     private final ConcurrentMap<ChangeFlag, JsonArray> combine = new ConcurrentHashMap<>();
 
-    // Refer the same as the UPDATE in combine
+    // KRef the same as the UPDATE in combine
     private final AptArray array = new AptArray();
     private final ChangeFlag flag;
 

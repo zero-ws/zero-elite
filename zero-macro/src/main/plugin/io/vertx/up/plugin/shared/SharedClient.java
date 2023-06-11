@@ -1,6 +1,6 @@
 package io.vertx.up.plugin.shared;
 
-import io.horizon.atom.common.Kv;
+import io.horizon.atom.program.Kv;
 import io.vertx.codegen.annotations.Fluent;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;

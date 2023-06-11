@@ -17,7 +17,7 @@ class AptSingle implements AptOp<JsonObject> {
     private final JsonObject current = new JsonObject();
     private final ConcurrentMap<ChangeFlag, JsonObject> combine = new ConcurrentHashMap<>();
 
-    // Refer the same as the UPDATE in combine
+    // KRef the same as the UPDATE in combine
     private final JsonObject replaced = new JsonObject();
     private final JsonObject appended = new JsonObject();
 
