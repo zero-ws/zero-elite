@@ -20,8 +20,8 @@ import java.util.concurrent.TimeUnit;
  *
  * @author <a href="http://www.origin-x.cn">Lang</a>
  */
-public class KTimer implements Serializable {
-    private static final Annal LOGGER = Annal.get(KTimer.class);
+public class KScheduler implements Serializable {
+    private static final Annal LOGGER = Annal.get(KScheduler.class);
     private final String unique;
     /*
      * duration information of two Job
@@ -30,24 +30,24 @@ public class KTimer implements Serializable {
     private TimeUnit durationUnit = TimeUnit.SECONDS;
     /* Default value should be 5 min, here the threshold means seconds */
     private long duration = VValue.RANGE;
-    private KTimerFormula formula;
+    private KPlan formula;
 
-    public KTimer(final String unique) {
+    public KScheduler(final String unique) {
         this.unique = unique;
     }
 
     // -------------------------- Bind -----------------------------
 
-    public KTimer scheduler(final String formula) {
-        this.formula = new KTimerFormula(formula, null);
+    public KScheduler configure(final String formula) {
+        this.formula = new KPlan(formula, null);
         return this;
     }
 
-    public KTimer scheduler(final String formula, final LocalTime runAt) {
+    public KScheduler configure(final String formula, final LocalTime runAt) {
         /* Calculation by runAt */
         if (Objects.isNull(runAt)) {
             Objects.requireNonNull(formula);
-            this.formula = new KTimerFormula(formula, null);
+            this.formula = new KPlan(formula, null);
         } else {
             /* Formula may be */
             final LocalTime runNow = LocalTime.now();
@@ -59,7 +59,7 @@ public class KTimer implements Serializable {
             }
             final LocalDateTime dateTime = LocalDateTime.of(today, runAt);
             final Instant instant = Ut.parse(dateTime).toInstant();
-            this.formula = new KTimerFormula(formula, instant);
+            this.formula = new KPlan(formula, instant);
         }
         return this;
     }
@@ -71,7 +71,7 @@ public class KTimer implements Serializable {
      * About `threshold/unit`, the method will calculate the final threshold,
      * here the threshold unit is `nanos`
      */
-    public KTimer scheduler(final long duration, final TimeUnit unit) {
+    public KScheduler configure(final long duration, final TimeUnit unit) {
         Objects.requireNonNull(unit);
         this.durationUnit = unit;
         this.duration = unit.toMillis(duration);
@@ -122,7 +122,7 @@ public class KTimer implements Serializable {
 
     @Override
     public String toString() {
-        return "KTimer{" +
+        return "KScheduler{" +
             "unique='" + this.unique + '\'' +
             ", durationUnit=" + this.durationUnit +
             ", duration=" + this.duration +

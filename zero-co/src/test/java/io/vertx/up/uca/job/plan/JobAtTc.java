@@ -1,7 +1,7 @@
 package io.vertx.up.uca.job.plan;
 
 import io.horizon.eon.em.typed.PerMode;
-import io.vertx.up.atom.sch.KTimerFormula;
+import io.vertx.up.atom.sch.KPlan;
 import io.vertx.up.util.Ut;
 import org.junit.Test;
 
@@ -33,7 +33,7 @@ public class JobAtTc {
 
     // ==================== Private Format ===================
     private void parsing(final String formula) {
-        final KTimerFormula kFormula = new KTimerFormula(formula, null);
+        final KPlan kFormula = new KPlan(formula, null);
         System.out.println(kFormula.mode());
         System.out.println(kFormula.formatter());
         Ut.itRepeat(10, () -> {
@@ -43,7 +43,7 @@ public class JobAtTc {
     }
 
     private void parsing(final String formula, final Instant runAt) {
-        final KTimerFormula kFormula = new KTimerFormula(formula, runAt);
+        final KPlan kFormula = new KPlan(formula, runAt);
         System.out.println(kFormula.mode());
         System.out.println(kFormula.formatter());
         Ut.itRepeat(10, () -> System.out.println(kFormula.runAt()));

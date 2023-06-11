@@ -16,7 +16,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 /**
  * @author <a href="http://www.origin-x.cn">Lang</a>
  */
-public class KTimerFormula {
+public class KPlan {
     /*
      * Two Way Here
      * 1.  runFormula = null, runAt ( value )       ( Simple )
@@ -29,7 +29,7 @@ public class KTimerFormula {
     private Instant simpleAt;
     private PerMode mode;
 
-    public KTimerFormula(final String runFormula, final Instant runAt) {
+    public KPlan(final String runFormula, final Instant runAt) {
         this.isComplex = Ut.isNotNil(runFormula);
         if (this.isComplex) {
             // Advanced Formula Support
@@ -89,7 +89,7 @@ public class KTimerFormula {
 
     @Override
     public String toString() {
-        return "KTimerFormula{" +
+        return "KPlan{" +
             "formulas=" + this.formulas +
             ", isComplex=" + this.isComplex +
             ", simpleAt=" + this.simpleAt +
