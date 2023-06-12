@@ -86,13 +86,12 @@ public class JooqInfix implements io.vertx.up.plugin.Infix {
         return configSafe(YmlCore.jooq.ORBIT).dsl();
     }
 
+    public static Configuration get(final String key) {
+        return CONFIGURATION.get(key);
+    }
 
     @Override
     public Configuration get() {
-        return this.get(YmlCore.jooq.PROVIDER);
-    }
-
-    public Configuration get(final String key) {
-        return CONFIGURATION.get(key);
+        return get(YmlCore.jooq.PROVIDER);
     }
 }

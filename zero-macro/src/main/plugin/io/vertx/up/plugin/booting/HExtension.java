@@ -34,10 +34,9 @@ public interface HExtension {
             final JsonObject launcher = ZeroStore.launcherJ();
             final JsonArray boots = Ut.valueJArray(launcher, VSpec.Boot.EXTENSION);
             Ut.itJArray(boots).forEach(json -> {
-                final Class<?> bootCls = Ut.clazz(json.getString("executor"), null);
+                final Class<?> bootCls = Ut.clazz(json.getString(VSpec.Boot.extension.EXECUTOR), null);
                 if (Objects.nonNull(bootCls)) {
                     Pool.CC_BOOTS.pick(() -> Ut.instance(bootCls), bootCls);
-                    // Fn.po?l(Pool.BOOTS, bootCls, () -> Ut.instance(bootCls));
                 }
             });
         }

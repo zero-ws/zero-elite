@@ -248,7 +248,14 @@ E80210: "(404) - (RBAC) The resource of id = `{0}` for request = {1} could not b
 E80211: "(403) - (RBAC) The resource level is {0}, action level is {0} and lower than resource required"
 E80212: "(403) - (RBAC) The user = `{0}` of profile = `{1}` has no permission for access any resource"
 E80213: "(403) - (RBAC) Sorry, you have no access to visit the resource that you required, action = `{0}`, permissionId = `{1}`"
+# Kernel Module
+E80214: "(409) - (Ke) Zero system could not identify the session you provided `{0}`, maybe it''s expired or destroyed"
 E80215: "(500) - (RBAC) Dwarf instance is null when analyzed result type = {0}"
+E80216: "(501) - (Ke) Your channel is not implemented {0}, but you called this channel, please check your configuration"
+E80217: "(501) - (Ke) Your Class<T> is null or `UxJooq` has not been bind here!"
+E80218: "(409) - (Ke) The data loading environment is not ready, please check your configuration and try again."
+E80219: "(403) - (Ke) You have no access to create cross `application` account tokens, token generation error, now size = {0}"
+
 E80220: "(401) - (RBAC) The user `{0}` that you have provided is locked, please contact administrator"
 E80221: "(401) - (RBAC) Your wrong password typing exceed `{0}` times, please wait around `{1}` mins and try again"
 E80222: "(401) - (RBAC) Image code ( {0} ) that you provided is wrong"
@@ -258,17 +265,6 @@ E80223: "(409) - (RBAC) The `uiType` defined should not be NONE, please check yo
 E80224: "(409) - (RBAC) The `phase` of ui part must be EAGER, but not it''s {0}"
 E80225: "(404) - (RBAC) The `uiType` defined {0} could not detect correct HAdminCompiler component"
 E80226: "(404) - (RBAC) You have defined type to \"DAO\", but the `dao` attribute is not valid class: {0}"
-
-# Kernel Module
-E80214: "(409) - (Ke) Zero system could not identify the session you provided `{0}`, maybe it''s expired or destroyed"
-E80216: "(501) - (Ke) Your channel is not implemented {0}, but you called this channel, please check your configuration"
-E80217: "(501) - (Ke) Your Class<T> is null or `UxJooq` has not been bind here!"
-# E80218: "(501) - (Ke) This api is not supported or implemented, please check your specification, source = {0}"
-E80219: "(403) - (Ke) You have no access to create cross `application` account tokens, token generation error, now size = {0}"
-
-E80542: "(409) - (Ke) You want to seek `target` configuration in JOIN, but now the fields ( one of `crud, classDao, classDefine` ) is missing."
-E80543: "(412) - (Ke) You parsed targetIndent = `{0}` in Join workflow, but now get null. data = `{1}`."
-E80548: "(412) - (Ke) You parsed targetIndent = `{0}` in Join workflow with JsonArray, but found more than one identifiers. "
 
 # Ambient Module
 E80300: "(500) - (Ambient) The application environment error, could not get app data"
@@ -335,10 +331,13 @@ E80538: "(417) - (Mod) Current model：{0} related schema counter {1} or joins n
 E80539: "(501) - (Web) Current `DictFabric` is null, but it''s required"
 E80540: "(501) - (Web) The model of `DataTpl` is null and could not be found in your environment, Anonymous error"
 E80541: "(409) - (Ref) The model `{0}` defined static references, but found more than one dao in field `{1}`, please check \"sourceReference\" configuration."
+E80542: "(409) - (Ke) You want to seek `target` configuration in JOIN, but now the fields ( one of `crud, classDao, classDefine` ) is missing."
+E80543: "(412) - (Ke) You parsed targetIndent = `{0}` in Join workflow, but now get null. data = `{1}`."
 E80544: "(500) - (Ref) Please bind `DataAtom` first and then you can call `bind(Model)` method for this current model ( identifier = `{0}` ). "
 E80545: "(400) - (Mod) Because both new and old record(s) are null/empty, could not be valid to generate history"
 E80546: "(500) - (Excel) Read the excel file met null file issue, please check your code"
 E80547: "(409) - (Mod) The input identifier = `{0}` is confict with configured identifier = `{1}`, check your configuration"
+E80548: "(412) - (Ke) You parsed targetIndent = `{0}` in Join workflow with JsonArray, but found more than one identifiers. "
 
 # Workflow Module
 E80600: "(404) - (Workflow) The system could not find the ProcessDefinition by code = `{0}`"
