@@ -252,14 +252,14 @@ public interface YmlCore {
     /**
      * vertx-jet.yml
      * <pre><code>
-     * router:              {@see io.vertx.mod.jet.atom.JtConfig}
+     * router:              {@see io.vertx.mod.jet.argument.JtConfig}
      *     wall:
      *     worker:          {@link io.vertx.core.DeploymentOptions}
      *        instances:
      *     agent:           {@link io.vertx.core.DeploymentOptions}
      *        instances:
      *     unity:           {@see io.horizon.spi.environment.UnityApp}
-     * deployment:          {@see io.vertx.up.atom.agent.Arrange}
+     * deployment:          {@see io.vertx.up.argument.agent.Arrange}
      *     mode:            {@see io.vertx.up.eon.em.DeployMode}
      *     delivery:        {@link io.vertx.core.eventbus.DeliveryOptions}
      *     options:
@@ -433,7 +433,7 @@ public interface YmlCore {
     /**
      * vertx-workflow.yml
      * <pre><code>
-     * workflow: {@see io.vertx.mod.workflow.atom.configuration.MetaWorkflow}
+     * workflow: {@see io.vertx.mod.workflow.argument.configuration.MetaWorkflow}
      *    name:
      *    builtIn:
      *    resource:

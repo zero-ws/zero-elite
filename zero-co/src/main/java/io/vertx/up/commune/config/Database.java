@@ -36,7 +36,7 @@ import java.util.Objects;
  *    database:         // WORKFLOW
  */
 @Legacy("旧版由于使用反射无法直接重命名，"
-    + "所以保留了Zero内部的数据库定义，并且该定义位于 zero-atom 核心位置，"
+    + "所以保留了Zero内部的数据库定义，并且该定义位于 zero-argument 核心位置，"
     + "不可以直接被取消，但该类可从 KDatabase 高阶对象中继承"
 )
 public class Database extends KDatabase {

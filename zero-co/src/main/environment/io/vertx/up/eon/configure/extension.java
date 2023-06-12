@@ -9,7 +9,7 @@ interface YmlExtension extends VOption.component {
     String __KEY = "extension";
     String REGION = "region";
     String AUDITOR = "auditor";
-    String ATOM = "atom";
+    String ATOM = "argument";
     String ETCD = "etcd";
 
     interface region extends VOption.component {

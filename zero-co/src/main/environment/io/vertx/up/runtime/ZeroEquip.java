@@ -1,7 +1,7 @@
 package io.vertx.up.runtime;
 
-import io.horizon.eon.VSpec;
 import io.horizon.eon.VString;
+import io.horizon.eon.spec.VBoot;
 import io.horizon.spi.boot.HEquip;
 import io.macrocosm.atom.boot.KSetting;
 import io.macrocosm.specification.config.HConfig;
@@ -41,7 +41,7 @@ public class ZeroEquip implements HEquip {
         setting.container(HConfig.of(configZero));
         final String extension = Ut.valueString(configZero, YmlCore.LIME);
 
-        final JsonObject configBoot = Ut.valueJObject(configuration, VSpec.Boot.__KEY);
+        final JsonObject configBoot = Ut.valueJObject(configuration, VBoot.__KEY);
         setting.launcher(HConfig.of(configBoot));
 
         /*

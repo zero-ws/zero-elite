@@ -26,7 +26,7 @@ import java.util.Objects;
  * - config: The related json config of current component.
  *
  * Replace the old class 'Common component yaml/json configuration'
- * - 'io.vertx.up.atom.config.ComponentOption'
+ * - 'io.vertx.up.argument.config.ComponentOption'
  *
  * @author <a href="http://www.origin-x.cn">Lang</a>
  */

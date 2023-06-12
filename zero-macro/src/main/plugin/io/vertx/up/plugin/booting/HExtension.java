@@ -1,7 +1,7 @@
 package io.vertx.up.plugin.booting;
 
 
-import io.horizon.eon.VSpec;
+import io.horizon.eon.spec.VBoot;
 import io.horizon.uca.cache.Cc;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
@@ -32,9 +32,9 @@ public interface HExtension {
         final ConcurrentMap<Class<?>, HExtension> data = Pool.CC_BOOTS.store();
         if (data.isEmpty()) {
             final JsonObject launcher = ZeroStore.launcherJ();
-            final JsonArray boots = Ut.valueJArray(launcher, VSpec.Boot.EXTENSION);
+            final JsonArray boots = Ut.valueJArray(launcher, VBoot.EXTENSION);
             Ut.itJArray(boots).forEach(json -> {
-                final Class<?> bootCls = Ut.clazz(json.getString(VSpec.Boot.extension.EXECUTOR), null);
+                final Class<?> bootCls = Ut.clazz(json.getString(VBoot.extension.EXECUTOR), null);
                 if (Objects.nonNull(bootCls)) {
                     Pool.CC_BOOTS.pick(() -> Ut.instance(bootCls), bootCls);
                 }
