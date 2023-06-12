@@ -1,2 +1,2 @@
 mysql:
-    hostname: test
+  hostname: mock

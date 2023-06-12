@@ -22,7 +22,7 @@ import java.util.function.Consumer;
  * 1. Event Loop Execute Time: 1800s -> 30mins
  * 2. Worker Execute Time: 1800s -> 30mins
  *
- * It means that our test cases must do some long time works especially in enterprise application or
+ * It means that our mock cases must do some long time works especially in enterprise application or
  * complex web applications. This class provide default testing environment in vert.x so that developers could
  * do unit testing smartly.
  *
@@ -52,7 +52,7 @@ public abstract class ZeroBase extends EpicBase {
     public final RunTestOnContext rule = new RunTestOnContext(OPTIONS);
 
     /**
-     * Defined timeout in each test case that's matched with 1800s.
+     * Defined timeout in each mock case that's matched with 1800s.
      */
     @Rule
     public Timeout timeout = Timeout.seconds(1800L);

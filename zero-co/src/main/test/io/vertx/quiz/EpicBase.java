@@ -14,8 +14,8 @@ import io.vertx.up.util.Ut;
  *
  * This class is testing base class to read file resources, here are specification in zero framework for testing
  *
- * 1. The resource path name should be `src/test/resources/test/[package]/[filename]`.
- * 2. The `package` name is the same as current class, the root folder is `test` in testing resources.
+ * 1. The resource path name should be `src/mock/resources/mock/[package]/[filename]`.
+ * 2. The `package` name is the same as current class, the root folder is `mock` in testing resources.
  * 3. You can provide `filename` that will be used in testing classes.
  *
  * Here support three file format

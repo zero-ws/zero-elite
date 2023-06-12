@@ -136,7 +136,7 @@ E40058: "(Jooq) The mode required is {0}, but current filters are \"{1}\", they 
 E40059: "(Jooq) The field = \"{0}\" could not be found in type = \"{1}\""
 E40060: "(Jooq) Infusion Jooq require vertx environment, but now vertx is null"
 E40061: "(Security) You are using Zero Security Framework, but the @Wall found Security reference is null"
-E40062: "(Quiz) Current test case name = `{0}` is invalid when you enable Quiz Framework of Zero, name must end with `Tc`"
+E40062: "(Quiz) Current mock case name = `{0}` is invalid when you enable Quiz Framework of Zero, name must end with `Tc`"
 E40063: "Your reflect invoking does not satisfy the pre-condition, method = {0}"
 E40064: "(Act) Act specification is invalid, you could not call this api when isBatch = {0}"
 E40065: "(Jooq) Jooq database configuration pool key = `provider` missing, it's required when you enable Jooq"

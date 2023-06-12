@@ -4,7 +4,7 @@ import io.horizon.exception.BootingException;
 
 /*
  * Zero Quiz needed when you used QzTc / QzMicroTc
- * It means that all the test case name must end with "Tc"
+ * It means that all the mock case name must end with "Tc"
  * Because the name will be parsed.
  */
 public class TestCaseNameException extends BootingException {
