@@ -253,7 +253,7 @@ E80214: "(409) - (Ke) Zero system could not identify the session you provided `{
 E80215: "(500) - (RBAC) Dwarf instance is null when analyzed result type = {0}"
 E80216: "(501) - (Ke) Your channel is not implemented {0}, but you called this channel, please check your configuration"
 E80217: "(501) - (Ke) Your Class<T> is null or `UxJooq` has not been bind here!"
-E80218: "(409) - (Ke) The data loading environment is not ready, please check your configuration and try again."
+E80218: "(409) - (Ke) The data loading environment is not ready, please check your configuration and try again. infix = {0}"
 E80219: "(403) - (Ke) You have no access to create cross `application` account tokens, token generation error, now size = {0}"
 
 E80220: "(401) - (RBAC) The user `{0}` that you have provided is locked, please contact administrator"
