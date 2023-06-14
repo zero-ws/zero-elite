@@ -1,7 +1,5 @@
 package io.vertx.up.atom.extension;
 
-import com.fasterxml.jackson.databind.JsonObjectDeserializer;
-import com.fasterxml.jackson.databind.JsonObjectSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.horizon.atom.datamation.KDictConfig;
@@ -9,6 +7,8 @@ import io.horizon.atom.datamation.KDictUse;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.KName;
 import io.vertx.up.util.Ut;
+import io.zerows.jackson.databind.JsonObjectDeserializer;
+import io.zerows.jackson.databind.JsonObjectSerializer;
 
 import java.io.Serializable;
 import java.util.concurrent.ConcurrentMap;
