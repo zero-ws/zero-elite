@@ -268,16 +268,9 @@ public final class Ut extends HUt {
      *
      * Object converting here of serialization
      */
-    public static <T, R extends Iterable> R serializeJson(final T t) {
-        return Jackson.serializeJson(t, false);
-    }
 
     public static <T, R extends Iterable> R serializeJson(final T t, final boolean isSmart) {
         return Jackson.serializeJson(t, isSmart);
-    }
-
-    public static <T> T deserialize(final JsonObject value, final Class<T> type) {
-        return Jackson.deserialize(value, type, true);
     }
 
     public static <T> T deserialize(final JsonObject value, final Class<T> type, boolean isSmart) {
