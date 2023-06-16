@@ -24,7 +24,7 @@ import java.util.concurrent.ConcurrentMap;
 public class RpcServerVisitor implements ServerVisitor<RpcOptions> {
 
     //    private transient final Node<JsonObject> node = Node.infix(YmlCore.server.__KEY);
-    private transient final JTransformer<RpcOptions>
+    private transient final Transformer<RpcOptions>
         transformer = Ut.singleton(RpcServerSetUp.class);
 
     @Override
