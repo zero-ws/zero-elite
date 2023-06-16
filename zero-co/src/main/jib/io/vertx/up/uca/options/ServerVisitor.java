@@ -1,10 +1,10 @@
 package io.vertx.up.uca.options;
 
+import io.horizon.eon.em.web.ServerType;
 import io.horizon.uca.log.Annal;
 import io.vertx.core.http.HttpServerOptions;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.KName;
-import io.vertx.up.eon.em.container.ServerType;
 
 import java.util.concurrent.ConcurrentMap;
 

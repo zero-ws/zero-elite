@@ -1,6 +1,7 @@
 package io.vertx.up.uca.options;
 
 import io.horizon.eon.VMessage;
+import io.horizon.eon.em.web.ServerType;
 import io.horizon.exception.ProgramException;
 import io.vertx.core.RpcOptions;
 import io.vertx.core.json.JsonArray;
@@ -8,7 +9,6 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.up.commune.Ruler;
 import io.vertx.up.eon.KName;
 import io.vertx.up.eon.configure.YmlCore;
-import io.vertx.up.eon.em.container.ServerType;
 import io.vertx.up.exception.daemon.ServerConfigException;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.runtime.ZeroStore;

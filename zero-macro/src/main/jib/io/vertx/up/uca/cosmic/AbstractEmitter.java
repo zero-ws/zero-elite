@@ -1,11 +1,11 @@
 package io.vertx.up.uca.cosmic;
 
+import io.horizon.eon.em.web.EmTraffic;
 import io.horizon.uca.log.Annal;
 import io.modello.atom.app.KIntegration;
 import io.vertx.core.MultiMap;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.eon.em.EmTraffic;
 import io.vertx.up.util.Ut;
 
 import javax.net.ssl.SSLContext;

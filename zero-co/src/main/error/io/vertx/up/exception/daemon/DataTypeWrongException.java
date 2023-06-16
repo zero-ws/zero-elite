@@ -1,6 +1,6 @@
 package io.vertx.up.exception.daemon;
 
-import io.horizon.eon.em.EmType;
+import io.horizon.eon.em.typed.EmType;
 import io.horizon.exception.DaemonException;
 
 public class DataTypeWrongException extends DaemonException {

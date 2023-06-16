@@ -1,7 +1,7 @@
 package io.vertx.up.annotations;
 
+import io.horizon.eon.em.web.EmTraffic;
 import io.vertx.up.eon.KWeb;
-import io.vertx.up.eon.em.EmTraffic;
 
 import java.lang.annotation.*;
 

@@ -1,10 +1,10 @@
 package io.vertx.up.specification.action;
 
+import io.horizon.eon.em.web.EmTraffic;
 import io.horizon.specification.typed.TJson;
+import io.modello.atom.app.KIntegration;
 import io.modello.specification.atom.HRule;
 import io.vertx.up.commune.config.Database;
-import io.modello.atom.app.KIntegration;
-import io.vertx.up.eon.em.EmTraffic;
 
 /*
  * Underway communication channel between

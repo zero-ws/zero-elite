@@ -1,6 +1,6 @@
 package io.vertx.up.uca.stable;
 
-import io.horizon.eon.em.EmType;
+import io.horizon.eon.em.typed.EmType;
 import io.horizon.exception.ProgramException;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.exception.daemon.DataTypeWrongException;
