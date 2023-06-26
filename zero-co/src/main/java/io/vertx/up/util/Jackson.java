@@ -1,5 +1,6 @@
 package io.vertx.up.util;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import io.horizon.eon.VString;
 import io.horizon.eon.VValue;
 import io.horizon.eon.em.typed.ChangeFlag;
@@ -10,6 +11,7 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.KName;
 import io.vertx.up.fn.Fn;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.util.*;
 import java.util.concurrent.ConcurrentMap;
@@ -179,8 +181,8 @@ final class Jackson {
 
     private static <T> String deserializeSmart(final JsonObject item, final Class<T> type) {
         new HashSet<>(item.fieldNames()).forEach(field -> {
-            try {
-                final Field fieldT = type.getDeclaredField(field);
+            final Field fieldT = deserializeField(field, type);
+            if (Objects.nonNull(fieldT)) {
                 final Class<?> fieldC = fieldT.getType();           // getType
                 final Object value = item.getValue(field);
                 /*
@@ -192,12 +194,25 @@ final class Jackson {
                 } else if (value instanceof JsonArray && String.class == fieldC) {
                     item.put(field, ((JsonArray) value).encode());
                 }
-            } catch (final NoSuchFieldException ex) {
-                // Remove / Ignore the field
-                item.remove(field);
             }
         });
         return item.encode();
+    }
+
+    private static Field deserializeField(final String field, final Class<?> type) {
+        final Field[] fields = type.getDeclaredFields();
+        return Arrays.stream(fields)
+            .filter(item -> {
+                final String fieldName;
+                if (item.isAnnotationPresent(JsonProperty.class)) {
+                    final Annotation annotation = item.getAnnotation(JsonProperty.class);
+                    fieldName = Ut.invoke(annotation, "value");
+                } else {
+                    fieldName = item.getName();
+                }
+                return field.equals(fieldName);
+            })
+            .findFirst().orElse(null);
     }
 
     private static <T> String deserializeSmart(final JsonArray item, final Class<T> type) {

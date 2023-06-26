@@ -13,7 +13,6 @@ import java.util.concurrent.ConcurrentMap;
 interface Info {
 
     String JOOQ_PARSE = "( Jooq -> Condition ) Parsed result is condition = {0}.";
-    String JOOQ_CACHED = "( Jooq -> Condition ) Cached result is condition = {0}.";
     String JOOQ_TERM = "`io.vertx.mod.plugin.jooq.condition.Term` selected: `{0}` by op = `{1}`.";
     String JOOQ_TERM_ERR = "`io.vertx.mod.plugin.jooq.condition.Term` is null when op = `{0}`.";
 }
@@ -61,6 +60,8 @@ interface Pool {
             this.put(Ir.Op.GT, Ut.instance(TermDGt.class));
             this.put(Ir.Op.GE, Ut.instance(TermDGe.class));
             this.put(Ir.Op.EQ, Ut.instance(TermDEq.class));
+            this.put(Ir.Op.NULL, Ut.instance(TermDNull.class));
+            this.put(Ir.Op.NOT_NULL, Ut.instance(TermDNotNull.class));
         }
     };
 }

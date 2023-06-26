@@ -14,8 +14,8 @@ public class TermDEq extends AbstractDTerm {
             final LocalDate date = this.toDate(value);
             //  field.between(date.atStartOfDay(), date.plusDays(1).atStartOfDay());
             //  New Condition to replace between
-            final Condition min = field.ge(date.atStartOfDay());
-            final Condition max = field.lt(date.plusDays(1).atStartOfDay());
+            final Condition min = DSL.field(fieldName).ge(date.atStartOfDay());
+            final Condition max = DSL.field(fieldName).lt(date.plusDays(1).atStartOfDay());
             return min.and(max);
         }, () -> DSL.field(fieldName).eq(value));
     }

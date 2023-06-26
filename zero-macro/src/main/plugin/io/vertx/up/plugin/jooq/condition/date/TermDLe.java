@@ -12,7 +12,7 @@ public class TermDLe extends AbstractDTerm {
     public Condition where(final Field field, final String fieldName, final Object value) {
         return this.toDate(field, () -> {
             final LocalDate date = this.toDate(value);
-            return field.le(date.plusDays(1).atStartOfDay());
+            return DSL.field(fieldName).le(date.plusDays(1).atStartOfDay());
         }, () -> DSL.field(fieldName).le(value));
     }
 }

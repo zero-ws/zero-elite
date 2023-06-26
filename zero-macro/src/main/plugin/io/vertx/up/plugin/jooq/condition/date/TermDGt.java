@@ -12,7 +12,7 @@ public class TermDGt extends AbstractDTerm {
     public Condition where(final Field field, final String fieldName, final Object value) {
         return this.toDate(field, () -> {
             final LocalDate date = this.toDate(value);
-            return field.gt(date.atStartOfDay());
+            return DSL.field(fieldName).gt(date.atStartOfDay());
         }, () -> DSL.field(fieldName).gt(value));
     }
 }
