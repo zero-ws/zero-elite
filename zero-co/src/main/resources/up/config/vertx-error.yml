@@ -351,7 +351,7 @@ E80607: "(404) - (Workflow) The supplier of event type = `{0}` could not be foun
 E80608: "(501) - (Workflow) Your BPMN file has no `EndEvent`, please check by id = `{0}`"
 E80609: "(409) - (Workflow) This api could be called when unique `EndEvent`, but not the size is `{0}`, id = `{1}`"
 E80610: "(409) - (Workflow) This api could not be called because of NodeType conflict, input = {0} and expected = {1}"
-
+E80611: "(410) - (Workflow) The task has gone and the state is invalid, please reopen it from entry. id = `{0}`"
 # Extension Vie Platform
 E81000: "(400) - (Vie) Current environment `{0}` is not supported, please provide new one."
 E81001: "(501) - (Vie) Sorry the command of development could not be used on production environment."
