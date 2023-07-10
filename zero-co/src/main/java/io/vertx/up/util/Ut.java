@@ -5,7 +5,6 @@ import io.vertx.core.Future;
 import io.vertx.core.json.JsonObject;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.util.function.BiFunction;
 
 @SuppressWarnings("all")
@@ -74,18 +73,6 @@ public final class Ut extends _Visit {
 
     public static <T> T plugin(final JsonObject options, final String pluginKey, final Class<T> interfaceCls) {
         return Instance.plugin(options, pluginKey, interfaceCls);
-    }
-
-    public static <T> T invoke(final Object instance, final String name, final Object... args) {
-        return Invoker.invokeObject(instance, name, args);
-    }
-
-    public static <T> T invokeStatic(final Class<?> clazz, final String name, final Object... args) {
-        return Invoker.invokeStatic(clazz, name, args);
-    }
-
-    public static <T> Future<T> invokeAsync(final Object instance, final Method method, final Object... args) {
-        return Invoker.invokeAsync(instance, method, args);
     }
 
     public static Class<?> child(final Class<?> clazz) {
