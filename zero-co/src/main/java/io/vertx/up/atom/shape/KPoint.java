@@ -18,68 +18,51 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * ## 「Pojo」Source/Target
- *
- * ### 1. Intro
- *
- * Here defined the field for join point such as `source` and `target`.
- *
- * ### 2. Attribute
- *
- * |Name|Comment|
- * |---|:---|
- * |key|The default value is `key`, primary key field.|
- * |keyJoin|Required, the join key field of the record.|
- * |crud|Optional, When it has value, you can search `identifier`( targetKey ) by CRUD.|
- * |classDao|Optional, When it has value, you can join with the Dao class instead of CRUD seeking.|
- * |classDefine|Optional, When it has value, you can seek target by defined component.|
- *
- * ### 3. Data Format
- *
- * ```json
- * // <pre><code class="json">
- *     {
- *         "crud": "xxx",
- *         "classDao": "xxx",
- *         "keyJoin": "fieldx",
- *         "key": "key"
+ * 连接点专用配置，所有连接点配置一致 {@link KPoint} ，都是固定数据结构：
+ * <pre><code>
+ * {
+ *     "identifier": "连接点的唯一标识符，通常是模型名",
+ *     "crud": "{@link EmModel.Join#CRUD} 模式必须：crud join 模式必须的，使用 CURD 标准定义执行模式连接",
+ *     "classDao": "{@link EmModel.Join#DAO} 模式必须：直连模式",
+ *     "classDefine": "{@link EmModel.Join#DEFINE} 模式必须：定义模式",
+ *     "key": "当前模型的主键是什么",
+ *     "keyJoin": "当前模型的的连接键是什么",
+ *     "synonym": {
+ *         "field": "field alias"
  *     }
- * // </code></pre>
- * ```
+ * }
+ * </code></pre>
+ * 上述连接点专用属性 synonym 需要说明一下，当两个表连接时，如果两个表中存在相同的字段名，那么在连接时会出现冲突，所以需要
+ * 使用此属性重新定义某张表中的属性别名，保证连接时不会冲突。
  *
  * @author <a href="http://www.origin-x.cn">Lang</a>
  */
 public class KPoint implements Serializable {
-    /**
-     * `identifier`
-     */
+    /** 模型标识符 */
     @JsonIgnore
     private String identifier;
-    /**
-     * `crud`, <strong>filename</strong> that could be parsed.
-     */
+
+
+    /** {@link EmModel.Join#CRUD} 专用：可解析的crud连接专用文件 */
     private String crud;
-    /**
-     * `classDao`, <strong>Dao class</strong> that could be convert to java class.
-     */
+
+
+    /** {@link EmModel.Join#DAO} 专用：Java的类名，做直连JOIN专用 */
     @JsonSerialize(using = ClassSerializer.class)
     @JsonDeserialize(using = ClassDeserializer.class)
     private Class<?> classDao;
 
 
-    /**
-     * `classDefine`, <strong>Defined class</strong> that could be convert to java class.
-     */
+    /** {@link EmModel.Join#DEFINE} 专用： **/
     @JsonSerialize(using = ClassSerializer.class)
     @JsonDeserialize(using = ClassDeserializer.class)
     private Class<?> classDefine;
-    /**
-     * `key`, primary key field.
-     */
+
+
+    /** 主键名 **/
     private String key;
-    /**
-     * `keyJoin`, join key that are related to join point.
-     */
+
+    /** 连接键名 **/
     private String keyJoin;
 
     @JsonSerialize(using = JsonObjectSerializer.class)
@@ -140,8 +123,11 @@ public class KPoint implements Serializable {
         return new KMapping(this.synonym);
     }
 
+
+    // ------------------ 模式解析
+
     /**
-     * Get target configuration mode here for calculation.
+     * 获取目标JOIN模式的相关配置，主要有三种模式，按优先级排序
      *
      * @return {@link EmModel.Join}
      */
@@ -160,7 +146,7 @@ public class KPoint implements Serializable {
     }
 
     /**
-     * Get source configuration mode here for calculation.
+     * 获取源模式，元模式不支持 CRUD 配置，只支持两种模式
      *
      * @return {@link EmModel.Join}
      */
@@ -178,6 +164,13 @@ public class KPoint implements Serializable {
         return EmModel.Join.CRUD;
     }
 
+    /**
+     * 设置当前连接点的模型标识符
+     *
+     * @param identifier 模型标识符
+     *
+     * @return {@link KPoint}
+     */
     public KPoint indent(final String identifier) {
         this.identifier = identifier;
         if (Objects.isNull(this.crud)) {
@@ -187,6 +180,11 @@ public class KPoint implements Serializable {
         return this;
     }
 
+    /**
+     * 读取模型标识符
+     *
+     * @return 模型标识符
+     */
     public String indent() {
         return this.identifier;
     }
