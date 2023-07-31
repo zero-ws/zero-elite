@@ -7,20 +7,20 @@ public interface Saber {
     /**
      * String to object
      *
-     * @param type
-     * @param literal
+     * @param type    数据类型
+     * @param literal 字面量
      *
-     * @return
+     * @return 转换后的对象
      */
     Object from(Class<?> type, String literal);
 
     /**
      * T to object
      *
-     * @param input
-     * @param <T>
+     * @param input 输入数据
+     * @param <T>   泛型类型
      *
-     * @return
+     * @return 转换后的对象
      */
     <T> Object from(T input);
 }

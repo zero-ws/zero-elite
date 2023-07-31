@@ -1,17 +1,11 @@
 package io.vertx.up.atom.shape;
 
 import io.horizon.uca.log.Annal;
-import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.exception.web._412IndentParsingException;
-import io.vertx.up.exception.web._412IndentUnknownException;
-import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
 
 import java.io.Serializable;
-import java.util.HashSet;
 import java.util.Objects;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.function.Consumer;
@@ -111,7 +105,7 @@ public class KJoin implements Serializable {
      *
      * @return {@link String} 解析出的 identifier
      */
-    private String identifier(final JsonObject data) {
+    public String indentTarget(final JsonObject data) {
         if (Ut.isNil(this.targetIndent)) {
             LOGGER.warn("The `targetIndent` field is null");
             return null;
@@ -128,65 +122,6 @@ public class KJoin implements Serializable {
     }
 
 
-    /**
-     * 从数据中提取连接点配置，这种模式主要应用于主从表模式，即：
-     * 一个主表对应多个从表时，需要从主表数据中提取从表的 identifier 模型标识符，有了
-     * 此标识符才可以让主表模型和从表模型执行 JOIN 操作。
-     *
-     * @param data {@link JsonObject} 传入的数据
-     *
-     * @return {@link KPoint} 连接点
-     */
-    public KPoint point(final JsonObject data) {
-        final String identifier = this.identifier(data);
-        Fn.out(Ut.isNil(identifier), _412IndentParsingException.class, this.getClass(), this.targetIndent, data);
-        final KPoint result = this.point(identifier);
-        if (Objects.isNull(result)) {
-            LOGGER.info("System could not find configuration for `{0}` with data = {1}", identifier, data.encode());
-        }
-        return result;
-    }
-
-    /**
-     * 从配置中直接提取连接点配置，根据传入的 identifier 执行提取，对应：
-     * <pre><code>
-     *     {
-     *         "target": {
-     *             "identifier1": {@link KPoint},
-     *             "identifier2": {@link KPoint}
-     *         }
-     *     }
-     * </code></pre>
-     *
-     * @param identifier 统一模型标识符
-     *
-     * @return {@link KPoint} 连接点
-     */
-    public KPoint point(final String identifier) {
-        final KPoint target = this.target.getOrDefault(identifier, null);
-        if (Objects.isNull(target)) {
-            return null;
-        }
-        return target.indent(identifier);
-    }
-
-
-    /**
-     * 从数据中提取连接点配置（批量版）
-     *
-     * @param data {@link JsonArray} 传入的数据
-     *
-     * @return {@link KPoint} 连接点
-     */
-    public KPoint point(final JsonArray data) {
-        final Set<String> idSet = new HashSet<>();
-        Ut.itJArray(data).map(this::identifier).filter(Objects::nonNull).forEach(idSet::add);
-        Fn.out(1 != idSet.size(), _412IndentUnknownException.class, this.getClass(), this.targetIndent);
-        final String identifier = idSet.iterator().next();
-        return this.point(identifier);
-    }
-
-    
     // 连接条件方法
 
     /**
