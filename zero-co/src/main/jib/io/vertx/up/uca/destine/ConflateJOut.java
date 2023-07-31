@@ -35,7 +35,7 @@ class ConflateJOut extends ConflateBase<JsonObject, JsonObject> {
 
 
         // 同义词（Synonym）
-        final KPoint point = this.pTarget(identifier);
+        final KPoint point = this.target(identifier);
         if (Objects.nonNull(point)) {
             final JsonObject synonymJ = Ut.aiOut(standJ, point.synonym(), false);
             standJ.mergeIn(synonymJ, true);
@@ -44,7 +44,7 @@ class ConflateJOut extends ConflateBase<JsonObject, JsonObject> {
 
         // 连接点数据
         final JsonObject combine = standJ.mergeIn(active, true);
-        final JsonObject connected = this.dataOut(combine, identifier);
+        final JsonObject connected = this.procOutput(combine, identifier);
         combine.mergeIn(connected, true);
 
         // 构造最终数据
@@ -58,6 +58,6 @@ class ConflateJOut extends ConflateBase<JsonObject, JsonObject> {
 
 
         // 根据连接点构造数据返回
-        return this.dataOut(data, identifier);
+        return this.procOutput(data, identifier);
     }
 }

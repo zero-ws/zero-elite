@@ -39,12 +39,12 @@ class ConflateJIn extends ConflateBase<JsonObject, JsonObject> {
 
 
         // 提取连接点数据（Joined Key）
-        final JsonObject connected = this.dataIn(inputJ, identifier);
+        final JsonObject connected = this.procInput(inputJ, identifier);
         inputJ.mergeIn(connected, true);
 
 
         // 同义词（Synonym）
-        final KPoint point = this.pTarget(identifier);
+        final KPoint point = this.target(identifier);
         if (Objects.nonNull(point)) {
             final JsonObject synonymJ = Ut.aiIn(inputJ, point.synonym(), false);
             inputJ.mergeIn(synonymJ, true);
@@ -69,6 +69,6 @@ class ConflateJIn extends ConflateBase<JsonObject, JsonObject> {
 
 
         // 根据连接点构造数据返回输入部分
-        return this.dataIn(data, identifier);
+        return this.procInput(data, identifier);
     }
 }

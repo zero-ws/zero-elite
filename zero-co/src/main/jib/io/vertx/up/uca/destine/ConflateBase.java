@@ -1,6 +1,7 @@
 package io.vertx.up.uca.destine;
 
 import io.horizon.uca.log.Log;
+import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.atom.shape.KJoin;
 import io.vertx.up.atom.shape.KPoint;
@@ -8,6 +9,7 @@ import io.vertx.up.eon.KName;
 import io.vertx.up.util.Ut;
 
 import java.util.Objects;
+import java.util.function.BiConsumer;
 
 /**
  * 针对原始系统中的 dataIn / dataOut / dataCond 执行强替换，每一种替换使用一个子类来处理，这里是抽象类，不可直接使用，需要使用子类来实现，和 {@link Hymn} 不同的点在于：
@@ -58,13 +60,13 @@ public abstract class ConflateBase<I, O> implements Conflate<I, O> {
      *
      * @return {@link KPoint} 配置
      */
-    protected KPoint pSource() {
+    protected KPoint source() {
         final KPoint source = this.joinRef.getSource();
         Objects.requireNonNull(source);
         return source;
     }
 
-    protected String keySource() {
+    protected String sourceKey() {
         // joinRef 中提取
         if (Objects.isNull(this.joinRef)) {
             return KName.KEY;
@@ -91,18 +93,62 @@ public abstract class ConflateBase<I, O> implements Conflate<I, O> {
      *
      * @return {@link KPoint} 配置
      */
-    protected KPoint pTarget(final String identifier) {
+    protected KPoint target(final String identifier) {
         final Hymn<String> hymn = Hymn.ofString(this.joinRef);
         final KPoint point = hymn.pointer(identifier);
         Log.info(this.getClass(), "Point = {0}, To = {1}", point, identifier);
         return point;
     }
 
+    protected String targetKey(final String identifier) {
+        final KPoint target = this.target(identifier);
+        return Objects.isNull(target) ? KName.KEY : target.getKeyJoin();
+    }
+
     // ---------------------- 数据处理专用 -----------------------
+
+    protected void procEach(final JsonArray active, final JsonArray assist, final String identifier,
+                            final BiConsumer<JsonObject, JsonObject> consumerFn) {
+        // 抽取 key 属性信息
+        final String sourceKey = this.sourceKey();
+        Objects.requireNonNull(sourceKey);
+        final String targetKey = this.targetKey(identifier);
+        Ut.itJArray(active).forEach(sourceJ -> {
+            final Object value = sourceJ.getValue(sourceKey);
+            if (Objects.isNull(targetKey) || Objects.isNull(value)) {
+                // targetKey == null || value == null
+                consumerFn.accept(sourceJ, null);
+            } else {
+                // targetKey != null && value != null
+                final JsonObject found = Ut.elementFind(assist, targetKey, value);
+                consumerFn.accept(sourceJ, found);
+            }
+        });
+    }
+
+    // source.key / target.keyJoin --> qr
+    protected JsonObject procQr(final JsonObject active, final String identifier) {
+        final String keySource = this.sourceKey();
+        final KPoint target = this.target(identifier);
+        final JsonObject dataJoin = new JsonObject();
+        if (Objects.nonNull(target)) {
+            // 若连接点存在，则执行连接点部分的数据
+            String joinedValue = active.getString(keySource);
+            if (Ut.isNil(joinedValue)) {
+                joinedValue = active.getString(target.getKeyJoin());
+            }
+            // 最终合并的Qr数据相关信息
+            if (Ut.isNotNil(joinedValue)) {
+                dataJoin.put(target.getKeyJoin(), joinedValue);
+            }
+        }
+        return dataJoin;
+    }
+
     // source.key -> target.keyJoin
-    protected JsonObject dataIn(final JsonObject active, final String identifier) {
-        final String keySource = this.keySource();
-        final KPoint target = this.pTarget(identifier);
+    protected JsonObject procInput(final JsonObject active, final String identifier) {
+        final String keySource = this.sourceKey();
+        final KPoint target = this.target(identifier);
         final JsonObject dataJoin = new JsonObject();
         if (Objects.nonNull(target)) {
             // 若连接点存在，则执行连接点部分的数据
@@ -115,9 +161,9 @@ public abstract class ConflateBase<I, O> implements Conflate<I, O> {
     }
 
     // target.keyJoin -> source.key
-    protected JsonObject dataOut(final JsonObject active, final String identifier) {
-        final String keySource = this.keySource();
-        final KPoint target = this.pTarget(identifier);
+    protected JsonObject procOutput(final JsonObject active, final String identifier) {
+        final String keySource = this.sourceKey();
+        final KPoint target = this.target(identifier);
         final JsonObject dataJoin = new JsonObject();
         if (Objects.nonNull(target)) {
             // 若连接点存在，则执行连接点部分的数据
