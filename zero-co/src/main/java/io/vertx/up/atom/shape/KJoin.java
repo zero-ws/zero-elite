@@ -5,10 +5,8 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.up.util.Ut;
 
 import java.io.Serializable;
-import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
-import java.util.function.Consumer;
 
 /**
  * 连接配置，位于CRUD模型配置的核心节点 `connect` 的数据结构，结构如下
@@ -119,51 +117,5 @@ public class KJoin implements Serializable {
             identifier = this.targetIndent;
         }
         return identifier;
-    }
-
-
-    // 连接条件方法
-
-    /**
-     * key -> keyJoin
-     */
-    public void dataIn(final JsonObject ds, final KPoint target, final JsonObject data) {
-        this.dataRun(target, (source) -> {
-            final String joinedValue = ds.getString(source.getKey());
-            if (Ut.isNotNil(joinedValue)) {
-                data.put(target.getKeyJoin(), joinedValue);
-            }
-        });
-    }
-
-    public void dataCond(final JsonObject ds, final KPoint target, final JsonObject data) {
-        this.dataRun(target, (source) -> {
-            String joinedValue = ds.getString(source.getKey());
-            if (Ut.isNil(joinedValue)) {
-                joinedValue = ds.getString(target.getKeyJoin());
-            }
-            if (Ut.isNotNil(joinedValue)) {
-                data.put(target.getKeyJoin(), joinedValue);
-            }
-        });
-    }
-
-    /**
-     * keyJoin -> key
-     */
-    public void dataOut(final JsonObject ds, final KPoint target, final JsonObject data) {
-        this.dataRun(target, (source) -> {
-            final String joinedValue = ds.getString(target.getKeyJoin());
-            if (Ut.isNotNil(joinedValue)) {
-                data.put(source.getKey(), joinedValue);
-            }
-        });
-    }
-
-    private void dataRun(final KPoint target, final Consumer<KPoint> consumer) {
-        final KPoint source = this.source;
-        if (Objects.nonNull(target) && Objects.nonNull(source)) {
-            consumer.accept(source);
-        }
     }
 }

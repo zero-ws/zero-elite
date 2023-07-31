@@ -40,6 +40,7 @@ class ConflateAIo extends ConflateBase<JsonArray, JsonArray> {
     @Override
     public JsonArray treat(final JsonArray active, final JsonArray assist, final String identifier) {
         final JsonArray zip = new JsonArray();
+        // 处理每个元素
         this.procEach(active, assist, identifier, (sourceJ, target) -> {
             // 检查 target
             final JsonObject normalized;
