@@ -112,7 +112,7 @@ public class KPoint implements Serializable {
     }
 
     public JsonObject getSynonym() {
-        return this.synonym;
+        return Objects.isNull(this.synonym) ? new JsonObject() : this.synonym;
     }
 
     public void setSynonym(final JsonObject synonym) {
