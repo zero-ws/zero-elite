@@ -5,6 +5,7 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.up.util.Ut;
 
 import java.io.Serializable;
+import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
@@ -87,6 +88,9 @@ public class KJoin implements Serializable {
         this.target = target;
     }
 
+    public boolean isRefer() {
+        return Objects.nonNull(this.reference);
+    }
     // --------------------- 非POJO类方法 ---------------------
     // 连接点
 
