@@ -5,7 +5,7 @@ import io.horizon.uca.cache.Cc;
 
 
 @SuppressWarnings("all")
-interface Pool {
+interface POOL {
     @Memory(Hymn.class)
     Cc<String, Hymn> CCT_HYMN = Cc.openThread();
 

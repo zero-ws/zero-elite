@@ -22,29 +22,17 @@ public interface Conflate<I, O> {
 
     // ( JsonArray | JsonObject ) / JsonObject
     static <I> Conflate<I, JsonObject> ofQr(final KJoin joinRef, final boolean isArray) {
-        if (isArray) {
-            return Pool.CCT_CONFLATE.pick(() -> new ConflateAQr(joinRef));
-        } else {
-            return Pool.CCT_CONFLATE.pick(() -> new ConflateJQr(joinRef));
-        }
+        return BuilderConflate.ofQr(joinRef, isArray);
     }
 
     // JsonArray / JsonArray
     static Conflate<JsonArray, JsonArray> ofJArray(final KJoin joinRef, final boolean isOut) {
-        if (isOut) {
-            return Pool.CCT_CONFLATE.pick(() -> new ConflateAIo(joinRef, true));
-        } else {
-            return Pool.CCT_CONFLATE.pick(() -> new ConflateAIo(joinRef, false));
-        }
+        return BuilderConflate.ofJArray(joinRef, isOut);
     }
 
     // JsonObject / JsonObject
     static Conflate<JsonObject, JsonObject> ofJObject(final KJoin joinRef, final boolean isOut) {
-        if (isOut) {
-            return Pool.CCT_CONFLATE.pick(() -> new ConflateJOut(joinRef));
-        } else {
-            return Pool.CCT_CONFLATE.pick(() -> new ConflateJIn(joinRef));
-        }
+        return BuilderConflate.ofJObject(joinRef, isOut);
     }
 
     // 默认实现是为了 QR 部分量身打造，不可直接使用

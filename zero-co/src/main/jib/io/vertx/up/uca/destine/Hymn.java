@@ -21,15 +21,15 @@ import io.vertx.up.atom.shape.KPoint;
 public interface Hymn<T> {
 
     static Hymn<String> ofString(final KJoin join) {
-        return Pool.CCT_HYMN.pick(() -> new HymnString(join), HymnString.class.getName());
+        return POOL.CCT_HYMN.pick(() -> new HymnString(join), HymnString.class.getName());
     }
 
     static Hymn<JsonObject> ofJObject(final KJoin join) {
-        return Pool.CCT_HYMN.pick(() -> new HymnJObject(join), HymnJObject.class.getName());
+        return POOL.CCT_HYMN.pick(() -> new HymnJObject(join), HymnJObject.class.getName());
     }
 
     static Hymn<JsonArray> ofJArray(final KJoin join) {
-        return Pool.CCT_HYMN.pick(() -> new HymnJArray(join), HymnJArray.class.getName());
+        return POOL.CCT_HYMN.pick(() -> new HymnJArray(join), HymnJArray.class.getName());
     }
 
     /**
