@@ -1,8 +1,6 @@
 package io.vertx.up.atom.shape;
 
 import io.horizon.uca.log.Annal;
-import io.vertx.core.json.JsonObject;
-import io.vertx.up.util.Ut;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -90,36 +88,5 @@ public class KJoin implements Serializable {
 
     public boolean isRefer() {
         return Objects.nonNull(this.reference);
-    }
-    // --------------------- 非POJO类方法 ---------------------
-    // 连接点
-
-    /**
-     * 从数据中解析出 identifier，直接根据传入 JSON 数据解析出模型标识符 identifier
-     * 解析步骤如下：
-     * <pre><code>
-     *     1. 检查是否存在 `targetIndent` 属性（解析数据时必须）
-     *     2. - 若存在 `targetIndent` 中定义的属性，则从数据中提取 data[targetIndent]
-     *        - 若不存在 `targetIndent` 中定义的属性，则直接使用 `targetIndent` 作为 identifier（固定常量）
-     * </code></pre>
-     *
-     * @param data {@link JsonObject} 传入的数据
-     *
-     * @return {@link String} 解析出的 identifier
-     */
-    public String indentTarget(final JsonObject data) {
-        if (Ut.isNil(this.targetIndent)) {
-            LOGGER.warn("The `targetIndent` field is null");
-            return null;
-        }
-        final String identifier;
-        if (data.containsKey(this.targetIndent)) {
-            // 解析值
-            identifier = data.getString(this.targetIndent);
-        } else {
-            // 固定值
-            identifier = this.targetIndent;
-        }
-        return identifier;
     }
 }

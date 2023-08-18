@@ -37,7 +37,7 @@ class HymnJArray extends HymnBase<JsonArray> {
     public KPoint pointer(final JsonArray dataA) {
         // 先从数据节点解析 identifier
         final Set<String> idSet = new HashSet<>();
-        Ut.itJArray(dataA).map(this.joinRef::indentTarget)
+        Ut.itJArray(dataA).map(this::id)
             .filter(Objects::nonNull).forEach(idSet::add);
         Fn.out(1 != idSet.size(), _412IndentUnknownException.class, this.getClass(), this.joinRef.getTargetIndent());
 

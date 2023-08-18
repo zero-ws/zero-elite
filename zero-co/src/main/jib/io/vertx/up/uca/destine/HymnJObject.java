@@ -35,7 +35,7 @@ class HymnJObject extends HymnBase<JsonObject> {
     @Override
     public KPoint pointer(final JsonObject dataJ) {
         // 先从数据节点解析 identifier
-        final String identifier = this.joinRef.indentTarget(dataJ);
+        final String identifier = this.id(dataJ);
         Fn.out(Ut.isNil(identifier), _412IndentParsingException.class,
             this.getClass(), this.joinRef.getTargetIndent(), dataJ);
 
