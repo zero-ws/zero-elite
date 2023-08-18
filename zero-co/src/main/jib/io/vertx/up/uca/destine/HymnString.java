@@ -32,6 +32,16 @@ class HymnString extends HymnBase<String> {
             // 输入为 null，直接返回 null 连接点
             return null;
         }
+        if (this.joinRef.isRefer()) {
+            // 父从表模式
+            return this.pointRefer(identifier);
+        } else {
+            // 父主表模式
+            return this.pointTarget(identifier);
+        }
+    }
+
+    private KPoint pointTarget(final String identifier) {
         final ConcurrentMap<String, KPoint> targetMap = this.joinRef.getTarget();
         final KPoint point = targetMap.getOrDefault(identifier, null);
         if (Objects.isNull(point)) {
@@ -46,6 +56,15 @@ class HymnString extends HymnBase<String> {
          * - crud / actor：相同时，则直接 identifier 和 actor 是一致的（都为 identifier）
          * - crud / actor：不同时，则直接 identifier 和 actor 是不一致的
          */
+        return point.indent(identifier);
+    }
+
+    private KPoint pointRefer(final String identifier) {
+        final KPoint point = this.joinRef.getReference();
+        if (Objects.isNull(point)) {
+            // 目标连接点为 null，直接返回
+            return null;
+        }
         return point.indent(identifier);
     }
 }
