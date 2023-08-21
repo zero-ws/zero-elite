@@ -1,7 +1,5 @@
 package io.vertx.up.atom.shape;
 
-import io.horizon.uca.log.Annal;
-
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
@@ -40,8 +38,6 @@ import java.util.concurrent.ConcurrentMap;
  * @author <a href="http://www.origin-x.cn">Lang</a>
  */
 public class KJoin implements Serializable {
-
-    private static final Annal LOGGER = Annal.get(KJoin.class);
     /** 做JOIN的目标模型的 identifier 属性 */
     private volatile String targetIndent;
 

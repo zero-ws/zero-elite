@@ -19,14 +19,16 @@ interface Pool {
 }
 
 /**
- * Data Booting for configuration
+ * 扩展启动器，用于 Zero Extension 扩展模块专用，职责如下：
+ * <pre><code>
+ *     1. 负责扩展模块数据导入
+ *     2. 负责扩展模块抓取 crud 部分配置
+ * </code></pre>
  *
  * @author <a href="http://www.origin-x.cn">Lang</a>
  */
 public interface HExtension {
-    /*
-     * Capture all HExtension components
-     */
+
     static Set<HExtension> initialize() {
         /* Boot processing */
         final ConcurrentMap<Class<?>, HExtension> data = Pool.CC_BOOTS.store();
