@@ -16,7 +16,7 @@ public class IOTc extends ZeroBase {
 
     @Test
     public void testYaml(final TestContext context) {
-        context.assertNotNull(HUt.ioYaml(this.ioString("mock.yaml")));
+        context.assertNotNull(HUt.ioYaml(this.ioString("test.yaml")));
     }
 
     @SuppressWarnings("all")
