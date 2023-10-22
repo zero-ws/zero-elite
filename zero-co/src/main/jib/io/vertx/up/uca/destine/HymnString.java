@@ -2,6 +2,7 @@ package io.vertx.up.uca.destine;
 
 import io.vertx.up.atom.shape.KJoin;
 import io.vertx.up.atom.shape.KPoint;
+import io.vertx.up.eon.em.EmPRI;
 
 import java.util.Objects;
 import java.util.concurrent.ConcurrentMap;
@@ -32,7 +33,7 @@ class HymnString extends HymnBase<String> {
             // 输入为 null，直接返回 null 连接点
             return null;
         }
-        if (this.joinRef.isRefer()) {
+        if (EmPRI.Connect.PARENT_STANDBY == this.joinRef.refer()) {
             // 父从表模式
             return this.pointRefer(identifier);
         } else {

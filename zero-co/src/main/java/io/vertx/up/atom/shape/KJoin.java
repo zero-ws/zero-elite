@@ -1,5 +1,7 @@
 package io.vertx.up.atom.shape;
 
+import io.vertx.up.eon.em.EmPRI;
+
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
@@ -82,7 +84,13 @@ public class KJoin implements Serializable {
         this.target = target;
     }
 
-    public boolean isRefer() {
-        return Objects.nonNull(this.reference);
+    public EmPRI.Connect refer() {
+        if (Objects.isNull(this.reference)) {
+            // 父主表模式
+            return EmPRI.Connect.PARENT_ACTIVE;
+        } else {
+            // 父从表模式
+            return EmPRI.Connect.PARENT_STANDBY;
+        }
     }
 }

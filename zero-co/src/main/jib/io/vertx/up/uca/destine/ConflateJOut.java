@@ -3,6 +3,7 @@ package io.vertx.up.uca.destine;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.atom.shape.KJoin;
 import io.vertx.up.atom.shape.KPoint;
+import io.vertx.up.eon.em.EmPRI;
 import io.vertx.up.util.Ut;
 
 import java.util.Objects;
@@ -44,8 +45,11 @@ class ConflateJOut extends ConflateBase<JsonObject, JsonObject> {
 
         // 连接点数据
         final JsonObject combine = standJ.mergeIn(active, true);
-        final JsonObject connected = this.procOutput(combine, identifier);
-        combine.mergeIn(connected, true);
+        if (EmPRI.Connect.PARENT_ACTIVE == this.joinRef.refer()) {
+            // 这个代码只在父主表模式生效
+            final JsonObject connected = this.procOutput(combine, identifier);
+            combine.mergeIn(connected, true);
+        }
 
         // 构造最终数据
         return combine;

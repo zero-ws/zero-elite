@@ -4,6 +4,7 @@ import io.horizon.uca.log.Log;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.atom.shape.KJoin;
 import io.vertx.up.atom.shape.KPoint;
+import io.vertx.up.eon.em.EmPRI;
 import io.vertx.up.util.Ut;
 
 import java.util.Objects;
@@ -44,7 +45,7 @@ public abstract class HymnBase<T> implements Hymn<T> {
      * @return {@link String} 解析出来的 identifier
      */
     protected String id(final JsonObject dataJ) {
-        if (this.joinRef.isRefer()) {
+        if (EmPRI.Connect.PARENT_STANDBY == this.joinRef.refer()) {
             // 父从表模式
             return this.idRefer();
         } else {
