@@ -36,7 +36,9 @@ public class AtomNsZero implements AtomNs {
             ? VEnv.APP.NS_DEFAULT :                     // io.mature.aeon
             HUt.fromMessage(prefix, appName);           // io.mature.{0} 或 Z_NS
         Ho.LOG.Aeon.info(this.getClass(),
-            "名空间: {0}, 应用：{1}", namespace, appName);
+            "名空间: {0}, 前缀：{1}", namespace, prefix);
+        Ho.LOG.Aeon.info(this.getClass(),
+            "应用名：{0}", appName);
         return namespace;
     }
 }
