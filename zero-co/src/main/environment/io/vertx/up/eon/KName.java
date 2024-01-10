@@ -364,4 +364,11 @@ public interface KName extends VName {
         String YEAR = "year";
         String YEARS = "years";
     }
+
+    // Finance
+    interface Finance {
+        String SETTLEMENT_ID = "settlementId";
+        String ORDER_ID = "orderId";
+        String BILL_ID = "billId";
+    }
 }
