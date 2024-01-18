@@ -8,6 +8,6 @@ import java.lang.annotation.*;
 @Inherited
 public @interface Contract {
     /*
-     * This annotation is used between different business component
+     * This annotation is used between different income component
      */
 }

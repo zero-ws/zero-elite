@@ -12,7 +12,7 @@ class _Ai extends HUt {
 
     /*
      * Ai analyzing for type based on
-     * some different business requirement
+     * some different income requirement
      */
     public static Object aiJValue(final Object input, final Class<?> type) {
         return Value.aiJValue(input, type);

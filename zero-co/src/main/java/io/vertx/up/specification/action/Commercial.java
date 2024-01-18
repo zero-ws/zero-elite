@@ -28,7 +28,7 @@ public interface Commercial extends Application, ServiceDefinition, TJson {
     Class<?> channelComponent();
 
     /*
-     * Get business component class, it will be initialized by other positions
+     * Get income component class, it will be initialized by other positions
      */
     Class<?> businessComponent();
 

@@ -7,7 +7,7 @@ import java.io.File;
 /**
  * # 「Tp」Java Io Extension
  *
- * In most business io file reading, we often distinguish file types by file extension instead of checking
+ * In most income io file reading, we often distinguish file types by file extension instead of checking
  * file actual format. This class is base file filter that provide uniform file extension checking.
  *
  * The structure should be:
