@@ -372,5 +372,10 @@ public interface KName extends VName {
         String BILL_ID = "billId";
 
         String BOOK = "book";
+
+        // NODE
+        String SETTLEMENTS = "settlements";
+        String DEBTS = "debts";
+        String TRANSACTIONS = "transactions";
     }
 }
