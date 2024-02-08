@@ -17,9 +17,9 @@ public class UniqueTc extends ZeroBase {
         final HRule unique = HRule.of(input);
         Assert.assertNotNull(unique);
         Assert.assertNotNull(unique.child("ci.device"));
-        Assert.assertNotNull(unique.child("ci.income"));
+        Assert.assertNotNull(unique.child("ci.business"));
         Assert.assertTrue(unique.valid());
         Assert.assertTrue(unique.child("ci.device").valid());
-        Assert.assertFalse(unique.child("ci.income").valid());
+        Assert.assertFalse(unique.child("ci.business").valid());
     }
 }
