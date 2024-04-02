@@ -10,7 +10,6 @@ import java.lang.annotation.*;
  * This annotation will be comments to `websocket` method and the
  * SockAxis will scan all these kind of `method` instead, because SockJS
  * is often building just like following:
- *
  * 1) The Server should send the message to client, here are the trigger mode
  * -- A. The scheduled @Job send the message to address
  * -- B. The api send the message to address ( One-Way Mode )
