@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>zero-elite</artifactId>
     <packaging>pom</packaging>
-    <name>Zero Core</name>
+    <name>Zero.Core.Runtime.POM.${zero.version}</name>
     <modules>
         <module>zero-co</module>
         <module>zero-macro</module>

@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>zero-co</artifactId>
-    <name>Zero Core / Core Library</name>
+    <name>Zero.Core.Runtime.Library</name>
     <dependencies>
         <dependency>
             <groupId>io.zerows</groupId>
