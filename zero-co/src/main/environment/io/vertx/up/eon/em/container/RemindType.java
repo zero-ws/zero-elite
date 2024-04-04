@@ -10,11 +10,11 @@ public enum RemindType {
     BRIDGE,
 
     /*
-     * This method is configuration for `Remind` ( Related to @Broker ), as inner zero framework:
+     * This method is configuration for `Remind` ( Related to @Subscribe ), as inner zero framework:
      *
      * - @Address means event bus address and you can publish / subscribe on this address.
      *   「FORMAT」: TOPIC://XXX/XXX
-     * - @Broker is a new annotation for websocket, it means that you can subscribe the topic in
+     * - @Subscribe is a new annotation for websocket, it means that you can subscribe the topic in
      *   this address instead.
      *   「FORMAT」: /job/notify or /xxx/xxxx,
      *

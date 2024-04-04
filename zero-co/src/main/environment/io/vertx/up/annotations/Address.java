@@ -25,12 +25,12 @@ import java.lang.annotation.*;
  * annotated with @Address.
  * 3. Both Agent/Worker must be in pair ( 1:1 ), they are communicated with the same `value()` in @Address.
  *
- * ## 2. Scenario 2: Broker Input
+ * ## 2. Scenario 2: Subscribe Input
  *
- * You can use this annotation in websocket method that has been annotated with @Broker
+ * You can use this annotation in websocket method that has been annotated with @Subscribe
  *
- * 1. WebSocket annotation @Broker must not be in class annotated with @Queue.
- * 2. In WebSocket method ( annotated by @Broker ), the @Address means the input of current method came from @Address
+ * 1. WebSocket annotation @Subscribe must not be in class annotated with @Queue.
+ * 2. In WebSocket method ( annotated by @Subscribe ), the @Address means the input of current method came from @Address
  * position and it also support async operations.
  *
  * @author <a href="http://www.origin-x.cn">Lang</a>

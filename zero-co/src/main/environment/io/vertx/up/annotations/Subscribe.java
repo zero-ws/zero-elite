@@ -21,7 +21,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Inherited
-public @interface Broker {
+public @interface Subscribe {
     /*
      * The first part of `websocket`, the address means that
      * the correct address from front-end, here are the address design for
