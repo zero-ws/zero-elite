@@ -22,16 +22,21 @@ import org.jooq.impl.DSL;
 import java.util.*;
 import java.util.function.Function;
 
-@SuppressWarnings("rawtypes")
+@SuppressWarnings("all")
 public class JooqCond {
 
     // Condition ---------------------------------------------------------
     private static final Set<String> KEYWORD_SET = new HashSet<>() {
         {
-            // MySQL keyword reserved for usage instead of directly
+            /*
+             * SQL关键字
+             * MySQL
+             * - KEY, NAME, GROUP, TO
+             */
             this.add("KEY");
             this.add("GROUP");
             this.add("NAME");
+            this.add("TO");
         }
     };
     private static final Annal LOGGER = Annal.get(JooqCond.class);
