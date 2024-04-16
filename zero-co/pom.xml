@@ -186,6 +186,8 @@
                     <instructions>
                         <Export-Package>
                             <!-- 编译警告 -->
+                            io.vertx.up.*,
+                            io.zerows.*,
                         </Export-Package>
                         <Import-Package>
                             *;resolution:=optional,

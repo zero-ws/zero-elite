@@ -58,13 +58,13 @@
         <appender-ref ref="VTC"/>
     </appender>
 
-    <logger name="io.vertx.up.bottle.ZeroScheduler" level="INFO">
+    <logger name="io.zerows.launcher.bottle.ZeroScheduler" level="INFO">
         <appender-ref ref="ASYNC_VTCJ"/>
     </logger>
-    <logger name="io.vertx.up.bottle.ZeroHttpAgent" level="INFO">
+    <logger name="io.zerows.launcher.bottle.ZeroHttpAgent" level="INFO">
         <appender-ref ref="ASYNC_VTCA"/>
     </logger>
-    <logger name="io.vertx.up.bottle.ZeroHttpWorker" level="INFO">
+    <logger name="io.zerows.launcher.bottle.ZeroHttpWorker" level="INFO">
         <appender-ref ref="ASYNC_VTCA"/>
     </logger>
     <logger name="io.vertx.up.bottle" level="INFO">

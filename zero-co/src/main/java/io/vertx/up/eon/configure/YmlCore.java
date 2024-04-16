@@ -200,7 +200,7 @@ public interface YmlCore {
      *        provider:
      *            authenticate:
      *            authorization:
-     * cors:  {@see io.vertx.up.secure.config.CorsConfig}
+     * cors:  {@see io.zerows.secure.config.CorsConfig}
      *    credentials:
      *    methods:
      *    headers:
