@@ -1,5 +1,7 @@
 package io.vertx.up.eon.configure;
 
+import io.vertx.up.annotations.infix.*;
+
 /**
  * @author lang : 2023-05-29
  */
@@ -7,15 +9,15 @@ interface YmlInject {
     String __KEY = "inject";
 
     // 内部扩展
-    /** {@link jakarta.inject.infix.Mongo} */
+    /** {@link Mongo} */
     String MONGO = "mongo";
-    /** {@link jakarta.inject.infix.MySql} */
+    /** {@link MySql} */
     String MYSQL = "mysql";
-    /** {@link jakarta.inject.infix.Redis} */
+    /** {@link Redis} */
     String REDIS = "redis";
-    /** {@link jakarta.inject.infix.Rpc} */
+    /** {@link Rpc} */
     String RPC = "rpc";
-    /** {@link jakarta.inject.infix.Jooq} */
+    /** {@link Jooq} */
     String JOOQ = "jooq";
 
     String SESSION = "session";

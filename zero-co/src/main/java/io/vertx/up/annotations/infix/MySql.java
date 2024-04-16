@@ -1,4 +1,4 @@
-package jakarta.inject.infix;
+package io.vertx.up.annotations.infix;
 
 import java.lang.annotation.*;
 

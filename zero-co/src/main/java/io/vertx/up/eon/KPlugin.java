@@ -1,8 +1,8 @@
 package io.vertx.up.eon;
 
+import io.vertx.up.annotations.infix.*;
 import io.vertx.up.eon.configure.YmlCore;
 import jakarta.inject.Inject;
-import jakarta.inject.infix.*;
 
 import java.lang.annotation.Annotation;
 import java.util.HashSet;

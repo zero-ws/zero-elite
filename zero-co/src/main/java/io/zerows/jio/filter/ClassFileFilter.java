@@ -1,4 +1,4 @@
-package javax.io.filter;
+package io.zerows.jio.filter;
 
 import io.horizon.eon.VPath;
 
@@ -9,7 +9,7 @@ import java.io.FileFilter;
 /**
  * # 「Tp」Java Io Extension
  *
- * This class inherit from {@link javax.io.filter.BaseFilter} to extend `java.io.FileFilter` and it read `.class` file
+ * This class inherit from {@link BaseFilter} to extend `java.io.FileFilter` and it read `.class` file
  * only.
  *
  * The usage in zero framework code segments are as following:
