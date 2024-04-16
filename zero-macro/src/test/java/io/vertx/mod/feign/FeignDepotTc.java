@@ -3,7 +3,7 @@ package io.vertx.mod.feign;
 import io.vertx.ext.unit.TestContext;
 import io.vertx.quiz.ZeroBase;
 import io.vertx.up.exception.booting.DynamicKeyMissingException;
-import io.vertx.up.plugin.init.TpConfig;
+import io.zerows.macro.plugin.init.TpConfig;
 import org.junit.Test;
 
 public class FeignDepotTc extends ZeroBase {
