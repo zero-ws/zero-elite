@@ -21,6 +21,10 @@
             <groupId>io.zerows</groupId>
             <artifactId>zero-core-runtime-metadata</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.zerows</groupId>
+            <artifactId>zero-core-cloud-environment</artifactId>
+        </dependency>
         <!-- Code Gen -->
         <dependency>
             <groupId>io.vertx</groupId>

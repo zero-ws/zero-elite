@@ -2,7 +2,7 @@ package io.zerows.core.metadata.uca.logging;
 
 import io.horizon.eon.VString;
 import io.horizon.uca.log.Annal;
-import io.vertx.up.annotations.metadata.Semantics;
+import io.vertx.up.annotations.Semantics;
 import io.zerows.core.metadata.cache.CStore;
 
 import java.util.Objects;

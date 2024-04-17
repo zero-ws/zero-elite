@@ -1,6 +1,6 @@
 package io.zerows.core.metadata.cache;
 
-import io.vertx.up.annotations.metadata.Semantics;
+import io.vertx.up.annotations.Semantics;
 
 /**
  * @author lang : 2024-04-17

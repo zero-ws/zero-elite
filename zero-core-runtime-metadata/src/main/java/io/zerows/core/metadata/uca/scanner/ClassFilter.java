@@ -1,6 +1,6 @@
 package io.zerows.core.metadata.uca.scanner;
 
-import io.vertx.up.annotations.metadata.Semantics;
+import io.vertx.up.annotations.Semantics;
 import io.vertx.up.eon.em.EmMonitor;
 
 /**
