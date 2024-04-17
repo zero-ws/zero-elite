@@ -20,5 +20,29 @@ class _Log extends _Load {
         public static OLog boot(final Class<?> clazz) {
             return OLog.of(clazz, "Boot");
         }
+
+        public static OLog callback(final Class<?> clazz) {
+            return OLog.of(clazz, "Callback");
+        }
+
+        public static OLog service(final Class<?> clazz) {
+            return OLog.of(clazz, "Service");
+        }
+
+        public static OLog plugin(final Class<?> clazz) {
+            return OLog.of(clazz, "Plugin");
+        }
+
+        public static OLog job(final Class<?> clazz) {
+            return OLog.of(clazz, "Job");
+        }
+
+        public static OLog exception(final Class<?> clazz) {
+            return OLog.of(clazz, "Exception");
+        }
+
+        public static OLog bundle(final Class<?> clazz) {
+            return OLog.of(clazz, "Bundle");
+        }
     }
 }

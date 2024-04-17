@@ -71,10 +71,18 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
+                            <!-- SPI Required -->
+                            io.zerows.core.metadata.osgi.spi.*;-split-package:=merge-first,
+
                             io.zerows.core.metadata.*,
-                            io.vertx.up.util.*,
+                            io.vertx.up.*,
+
                             <!-- Required -->
                             jakarta.inject.*,
+
+                            <!-- logback / slf4j -->
+                            org.slf4j.*;-split-package:=merge-first,
+                            ch.qos.logback.*,
                         </Export-Package>
                         <Import-Package>
                             *;resolution:=optional,

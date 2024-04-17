@@ -1,14 +1,11 @@
 package io.zerows.core.metadata.osgi.spi;
 
 import io.horizon.spi.HorizonIo;
-import io.horizon.spi.boot.HEquip;
-import io.horizon.util.HUt;
-import io.macrocosm.specification.config.HConfig;
-import io.macrocosm.specification.config.HSetting;
+import io.horizon.uca.log.internal.Log4JAnnal;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.KName;
-import io.vertx.up.eon.configure.YmlCore;
-import io.zerows.core.metadata.store.config.OZeroEquip;
+import io.zerows.core.metadata.store.config.OZeroFailure;
+import io.zerows.core.metadata.zdk.running.OCache;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.FrameworkUtil;
 
@@ -16,23 +13,25 @@ import org.osgi.framework.FrameworkUtil;
  * @author lang : 2023/4/28
  */
 public class HorizonIoLoad implements HorizonIo {
-    private final HSetting setting;
+    private final OCache<JsonObject> cache;
 
     public HorizonIoLoad() {
         final Bundle bundle = FrameworkUtil.getBundle(this.getClass());
-        final HEquip equip = OZeroEquip.of(bundle);
-        this.setting = equip.initialize();
+        this.cache = OZeroFailure.of(bundle);
     }
 
     @Override
     public JsonObject ofError() {
-        final HConfig error = this.setting.infix(YmlCore.error.__KEY);
-        return HUt.valueJObject(error.options(), KName.ERROR);
+        return this.cache.get(KName.ERROR);
     }
 
     @Override
     public JsonObject ofFailure() {
-        final HConfig error = this.setting.infix(YmlCore.error.__KEY);
-        return HUt.valueJObject(error.options(), KName.INFO);
+        return this.cache.get(KName.INFO);
+    }
+
+    @Override
+    public Class<?> ofLogger() {
+        return Log4JAnnal.class;
     }
 }

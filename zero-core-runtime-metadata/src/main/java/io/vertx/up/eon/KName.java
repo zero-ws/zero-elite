@@ -8,11 +8,12 @@ import java.util.Set;
 
 public interface KName extends VName {
 
+    String START = "start";
+    String STOP = "stop";
     // 「Specification Definition」
     interface __ extends VName.__ {
 
     }
-
 
     // 「Attachment Definition」
     interface Attachment {

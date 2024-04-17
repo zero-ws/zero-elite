@@ -178,6 +178,9 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
+                            <!-- SPI Required -->
+                            io.zerows.core.metadata.osgi.spi.*;-split-package:=merge-first,
+                            
                             <!-- 编译警告 -->
                             io.vertx.up.*,
                             io.zerows.*,

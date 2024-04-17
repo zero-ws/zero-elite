@@ -1,6 +1,5 @@
 package io.zerows.core.metadata.store.config;
 
-import io.horizon.spi.boot.HEquip;
 import io.horizon.uca.log.internal.Log4JAnnal;
 import io.macrocosm.specification.config.HConfig;
 import io.macrocosm.specification.config.HSetting;
@@ -21,9 +20,12 @@ public class OZeroStore {
     private static final ConcurrentMap<String, Class<?>> INJECTION = new ConcurrentHashMap<>();
 
     static {
-        /* 容器部分配置 */
-        final HEquip equip = OZeroEquip.of(null);
-        SETTING = equip.initialize();
+        {
+            // 容器部分配置, 对接 OZeroFailure
+            final OZeroFailure cache = OZeroFailure.of(null);
+            cache.initialize();
+            SETTING = cache.setting();
+        }
         /*
          * vertx-inject.yml
          */
