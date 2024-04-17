@@ -1,7 +1,6 @@
 package io.zerows.core.metadata.store.config;
 
 import io.horizon.spi.boot.HEquip;
-import io.horizon.uca.log.Annal;
 import io.horizon.uca.log.internal.Log4JAnnal;
 import io.macrocosm.specification.config.HConfig;
 import io.macrocosm.specification.config.HSetting;
@@ -18,7 +17,6 @@ import java.util.function.Supplier;
  * @author lang : 2023-05-30
  */
 public class OZeroStore {
-    private static final Annal LOGGER = new Log4JAnnal(OZeroStore.class);
     private static final HSetting SETTING;
     private static final ConcurrentMap<String, Class<?>> INJECTION = new ConcurrentHashMap<>();
 

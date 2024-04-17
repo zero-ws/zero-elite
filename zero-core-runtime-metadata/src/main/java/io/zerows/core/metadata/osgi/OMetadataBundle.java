@@ -1,4 +1,4 @@
-package io.zerows.metadata.osgi;
+package io.zerows.core.metadata.osgi;
 
 import org.apache.felix.dm.DependencyActivatorBase;
 import org.apache.felix.dm.DependencyManager;
