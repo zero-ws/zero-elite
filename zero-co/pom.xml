@@ -12,6 +12,11 @@
     <packaging>bundle</packaging>
     <name>Zero.Core.Runtime.Library</name>
     <dependencies>
+        <!-- OSGI Module -->
+        <dependency>
+            <groupId>io.zerows</groupId>
+            <artifactId>zero-core-runtime-domain</artifactId>
+        </dependency>
         <dependency>
             <groupId>io.zerows</groupId>
             <artifactId>zero-core-runtime-metadata</artifactId>

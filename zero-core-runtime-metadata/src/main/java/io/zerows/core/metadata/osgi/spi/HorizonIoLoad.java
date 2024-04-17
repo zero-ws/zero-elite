@@ -1,4 +1,4 @@
-package io.zerows.core.metadata.spi;
+package io.zerows.core.metadata.osgi.spi;
 
 import io.horizon.spi.HorizonIo;
 import io.horizon.spi.boot.HEquip;

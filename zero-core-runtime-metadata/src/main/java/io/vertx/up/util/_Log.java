@@ -1,6 +1,6 @@
 package io.vertx.up.util;
 
-import io.zerows.core.metadata.zdk.running.OLog;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 /**
  * @author lang : 2024-04-17
@@ -15,6 +15,10 @@ class _Log extends _Load {
 
         public static OLog configure(final Class<?> clazz) {
             return OLog.of(clazz, "Callback");
+        }
+
+        public static OLog boot(final Class<?> clazz) {
+            return OLog.of(clazz, "Boot");
         }
     }
 }
