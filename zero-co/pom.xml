@@ -180,10 +180,12 @@
                         <Export-Package>
                             <!-- SPI Required -->
                             io.zerows.core.metadata.osgi.spi.*;-split-package:=merge-first,
-                            
+
                             <!-- 编译警告 -->
                             io.vertx.up.*,
-                            io.zerows.*,
+                            io.zerows.core.eon.*,
+                            io.zerows.core.spi.*,
+                            io.zerows.core.vertx.*,
                         </Export-Package>
                         <Import-Package>
                             *;resolution:=optional,

@@ -56,6 +56,11 @@
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.logback</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.gogo.command -->
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.gogo.command</artifactId>
+        </dependency>
     </dependencies>
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

@@ -29,6 +29,10 @@ class _Log extends _Load {
             return OLog.of(clazz, "Service");
         }
 
+        public static OLog command(final Class<?> clazz) {
+            return OLog.of(clazz, "Command");
+        }
+
         public static OLog plugin(final Class<?> clazz) {
             return OLog.of(clazz, "Plugin");
         }
