@@ -6,9 +6,9 @@ import io.horizon.uca.log.Annal;
 import io.modello.atom.app.KDatabase;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.configure.YmlCore;
-import io.vertx.up.runtime.ZeroStore;
 import io.vertx.up.runtime.env.MatureOn;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.store.config.OZeroStore;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -66,7 +66,7 @@ public class Database extends KDatabase {
      */
     public static Database getCurrent() {
         if (Objects.isNull(DATABASE)) {
-            final JsonObject configJ = ZeroStore.option(YmlCore.jooq.__KEY); // Database.VISITOR.read();
+            final JsonObject configJ = OZeroStore.option(YmlCore.jooq.__KEY); // Database.VISITOR.read();
             final JsonObject jooq = Ut.valueJObject(configJ, YmlCore.jooq.PROVIDER);
             DATABASE = configure(MatureOn.envDatabase(jooq, EmDS.Stored.PRIMARY));
         }
@@ -83,7 +83,7 @@ public class Database extends KDatabase {
      * @return {@link Database}
      */
     public static Database getHistory() {
-        final JsonObject configJ = ZeroStore.option(YmlCore.jooq.__KEY); // Database.VISITOR.read();
+        final JsonObject configJ = OZeroStore.option(YmlCore.jooq.__KEY); // Database.VISITOR.read();
         final JsonObject jooq = Ut.valueJObject(configJ, YmlCore.jooq.ORBIT);
         return configure(MatureOn.envDatabase(jooq, EmDS.Stored.HISTORY));
     }
@@ -97,7 +97,7 @@ public class Database extends KDatabase {
      * @return {@link Database}
      */
     public static Database getCamunda() {
-        final JsonObject configJ = ZeroStore.option(YmlCore.workflow.__KEY);
+        final JsonObject configJ = OZeroStore.option(YmlCore.workflow.__KEY);
         final JsonObject jooq = Ut.valueJObject(configJ, YmlCore.workflow.DATABASE);
         return configure(MatureOn.envDatabase(jooq, EmDS.Stored.WORKFLOW));
     }

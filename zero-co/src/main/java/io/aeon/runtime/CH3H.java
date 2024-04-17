@@ -3,7 +3,6 @@ package io.aeon.runtime;
 import io.aeon.atom.secure.KPermit;
 import io.aeon.atom.secure.KSemi;
 import io.horizon.annotations.Memory;
-import io.horizon.specification.typed.TCombiner;
 import io.horizon.uca.cache.Cc;
 
 /**
@@ -23,11 +22,4 @@ interface CH3H extends CH2H {
     Cc<String, KPermit> CC_PERMIT = Cc.open();
     @Memory(KSemi.class)
     Cc<String, KSemi> CC_SEMI = Cc.open();
-
-    /*
-     * 「界面级别处理」
-     */
-    @SuppressWarnings("all")
-    @Memory(TCombiner.class)
-    Cc<String, TCombiner> CC_COMBINER = Cc.openThread();
 }

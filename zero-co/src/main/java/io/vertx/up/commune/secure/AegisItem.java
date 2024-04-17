@@ -6,8 +6,8 @@ import io.vertx.up.commune.Ruler;
 import io.vertx.up.eon.configure.YmlCore;
 import io.vertx.up.eon.em.EmSecure;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.runtime.ZeroStore;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.store.config.OZeroStore;
 
 import java.io.Serializable;
 import java.util.Set;
@@ -23,7 +23,7 @@ public class AegisItem implements Serializable {
 
     static {
         //    final JsonObject configuration = Ut.valueJObject(config.getJsonObject(YmlCore.inject.SECURE));
-        final JsonObject configuration = ZeroStore.option(YmlCore.inject.SECURE);
+        final JsonObject configuration = OZeroStore.option(YmlCore.inject.SECURE);
         final Set<String> keys = EmSecure.AuthWall.keys();
         Ut.<JsonObject>itJObject(configuration, (value, field) -> {
             if (keys.contains(field)) {

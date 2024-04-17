@@ -14,6 +14,7 @@
     <modules>
         <module>zero-co</module>
         <module>zero-macro</module>
+        <module>zero-core-runtime-metadata</module>
     </modules>
     <build>
         <plugins>

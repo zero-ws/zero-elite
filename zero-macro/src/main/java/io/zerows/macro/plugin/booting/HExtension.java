@@ -5,8 +5,8 @@ import io.horizon.eon.spec.VBoot;
 import io.horizon.uca.cache.Cc;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.runtime.ZeroStore;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.store.config.OZeroStore;
 
 import java.util.HashSet;
 import java.util.List;
@@ -33,7 +33,7 @@ public interface HExtension {
         /* Boot processing */
         final ConcurrentMap<Class<?>, HExtension> data = Pool.CC_BOOTS.store();
         if (data.isEmpty()) {
-            final JsonObject launcher = ZeroStore.launcherJ();
+            final JsonObject launcher = OZeroStore.launcherJ();
             final JsonArray boots = Ut.valueJArray(launcher, VBoot.EXTENSION);
             Ut.itJArray(boots).forEach(json -> {
                 final Class<?> bootCls = Ut.clazz(json.getString(VBoot.extension.EXECUTOR), null);

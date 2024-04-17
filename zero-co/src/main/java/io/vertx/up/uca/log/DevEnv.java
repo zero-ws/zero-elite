@@ -2,9 +2,9 @@ package io.vertx.up.uca.log;
 
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.configure.YmlCore;
-import io.vertx.up.runtime.ZeroStore;
 import io.vertx.up.runtime.env.DiagnosisOption;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.store.config.OZeroStore;
 
 /**
  * # 「Co」Zero Extension for Debugger to process logs
@@ -34,7 +34,7 @@ public class DevEnv {
 
     static {
         // 开发选项问题
-        final JsonObject developmentJ = ZeroStore.option(YmlCore.development.__KEY);
+        final JsonObject developmentJ = OZeroStore.option(YmlCore.development.__KEY);
         final JsonObject diagnosisJ = developmentJ.getJsonObject(YmlCore.development.ENV);
         OPTION = Ut.deserialize(diagnosisJ, DiagnosisOption.class);
     }

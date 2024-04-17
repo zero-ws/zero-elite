@@ -6,7 +6,7 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.up.commune.Ruler;
 import io.vertx.up.exception.booting.DynamicKeyMissingException;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.runtime.ZeroStore;
+import io.zerows.core.metadata.store.config.OZeroStore;
 
 import java.io.Serializable;
 
@@ -28,9 +28,9 @@ public class TpConfig implements Serializable {
     private final transient String endpoint;
 
     public TpConfig(final String key, final String rule) {
-        final JsonObject raw = ZeroStore.option(key);
+        final JsonObject raw = OZeroStore.option(key);
         // Check up exception for key
-        Fn.outBoot(!ZeroStore.is(key),
+        Fn.outBoot(!OZeroStore.is(key),
             LOGGER, DynamicKeyMissingException.class,
             this.getClass(), key, raw);
 

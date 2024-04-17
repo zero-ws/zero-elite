@@ -4,8 +4,8 @@ import io.horizon.uca.log.Annal;
 import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.configure.YmlCore;
+import io.zerows.core.metadata.store.config.OZeroStore;
 import io.zerows.macro.plugin.cache.l1.L1Cache;
-import io.vertx.up.runtime.ZeroStore;
 
 import java.util.Objects;
 
@@ -21,11 +21,11 @@ public class Harp {
      * First method for initialized and read configuration
      */
     public static void init(final Vertx vertx) {
-        if (ZeroStore.is(YmlCore.cache.__KEY)) {
+        if (OZeroStore.is(YmlCore.cache.__KEY)) {
             /*
              * Cache enabled
              */
-            final JsonObject config = ZeroStore.option(YmlCore.cache.__KEY);
+            final JsonObject config = OZeroStore.option(YmlCore.cache.__KEY);
             // options.getJsonObject(YmlCore.cache.__KEY);
             LOGGER.info("[ Cache ] L1,L2,L3 has been configured: {0}", config);
             BUS_HARP = HarpBus.create(vertx, config);

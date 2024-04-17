@@ -32,15 +32,4 @@ interface CH1H extends CStore {
     @SuppressWarnings("all")
     @Memory(TEvent.class)
     Cc<String, TEvent> CCT_EVENT = Cc.openThread();
-
-
-    /*
-     * 「Zero标准」
-     * CC_SPI:    内置调用HService形成的通道接口（ServiceLoader规范）
-     *            HService优先级
-     *            - /META-INF/services/aeon/        Aeon Enabled
-     *            - /META-INF/services/             Zero Extension Enabled
-     */
-    @Memory(Object.class)
-    Cc<Class<?>, Object> CC_SPI = Cc.open();
 }

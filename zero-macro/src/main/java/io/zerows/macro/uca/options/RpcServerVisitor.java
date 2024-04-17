@@ -10,10 +10,10 @@ import io.vertx.up.eon.KName;
 import io.vertx.up.eon.configure.YmlCore;
 import io.vertx.up.exception.daemon.ServerConfigException;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.runtime.ZeroStore;
 import io.vertx.up.uca.options.ServerVisitor;
 import io.vertx.up.uca.options.Transformer;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.store.config.OZeroStore;
 import io.zerows.core.vertx.RpcOptions;
 import io.zerows.macro.uca.marshal.RpcServerSetUp;
 
@@ -36,7 +36,7 @@ public class RpcServerVisitor implements ServerVisitor<RpcOptions> {
         // 1. Must be the first line, fixed position.
         //        Fn.verifyLenEq(this.getClass(), 0, key);
         // 2. Visit the node for server, http
-        final JsonObject data = ZeroStore.option(YmlCore.server.__KEY); // this.node.read();
+        final JsonObject data = OZeroStore.option(YmlCore.server.__KEY); // this.node.read();
 
         Fn.outBug(null == data || !data.containsKey(KName.SERVER), logger(),
             ServerConfigException.class,
