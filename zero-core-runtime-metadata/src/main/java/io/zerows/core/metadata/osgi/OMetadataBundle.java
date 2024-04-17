@@ -2,8 +2,9 @@ package io.zerows.core.metadata.osgi;
 
 import io.vertx.up.eon.MessageOfLog;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.eon.OCommand;
 import io.zerows.core.metadata.osgi.service.OExceptionRegistry;
-import io.zerows.core.metadata.uca.command.CommandError;
+import io.zerows.core.metadata.uca.command.CommandStore;
 import io.zerows.core.metadata.zdk.running.ORegistry;
 import org.apache.felix.dm.DependencyActivatorBase;
 import org.apache.felix.dm.DependencyManager;
@@ -34,8 +35,8 @@ public class OMetadataBundle extends DependencyActivatorBase {
 
         // Command
         {
-            context.registerService(CommandError.class.getName(),
-                new CommandError(context), Ut.Bnd.command("estore"));
+            context.registerService(CommandStore.class.getName(),
+                new CommandStore(context), Ut.Bnd.command(OCommand.STORE));
         }
         Ut.Log.bundle(this.getClass())
             .info(MessageOfLog.BUNDLE.START, bundle.getSymbolicName());

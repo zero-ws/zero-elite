@@ -1,7 +1,7 @@
 package io.vertx.up.uca.destine;
 
-import io.vertx.up.atom.shape.KJoin;
-import io.vertx.up.atom.shape.KPoint;
+import io.zerows.core.domain.atom.specification.KJoin;
+import io.zerows.core.domain.atom.specification.KPoint;
 import io.vertx.up.eon.em.EmPRI;
 
 import java.util.Objects;

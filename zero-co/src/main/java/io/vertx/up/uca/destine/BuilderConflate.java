@@ -3,7 +3,7 @@ package io.vertx.up.uca.destine;
 import io.horizon.eon.VString;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.shape.KJoin;
+import io.zerows.core.domain.atom.specification.KJoin;
 
 /**
  * 针对组件 {@link Conflate} 的专用内部构造接口，此接口可根据不同输入信息构造对应的条件

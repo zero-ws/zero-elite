@@ -4,7 +4,7 @@ import com.zaxxer.hikari.HikariDataSource;
 import io.horizon.uca.cache.Cc;
 import io.horizon.uca.log.Annal;
 import io.modello.atom.app.KDatabase;
-import io.vertx.up.commune.config.Database;
+import io.zerows.core.domain.atom.commune.Database;
 import org.jooq.Configuration;
 import org.jooq.DSLContext;
 import org.jooq.SQLDialect;

@@ -1,8 +1,8 @@
 package io.vertx.up.uca.destine;
 
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.shape.KJoin;
-import io.vertx.up.atom.shape.KPoint;
+import io.zerows.core.domain.atom.specification.KJoin;
+import io.zerows.core.domain.atom.specification.KPoint;
 import io.vertx.up.util.Ut;
 
 import java.util.Objects;

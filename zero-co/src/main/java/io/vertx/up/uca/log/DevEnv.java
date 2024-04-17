@@ -2,7 +2,7 @@ package io.vertx.up.uca.log;
 
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.configure.YmlCore;
-import io.vertx.up.runtime.env.DiagnosisOption;
+import io.zerows.core.metadata.uca.environment.DiagnosisOption;
 import io.vertx.up.util.Ut;
 import io.zerows.core.metadata.store.config.OZeroStore;
 

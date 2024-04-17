@@ -1,6 +1,6 @@
 package io.vertx.up.uca.serialization;
 
-import io.vertx.up.commune.secure.Vis;
+import io.zerows.core.domain.atom.commune.secure.Vis;
 import io.vertx.up.fn.Fn;
 
 public class VisSaber extends BaseSaber {

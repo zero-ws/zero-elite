@@ -3,9 +3,9 @@ package io.zerows.macro.plugin.init;
 import io.horizon.uca.cache.Cc;
 import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.commune.Ruler;
 import io.vertx.up.exception.booting.DynamicKeyMissingException;
 import io.vertx.up.fn.Fn;
+import io.zerows.core.domain.uca.stable.Ruler;
 import io.zerows.core.metadata.store.config.OZeroStore;
 
 import java.io.Serializable;

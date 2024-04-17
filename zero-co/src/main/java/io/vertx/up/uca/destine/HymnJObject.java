@@ -2,8 +2,8 @@ package io.vertx.up.uca.destine;
 
 import io.horizon.uca.log.Log;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.shape.KJoin;
-import io.vertx.up.atom.shape.KPoint;
+import io.zerows.core.domain.atom.specification.KJoin;
+import io.zerows.core.domain.atom.specification.KPoint;
 import io.vertx.up.exception.web._412IndentParsingException;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;

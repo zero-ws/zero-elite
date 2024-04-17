@@ -3,8 +3,8 @@ package io.vertx.up.uca.destine;
 import io.horizon.uca.log.Log;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.shape.KJoin;
-import io.vertx.up.atom.shape.KPoint;
+import io.zerows.core.domain.atom.specification.KJoin;
+import io.zerows.core.domain.atom.specification.KPoint;
 import io.vertx.up.eon.KName;
 import io.vertx.up.util.Ut;
 
@@ -14,7 +14,7 @@ import java.util.function.BiConsumer;
 /**
  * 针对原始系统中的 dataIn / dataOut / dataCond 执行强替换，每一种替换使用一个子类来处理，这里是抽象类，不可直接使用，需要使用子类来实现，和 {@link Hymn} 不同的点在于：
  * <pre><code>
- *     1. {@link Hymn} 主要负责连接点的解析，解析的结果为一个 {@link KPoint}，主要作用点在于 {@link io.vertx.up.atom.shape.KJoin} 的连接定义部分。
+ *     1. {@link Hymn} 主要负责连接点的解析，解析的结果为一个 {@link KPoint}，主要作用点在于 {@link KJoin} 的连接定义部分。
  *     2. {@link Conflate} 则负责数据的处理，作用点在于 {@link KPoint} 部分的数据处理。
  * </code></pre>
  * 通常在解析流程的拓扑主要如下：

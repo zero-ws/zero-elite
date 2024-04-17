@@ -2,7 +2,7 @@ package io.vertx.up.uca.destine;
 
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.shape.KJoin;
+import io.zerows.core.domain.atom.specification.KJoin;
 import io.vertx.up.util.Ut;
 
 /**

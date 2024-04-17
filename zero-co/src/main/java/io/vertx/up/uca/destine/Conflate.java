@@ -3,11 +3,12 @@ package io.vertx.up.uca.destine;
 import io.horizon.exception.web._501NotSupportException;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.shape.KJoin;
+import io.zerows.core.domain.atom.specification.KJoin;
+import io.zerows.core.domain.atom.specification.KPoint;
 
 /**
  * 包域，不对外
- * 根据 {@link io.vertx.up.atom.shape.KPoint} 计算对应的组件，处理三个生命周期
+ * 根据 {@link KPoint} 计算对应的组件，处理三个生命周期
  * <pre><code>
  *     1. 输入数据处理
  *     2. 输出数据处理

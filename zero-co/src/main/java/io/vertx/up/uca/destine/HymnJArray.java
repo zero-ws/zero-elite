@@ -1,8 +1,8 @@
 package io.vertx.up.uca.destine;
 
 import io.vertx.core.json.JsonArray;
-import io.vertx.up.atom.shape.KJoin;
-import io.vertx.up.atom.shape.KPoint;
+import io.zerows.core.domain.atom.specification.KJoin;
+import io.zerows.core.domain.atom.specification.KPoint;
 import io.vertx.up.exception.web._412IndentUnknownException;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;

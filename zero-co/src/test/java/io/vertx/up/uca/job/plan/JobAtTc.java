@@ -1,8 +1,9 @@
 package io.vertx.up.uca.job.plan;
 
 import io.horizon.eon.em.typed.PerMode;
-import io.vertx.up.atom.sch.KPlan;
 import io.vertx.up.util.Ut;
+import io.zerows.core.domain.atom.specification.scheduler.KPlan;
+import io.zerows.core.domain.uca.plan.JobAt;
 import org.junit.Test;
 
 import java.time.Instant;

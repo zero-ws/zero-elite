@@ -2,13 +2,13 @@ package io.vertx.up.uca.destine;
 
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.shape.KJoin;
-import io.vertx.up.atom.shape.KPoint;
+import io.zerows.core.domain.atom.specification.KJoin;
+import io.zerows.core.domain.atom.specification.KPoint;
 
 /**
  * 「Hyphen翻译」练字符 -，此处表示「配置连接点」
- * 新方法，执行新版的链接点筛选专用 {@link io.vertx.up.atom.shape.KPoint}，目前的 zero-crud 版本只支持双表模式，所以 父从表和父主表只能选择一种模式进行关联（二选一），后期可拓展成多表链接同时支持两种模式，但目前版本支持两种模式即可以解决核心问题了。
- * 此接口主要用于构造 {@link io.vertx.up.atom.shape.KPoint}，替换原始的 connection 方法。
+ * 新方法，执行新版的链接点筛选专用 {@link KPoint}，目前的 zero-crud 版本只支持双表模式，所以 父从表和父主表只能选择一种模式进行关联（二选一），后期可拓展成多表链接同时支持两种模式，但目前版本支持两种模式即可以解决核心问题了。
+ * 此接口主要用于构造 {@link KPoint}，替换原始的 connection 方法。
  * <pre><code>
  *     1. 父从表模式：reference 定义
  *     2. 父主表模式：target 定义

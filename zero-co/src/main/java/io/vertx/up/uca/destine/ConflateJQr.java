@@ -1,7 +1,7 @@
 package io.vertx.up.uca.destine;
 
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.shape.KJoin;
+import io.zerows.core.domain.atom.specification.KJoin;
 
 /**
  * @author lang : 2023-07-31

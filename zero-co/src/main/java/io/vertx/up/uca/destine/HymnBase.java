@@ -2,15 +2,15 @@ package io.vertx.up.uca.destine;
 
 import io.horizon.uca.log.Log;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.shape.KJoin;
-import io.vertx.up.atom.shape.KPoint;
+import io.zerows.core.domain.atom.specification.KJoin;
+import io.zerows.core.domain.atom.specification.KPoint;
 import io.vertx.up.eon.em.EmPRI;
 import io.vertx.up.util.Ut;
 
 import java.util.Objects;
 
 /**
- * 专用抽象类，实际处理过程中会包含内置的 {@link io.vertx.up.atom.shape.KJoin} 的引用，根据实际定义的连接点元数据信息来解析连接点专用，此处可实现多种不同模式的连接流程，以完善连接点的解析过程。
+ * 专用抽象类，实际处理过程中会包含内置的 {@link KJoin} 的引用，根据实际定义的连接点元数据信息来解析连接点专用，此处可实现多种不同模式的连接流程，以完善连接点的解析过程。
  *
  * @author lang : 2023-07-28
  */
