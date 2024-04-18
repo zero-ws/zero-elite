@@ -35,7 +35,11 @@
         </dependency>
         <dependency>
             <groupId>io.zerows</groupId>
-            <artifactId>zero-core-feature-plugins-expression</artifactId>
+            <artifactId>zero-core-feature-toolkit-expression</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.zerows</groupId>
+            <artifactId>zero-core-feature-database-cp</artifactId>
         </dependency>
         <!-- Unit Testing -->
         <dependency>

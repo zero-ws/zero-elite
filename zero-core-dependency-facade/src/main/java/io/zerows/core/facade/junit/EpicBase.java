@@ -7,7 +7,7 @@ import io.vertx.core.buffer.Buffer;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.util.Ut;
-import io.zerows.core.domain.atom.commune.Database;
+import io.zerows.core.feature.database.atom.Database;
 
 /**
  * # 「Co」 Testing Framework

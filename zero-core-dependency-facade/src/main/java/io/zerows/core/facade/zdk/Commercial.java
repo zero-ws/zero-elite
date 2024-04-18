@@ -4,7 +4,7 @@ import io.horizon.eon.em.web.EmTraffic;
 import io.horizon.specification.typed.TJson;
 import io.modello.atom.app.KIntegration;
 import io.modello.specification.atom.HRule;
-import io.zerows.core.domain.atom.commune.Database;
+import io.zerows.core.feature.database.atom.Database;
 
 /*
  * Underway communication channel between

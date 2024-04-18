@@ -7,8 +7,8 @@ import io.vertx.up.annotations.Infusion;
 import io.vertx.up.eon.configure.YmlCore;
 import io.vertx.up.exception.booting.JooqConfigurationException;
 import io.vertx.up.fn.Fn;
-import io.zerows.macro.plugin.Infix;
-import io.zerows.macro.plugin.database.DataPool;
+import io.zerows.core.feature.database.cp.zdk.DataPool;
+import io.zerows.core.metadata.zdk.plugins.Infix;
 import org.jooq.Configuration;
 import org.jooq.DSLContext;
 

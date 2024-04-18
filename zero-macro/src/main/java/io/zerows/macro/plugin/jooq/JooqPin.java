@@ -3,14 +3,14 @@ package io.zerows.macro.plugin.jooq;
 import io.horizon.eon.em.EmDS;
 import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonObject;
-import io.zerows.core.domain.atom.commune.Database;
 import io.vertx.up.eon.KName;
 import io.vertx.up.eon.configure.YmlCore;
 import io.vertx.up.exception.booting.JooqConfigurationException;
 import io.vertx.up.fn.Fn;
-import io.zerows.macro.plugin.database.DataPool;
-import io.zerows.core.metadata.uca.environment.MatureOn;
 import io.vertx.up.util.Ut;
+import io.zerows.core.feature.database.atom.Database;
+import io.zerows.core.feature.database.cp.zdk.DataPool;
+import io.zerows.core.metadata.uca.environment.MatureOn;
 import org.jooq.Configuration;
 import org.jooq.Table;
 

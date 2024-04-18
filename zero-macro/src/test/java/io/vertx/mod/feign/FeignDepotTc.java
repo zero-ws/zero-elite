@@ -3,20 +3,20 @@ package io.vertx.mod.feign;
 import io.vertx.ext.unit.TestContext;
 import io.vertx.up.exception.booting.DynamicKeyMissingException;
 import io.zerows.core.facade.junit.ZeroBase;
-import io.zerows.macro.plugin.init.TpConfig;
+import io.zerows.core.metadata.zdk.plugins.InfixConfig;
 import org.junit.Test;
 
 public class FeignDepotTc extends ZeroBase {
 
     @Test(expected = DynamicKeyMissingException.class)
     public void testFeign(final TestContext context) {
-        final TpConfig tpconfig = TpConfig.create("tvk");
+        final InfixConfig tpconfig = InfixConfig.create("tvk");
         this.logger().info("[ TEST ] Tp Config: {0}", tpconfig);
     }
 
     @Test
     public void testTlk(final TestContext context) {
-        final TpConfig depot = TpConfig.create("qiy");
+        final InfixConfig depot = InfixConfig.create("qiy");
         this.logger().info("[ TEST ] Endpoint: {0}, Config: {1}", depot.getEndPoint(), depot.getConfig());
     }
 }
