@@ -1,4 +1,4 @@
-package io.zerows.macro.plugin.cache.hit;
+package io.zerows.core.feature.database.cache.hit;
 
 import io.horizon.eon.em.typed.ChangeFlag;
 import io.horizon.uca.log.Annal;
@@ -7,9 +7,9 @@ import io.vertx.core.Vertx;
 import io.vertx.core.eventbus.EventBus;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.zerows.macro.plugin.cache.l1.L1Cache;
-import io.zerows.macro.plugin.cache.l1.L1Config;
 import io.vertx.up.util.Ut;
+import io.zerows.core.feature.database.cache.l1.L1Cache;
+import io.zerows.core.feature.database.cache.l1.L1Config;
 
 import java.util.ArrayList;
 import java.util.Arrays;

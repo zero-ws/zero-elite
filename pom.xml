@@ -25,6 +25,7 @@
         <module>zero-core-feature-web-shared</module>
         <module>zero-core-feature-web-client</module>
         <module>zero-core-feature-database-jooq</module>
+        <module>zero-core-feature-database-cache</module>
     </modules>
     <build>
         <plugins>

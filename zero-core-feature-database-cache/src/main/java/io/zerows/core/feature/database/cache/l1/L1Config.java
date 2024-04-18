@@ -1,4 +1,4 @@
-package io.zerows.macro.plugin.cache.l1;
+package io.zerows.core.feature.database.cache.l1;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;

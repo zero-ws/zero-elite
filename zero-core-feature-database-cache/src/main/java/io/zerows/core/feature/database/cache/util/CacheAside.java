@@ -1,4 +1,4 @@
-package io.zerows.macro.plugin.cache.util;
+package io.zerows.core.feature.database.cache.util;
 
 import io.horizon.uca.log.Annal;
 import io.vertx.core.Future;

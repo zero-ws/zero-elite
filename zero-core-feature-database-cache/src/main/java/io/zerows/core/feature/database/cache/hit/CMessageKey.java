@@ -1,4 +1,4 @@
-package io.zerows.macro.plugin.cache.hit;
+package io.zerows.core.feature.database.cache.hit;
 
 import io.vertx.up.util.Ut;
 
@@ -40,8 +40,12 @@ public class CMessageKey extends AbstractCMessage {
 
     @Override
     public boolean equals(final Object o) {
-        if (this == o) return true;
-        if (o == null || this.getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || this.getClass() != o.getClass()) {
+            return false;
+        }
         final CMessageKey that = (CMessageKey) o;
         return this.id.equals(that.id);
     }

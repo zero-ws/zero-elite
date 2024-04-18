@@ -1,8 +1,8 @@
-package io.zerows.macro.plugin.cache.l1;
+package io.zerows.core.feature.database.cache.l1;
 
 import io.vertx.core.Future;
 import io.vertx.core.Vertx;
-import io.zerows.macro.plugin.cache.hit.CMessage;
+import io.zerows.core.feature.database.cache.hit.CMessage;
 
 /**
  * @author <a href="http://www.origin-x.cn">Lang</a>

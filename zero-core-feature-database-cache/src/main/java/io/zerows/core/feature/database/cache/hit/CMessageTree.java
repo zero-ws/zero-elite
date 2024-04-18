@@ -1,4 +1,4 @@
-package io.zerows.macro.plugin.cache.hit;
+package io.zerows.core.feature.database.cache.hit;
 
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.util.Ut;

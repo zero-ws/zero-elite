@@ -1,4 +1,4 @@
-package io.zerows.macro.plugin.cache.hit;
+package io.zerows.core.feature.database.cache.hit;
 
 import io.horizon.eon.em.typed.ChangeFlag;
 import io.vertx.core.buffer.Buffer;
