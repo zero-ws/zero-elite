@@ -23,6 +23,8 @@
         <module>zero-core-feature-database-cp</module>
         <module>zero-core-feature-web-session</module>
         <module>zero-core-feature-web-shared</module>
+        <module>zero-core-feature-web-client</module>
+        <module>zero-core-feature-database-jooq</module>
     </modules>
     <build>
         <plugins>

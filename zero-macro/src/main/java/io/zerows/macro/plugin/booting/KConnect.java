@@ -6,9 +6,9 @@ import io.vertx.core.json.JsonArray;
 import io.vertx.up.util.Ut;
 import io.zerows.core.domain.atom.commune.mapping.Mirror;
 import io.zerows.core.domain.atom.commune.mapping.Mojo;
+import io.zerows.core.feature.database.jooq.JooqPin;
 import io.zerows.jackson.databind.JsonArrayDeserializer;
 import io.zerows.jackson.databind.JsonArraySerializer;
-import io.zerows.macro.plugin.jooq.JooqPin;
 
 import java.io.Serializable;
 import java.util.HashSet;

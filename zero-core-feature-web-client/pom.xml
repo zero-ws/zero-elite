@@ -8,84 +8,27 @@
         <artifactId>zero-elite</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>zero-core-runtime-metadata</artifactId>
-    <name>Zero.Core.Runtime.Metadata</name>
+
+    <artifactId>zero-core-feature-web-client</artifactId>
+    <name>Zero.Core.Feature.Web.Client</name>
     <packaging>bundle</packaging>
     <dependencies>
         <dependency>
             <groupId>io.zerows</groupId>
-            <artifactId>zero-ams</artifactId>
+            <artifactId>zero-core-runtime-metadata</artifactId>
         </dependency>
-        <!-- Vertx Dependency -->
+        <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
         <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-config-yaml</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-codegen</artifactId>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-web</artifactId>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-hazelcast</artifactId>
-        </dependency>
-        <!-- Dependency -->
-        <dependency>
-            <groupId>com.google.inject</groupId>
-            <artifactId>guice</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-        </dependency>
-        <!-- OSGI Runtime -->
-        <!-- https://mvnrepository.com/artifact/org.osgi/org.osgi.framework -->
-        <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.framework</artifactId>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.osgi/osgi.annotation -->
-        <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>osgi.annotation</artifactId>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.osgi/org.osgi.service.cm -->
-        <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.service.cm</artifactId>
-        </dependency>
-        <!-- DM -->
-        <!-- https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.dependencymanager -->
-        <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.dependencymanager</artifactId>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.logback -->
-        <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.logback</artifactId>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.gogo.command -->
-        <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.gogo.command</artifactId>
-        </dependency>
-        <!-- Jsr 311 Jws -->
-        <dependency>
-            <groupId>org.glassfish.jersey.core</groupId>
-            <artifactId>jersey-common</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.reactivestreams</groupId>
-            <artifactId>reactive-streams</artifactId>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
         </dependency>
     </dependencies>
     <build>
@@ -100,25 +43,12 @@
                             <!-- SPI Required -->
                             io.zerows.core.metadata.osgi.spi.*;-split-package:=merge-first,
 
-                            io.zerows.core.metadata.*,
-                            io.vertx.up.*,
-
-                            <!-- Required -->
-                            jakarta.inject.*,
-
-                            <!-- logback / slf4j -->
-                            org.slf4j.*;-split-package:=merge-first,
-                            ch.qos.logback.*,
+                            io.zerows.core.feature.web.client.*,
                         </Export-Package>
                         <Import-Package>
                             *;resolution:=optional,
                         </Import-Package>
                         <Embed-Transitive>true</Embed-Transitive>
-                        <Embed-Dependency>
-                            slf4j-api;groupId=org.slf4j;artifactId=slf4j-api;inline=true,
-                            logback-classic;groupId=ch.qos.logback;artifactId=logback-classic;inline=true,
-                            logback-core;groupId=ch.qos.logback;artifactId=logback-core;inline=true
-                        </Embed-Dependency>
                         <!--
                         在 JDK 9 之后，OSGI的打包会引起部分警告信息：
                         [WARNING] Bundle io.zerows:zero-ams:bundle:1.0-SNAPSHOT :

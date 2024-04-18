@@ -29,6 +29,14 @@
             <groupId>io.zerows</groupId>
             <artifactId>zero-core-feature-web-shared</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.zerows</groupId>
+            <artifactId>zero-core-feature-web-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.zerows</groupId>
+            <artifactId>zero-core-feature-database-jooq</artifactId>
+        </dependency>
 
         <!-- AspectJ -->
         <dependency>
@@ -42,15 +50,6 @@
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
-        </dependency>
-        <!-- Jsr 311 Jws -->
-        <dependency>
-            <groupId>org.glassfish.jersey.core</groupId>
-            <artifactId>jersey-common</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
         </dependency>
         <!-- Health Checking -->
         <dependency>
