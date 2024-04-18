@@ -5,7 +5,7 @@ import io.vertx.up.eon.em.EmSecure;
 import io.vertx.up.exception.web._409DmComponentException;
 import io.vertx.up.fn.Fn;
 import io.zerows.core.security.cache.CStoreSecurity;
-import io.zerows.core.security.zdk.HAdmit;
+import io.zerows.core.security.zdk.authority.HAdmit;
 
 import java.util.Objects;
 

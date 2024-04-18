@@ -57,11 +57,7 @@
             <groupId>io.vertx</groupId>
             <artifactId>vertx-health-check</artifactId>
         </dependency>
-        <!-- Auth Common Framework for different Authorization -->
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-auth-common</artifactId>
-        </dependency>
+
         <!-- Jooq -->
         <dependency>
             <groupId>org.jooq</groupId>

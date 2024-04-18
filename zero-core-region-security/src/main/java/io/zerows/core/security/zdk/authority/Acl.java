@@ -1,4 +1,4 @@
-package io.zerows.core.security.zdk;
+package io.zerows.core.security.zdk.authority;
 
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.em.EmSecure;

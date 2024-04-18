@@ -1,4 +1,4 @@
-package io.zerows.core.security.zdk;
+package io.zerows.core.security.zdk.authority;
 
 import java.io.Serializable;
 import java.util.concurrent.ConcurrentHashMap;

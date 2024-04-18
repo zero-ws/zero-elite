@@ -8,7 +8,7 @@ import io.vertx.up.eon.KName;
 import io.vertx.up.eon.em.EmSecure;
 import io.vertx.up.util.Ut;
 import io.zerows.core.security.cache.CStoreSecurity;
-import io.zerows.core.security.zdk.HAdmit;
+import io.zerows.core.security.zdk.authority.HAdmit;
 
 import java.io.Serializable;
 import java.util.Objects;

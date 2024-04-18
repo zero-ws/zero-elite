@@ -1,4 +1,4 @@
-package io.zerows.macro.sdk.spi.component;
+package io.zerows.core.cloud.zdk.spi;
 
 import io.horizon.atom.datamation.KDictSource;
 import io.vertx.core.Future;

@@ -1,4 +1,4 @@
-package io.zerows.core.security.zdk;
+package io.zerows.core.security.zdk.authority;
 
 import io.horizon.specification.typed.TEvent;
 import io.modello.specification.atom.HAtom;
