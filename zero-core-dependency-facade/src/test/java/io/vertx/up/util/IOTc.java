@@ -2,7 +2,7 @@ package io.vertx.up.util;
 
 import io.horizon.util.HUt;
 import io.vertx.ext.unit.TestContext;
-import io.vertx.quiz.ZeroBase;
+import io.zerows.core.facade.junit.ZeroBase;
 import org.junit.Test;
 
 import java.io.File;

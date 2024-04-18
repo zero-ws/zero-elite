@@ -1,8 +1,9 @@
 package io.vertx.up.runtime;
 
 import io.vertx.ext.unit.TestContext;
-import io.vertx.quiz.ZeroBase;
 import io.vertx.up.example.AnnoOne;
+import io.zerows.core.facade.junit.ZeroBase;
+import io.zerows.core.facade.runtime.Anno;
 import org.junit.Test;
 
 import java.lang.annotation.Annotation;

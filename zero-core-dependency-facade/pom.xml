@@ -156,10 +156,7 @@
                             io.zerows.core.metadata.osgi.spi.*;-split-package:=merge-first,
 
                             <!-- 编译警告 -->
-                            io.vertx.up.*,
-                            io.zerows.core.eon.*,
-                            io.zerows.core.spi.*,
-                            io.zerows.core.vertx.*,
+                            io.zerows.core.facade.*
                         </Export-Package>
                         <Import-Package>
                             *;resolution:=optional,

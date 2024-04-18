@@ -6,8 +6,8 @@ import io.vertx.up.eon.configure.YmlCore;
 import io.vertx.up.eon.em.EmSecure;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
-import io.zerows.core.domain.uca.stable.Ruler;
 import io.zerows.core.metadata.store.config.OZeroStore;
+import io.zerows.core.metadata.uca.stable.Ruler;
 
 import java.io.Serializable;
 import java.util.Set;

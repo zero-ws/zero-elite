@@ -1,7 +1,7 @@
 package io.vertx.up.util;
 
 import io.vertx.core.json.JsonObject;
-import io.vertx.quiz.EpicBase;
+import io.zerows.core.facade.junit.EpicBase;
 import org.junit.Test;
 
 public class StepTc extends EpicBase {

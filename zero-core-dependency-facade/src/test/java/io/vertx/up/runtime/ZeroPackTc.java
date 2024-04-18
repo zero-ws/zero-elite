@@ -1,7 +1,7 @@
 package io.vertx.up.runtime;
 
 import io.vertx.ext.unit.TestContext;
-import io.vertx.quiz.ZeroBase;
+import io.zerows.core.facade.junit.ZeroBase;
 import io.zerows.core.metadata.store.classes.OCachedClass;
 import io.zerows.core.metadata.zdk.running.OCache;
 import org.junit.Test;

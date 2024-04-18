@@ -1,9 +1,9 @@
 package io.vertx.up.atom;
 
 import io.vertx.core.json.JsonObject;
-import io.vertx.quiz.ZeroBase;
 import io.vertx.up.util.Ut;
 import io.zerows.core.domain.atom.commune.mapping.Mirror;
+import io.zerows.core.facade.junit.ZeroBase;
 import org.junit.Test;
 
 public class MirrorTc extends ZeroBase {

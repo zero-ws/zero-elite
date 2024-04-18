@@ -1,8 +1,8 @@
 package io.vertx.mod.feign;
 
 import io.vertx.ext.unit.TestContext;
-import io.vertx.quiz.ZeroBase;
 import io.vertx.up.exception.booting.DynamicKeyMissingException;
+import io.zerows.core.facade.junit.ZeroBase;
 import io.zerows.macro.plugin.init.TpConfig;
 import org.junit.Test;
 

@@ -1,7 +1,7 @@
 package io.vertx.up.uca.yaml;
 
 import io.vertx.core.json.JsonObject;
-import io.vertx.quiz.ZeroBase;
+import io.zerows.core.facade.junit.ZeroBase;
 import io.zerows.core.metadata.store.config.OZeroStore;
 import org.junit.Test;
 

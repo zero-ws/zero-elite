@@ -4,8 +4,8 @@ import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.exception.booting.ConfigKeyMissingException;
 import io.vertx.up.fn.Fn;
-import io.zerows.core.domain.uca.stable.Ruler;
 import io.zerows.core.metadata.store.config.OZeroStore;
+import io.zerows.core.metadata.uca.stable.Ruler;
 
 import java.util.function.Function;
 

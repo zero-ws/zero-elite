@@ -1,6 +1,6 @@
 package io.vertx.up.util;
 
-import io.vertx.quiz.ZeroBase;
+import io.zerows.core.facade.junit.ZeroBase;
 import org.junit.Test;
 
 public class NetTc extends ZeroBase {
