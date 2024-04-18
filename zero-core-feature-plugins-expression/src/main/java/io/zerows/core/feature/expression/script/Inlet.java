@@ -1,4 +1,4 @@
-package io.vertx.up.uca.wffs.script;
+package io.zerows.core.feature.expression.script;
 
 import io.horizon.uca.cache.Cc;
 import io.vertx.core.json.JsonObject;

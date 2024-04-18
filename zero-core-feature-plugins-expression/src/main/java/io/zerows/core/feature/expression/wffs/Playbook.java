@@ -1,10 +1,10 @@
-package io.vertx.up.uca.wffs;
+package io.zerows.core.feature.expression.wffs;
 
 import io.horizon.uca.log.Annal;
 import io.vertx.core.Future;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.uca.wffs.script.Inlet;
 import io.vertx.up.util.Ut;
+import io.zerows.core.feature.expression.script.Inlet;
 import org.apache.commons.jexl3.*;
 
 import java.io.Serializable;

@@ -1,4 +1,4 @@
-package io.vertx.up.uca.wffs.script;
+package io.zerows.core.feature.expression.script;
 
 import io.horizon.eon.VString;
 import io.vertx.core.json.JsonObject;
@@ -40,12 +40,12 @@ class InletUser extends AbstractInlet {
          * Secondary Script variable,
          * fix issue:
          * org.apache.commons.jexl3.JxltEngine$Exception:
-         * io.vertx.up.uca.wffs.Playbook.format:84![9,18]:
+         * io.zerows.core.feature.expression.wffs.Playbook.format:84![9,18]:
          *
          * 'un.toUser.realname' exception error
          *
          * : failed to evaluate '一份"${zw.name}"工单分派给了"${un.toUser.realname}"。'
-         *      at io.vertx.up.uca.wffs.Playbook.format(Playbook.java:86)
+         *      at io.zerows.core.feature.expression.wffs.Playbook.format(Playbook.java:86)
          */
         user.fieldNames().forEach(field -> {
             final String childKey = name + VString.DOT + field;

@@ -1,4 +1,4 @@
-package io.vertx.up.uca.wffs;
+package io.zerows.core.feature.expression.wffs;
 
 import io.vertx.core.CompositeFuture;
 import io.vertx.core.Future;

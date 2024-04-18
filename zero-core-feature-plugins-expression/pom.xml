@@ -9,8 +9,8 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>zero-core-region-cloud</artifactId>
-    <name>Zero.Core.Region.Cloud</name>
+    <artifactId>zero-core-feature-plugins-expression</artifactId>
+    <name>Zero.Core.Feature.Plugins.Expression</name>
     <packaging>bundle</packaging>
     <dependencies>
         <dependency>
@@ -30,7 +30,7 @@
                             <!-- SPI Required -->
                             io.zerows.core.metadata.osgi.spi.*;-split-package:=merge-first,
 
-                            io.zerows.core.cloud.*,
+                            io.zerows.core.feature.expression.*,
                         </Export-Package>
                         <Import-Package>
                             *;resolution:=optional,

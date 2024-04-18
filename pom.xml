@@ -19,7 +19,7 @@
         <module>zero-core-region-cloud</module>
         <module>zero-core-region-security</module>
         <module>zero-core-region-configuration</module>
-        <module>zero-core-plugins-expression</module>
+        <module>zero-core-feature-plugins-expression</module>
     </modules>
     <build>
         <plugins>

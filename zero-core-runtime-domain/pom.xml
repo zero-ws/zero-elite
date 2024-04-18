@@ -33,6 +33,19 @@
             <groupId>org.reactivestreams</groupId>
             <artifactId>reactive-streams</artifactId>
         </dependency>
+        <!--
+        Fix Version Conflict
+        All following dependencies are for version conflict in External Library
+        Here to resolve the version of multi.
+        -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-cbor</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-smile</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
