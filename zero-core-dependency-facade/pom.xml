@@ -8,7 +8,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>zero-co</artifactId>
+    <artifactId>zero-core-dependency-facade</artifactId>
     <packaging>bundle</packaging>
     <name>Zero.Core.Runtime.Library</name>
     <dependencies>

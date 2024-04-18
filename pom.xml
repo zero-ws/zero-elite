@@ -12,13 +12,14 @@
     <packaging>pom</packaging>
     <name>Zero.Core.Runtime.POM.${zero.version}</name>
     <modules>
-        <module>zero-co</module>
+        <module>zero-core-dependency-facade</module>
         <module>zero-macro</module>
         <module>zero-core-runtime-metadata</module>
         <module>zero-core-runtime-domain</module>
         <module>zero-core-region-cloud</module>
         <module>zero-core-region-security</module>
         <module>zero-core-region-configuration</module>
+        <module>zero-core-plugins-expression</module>
     </modules>
     <build>
         <plugins>

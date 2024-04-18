@@ -43,6 +43,10 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
+                            <!-- SPI Required -->
+                            io.zerows.core.metadata.osgi.spi.*;-split-package:=merge-first,
+
+                            io.zerows.core.domain.*,
                         </Export-Package>
                         <Import-Package>
                             *;resolution:=optional,
