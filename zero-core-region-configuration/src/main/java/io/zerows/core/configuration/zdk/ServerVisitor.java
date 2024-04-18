@@ -1,4 +1,4 @@
-package io.vertx.up.uca.options;
+package io.zerows.core.configuration.zdk;
 
 import io.horizon.eon.em.web.ServerType;
 import io.horizon.uca.log.Annal;

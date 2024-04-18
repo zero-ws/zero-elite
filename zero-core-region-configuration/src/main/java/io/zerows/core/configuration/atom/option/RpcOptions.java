@@ -1,4 +1,4 @@
-package io.zerows.core.vertx;
+package io.zerows.core.configuration.atom.option;
 
 import io.vertx.codegen.annotations.Fluent;
 import io.vertx.core.json.JsonObject;

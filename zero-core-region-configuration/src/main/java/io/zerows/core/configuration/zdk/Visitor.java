@@ -1,4 +1,4 @@
-package io.vertx.up.uca.options;
+package io.zerows.core.configuration.zdk;
 
 import io.horizon.exception.ProgramException;
 

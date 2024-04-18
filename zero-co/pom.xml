@@ -29,15 +29,9 @@
             <groupId>io.zerows</groupId>
             <artifactId>zero-core-region-security</artifactId>
         </dependency>
-        <!-- Code Gen -->
         <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-web</artifactId>
-        </dependency>
-        <!-- Hazelcast -->
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-hazelcast</artifactId>
+            <groupId>io.zerows</groupId>
+            <artifactId>zero-core-region-configuration</artifactId>
         </dependency>
         <!-- Unit Testing -->
         <dependency>

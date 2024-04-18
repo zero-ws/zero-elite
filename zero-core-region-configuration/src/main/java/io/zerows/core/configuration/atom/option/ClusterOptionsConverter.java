@@ -1,4 +1,4 @@
-package io.zerows.core.vertx;
+package io.zerows.core.configuration.atom.option;
 
 import io.vertx.core.json.JsonObject;
 import io.vertx.core.spi.cluster.ClusterManager;

@@ -3,8 +3,8 @@ package io.zerows.macro.uca.marshal;
 import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.uca.options.Transformer;
-import io.zerows.core.vertx.RpcOptions;
+import io.zerows.core.configuration.atom.option.RpcOptions;
+import io.zerows.core.configuration.zdk.Transformer;
 
 public class RpcServerSetUp implements Transformer<RpcOptions> {
 

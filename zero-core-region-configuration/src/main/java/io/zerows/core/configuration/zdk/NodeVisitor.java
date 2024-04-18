@@ -1,7 +1,7 @@
-package io.vertx.up.uca.options;
+package io.zerows.core.configuration.zdk;
 
 import io.vertx.core.VertxOptions;
-import io.zerows.core.vertx.ClusterOptions;
+import io.zerows.core.configuration.atom.option.ClusterOptions;
 
 import java.util.concurrent.ConcurrentMap;
 
@@ -22,7 +22,7 @@ public interface NodeVisitor
     /**
      * Get cluster configuration from vertx initialization.
      *
-     * @return io.zerows.core.vertx.ClusterOptions that defined by zero.
+     * @return io.zerows.core.configuration.atom.option.ClusterOptions that defined by zero.
      */
     ClusterOptions getCluster();
 }

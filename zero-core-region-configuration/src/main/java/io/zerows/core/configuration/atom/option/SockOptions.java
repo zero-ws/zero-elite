@@ -1,4 +1,4 @@
-package io.zerows.core.vertx;
+package io.zerows.core.configuration.atom.option;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;

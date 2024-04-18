@@ -16,11 +16,24 @@
             <groupId>io.zerows</groupId>
             <artifactId>zero-ams</artifactId>
         </dependency>
-        <!-- Util Dependency -->
+        <!-- Vertx Dependency -->
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-config-yaml</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-codegen</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-hazelcast</artifactId>
+        </dependency>
+        <!-- Dependency -->
         <dependency>
             <groupId>com.google.inject</groupId>
             <artifactId>guice</artifactId>
