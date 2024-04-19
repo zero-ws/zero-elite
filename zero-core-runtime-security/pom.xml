@@ -9,13 +9,18 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>zero-core-region-configuration</artifactId>
-    <name>Zero.Core.Region.Configuration</name>
+    <artifactId>zero-core-runtime-security</artifactId>
+    <name>Zero.Core.Region.Security</name>
     <packaging>bundle</packaging>
     <dependencies>
         <dependency>
             <groupId>io.zerows</groupId>
-            <artifactId>zero-core-runtime-metadata</artifactId>
+            <artifactId>zero-core-runtime-domain</artifactId>
+        </dependency>
+        <!-- Auth Common Framework for different Authorization -->
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-auth-common</artifactId>
         </dependency>
     </dependencies>
     <build>
@@ -30,7 +35,7 @@
                             <!-- SPI Required -->
                             io.zerows.core.metadata.osgi.spi.*;-split-package:=merge-first,
 
-                            io.zerows.core.configuration.*,
+                            io.zerows.core.security.*,
                         </Export-Package>
                         <Import-Package>
                             *;resolution:=optional,

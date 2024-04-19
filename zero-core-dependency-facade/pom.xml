@@ -23,15 +23,15 @@
         </dependency>
         <dependency>
             <groupId>io.zerows</groupId>
-            <artifactId>zero-core-region-cloud</artifactId>
+            <artifactId>zero-core-runtime-cloud</artifactId>
         </dependency>
         <dependency>
             <groupId>io.zerows</groupId>
-            <artifactId>zero-core-region-security</artifactId>
+            <artifactId>zero-core-runtime-security</artifactId>
         </dependency>
         <dependency>
             <groupId>io.zerows</groupId>
-            <artifactId>zero-core-region-configuration</artifactId>
+            <artifactId>zero-core-runtime-configuration</artifactId>
         </dependency>
         <dependency>
             <groupId>io.zerows</groupId>
