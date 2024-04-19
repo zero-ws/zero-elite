@@ -4,7 +4,7 @@ import io.horizon.specification.typed.TEvent;
 import io.modello.specification.atom.HAtom;
 import io.vertx.core.Future;
 import io.vertx.core.json.JsonObject;
-import io.zerows.core.security.atom.KPermit;
+import io.zerows.core.security.atom.manage.KPermit;
 
 /**
  * @author <a href="http://www.origin-x.cn">Lang</a>

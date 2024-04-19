@@ -1,7 +1,7 @@
 package io.zerows.core.domain.uca.serialization;
 
 import io.vertx.up.fn.Fn;
-import io.zerows.core.domain.atom.commune.secure.Vis;
+import io.zerows.core.domain.atom.commune.Vis;
 
 class VisSaber extends AbstractSaber {
 

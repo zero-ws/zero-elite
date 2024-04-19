@@ -4,7 +4,7 @@ import io.horizon.specification.typed.TEvent;
 import io.vertx.core.Future;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.KName;
-import io.zerows.core.security.atom.KCatena;
+import io.zerows.core.security.atom.manage.KCatena;
 
 /**
  * 「阀」

@@ -1,4 +1,4 @@
-package io.zerows.core.security.atom;
+package io.zerows.core.security.atom.manage;
 
 import io.vertx.core.Future;
 import io.vertx.up.eon.em.EmSecure;

@@ -3,8 +3,8 @@ package io.zerows.core.security.cache;
 import io.horizon.annotations.Memory;
 import io.horizon.uca.cache.Cc;
 import io.zerows.core.metadata.cache.CStore;
-import io.zerows.core.security.atom.KPermit;
-import io.zerows.core.security.atom.KSemi;
+import io.zerows.core.security.atom.manage.KPermit;
+import io.zerows.core.security.atom.manage.KSemi;
 
 /**
  * @author lang : 2024-04-18

@@ -1,4 +1,4 @@
-package io.zerows.core.domain.atom.commune.secure;
+package io.zerows.core.security.atom;
 
 import io.horizon.eon.VValue;
 import io.horizon.specification.typed.TCopy;

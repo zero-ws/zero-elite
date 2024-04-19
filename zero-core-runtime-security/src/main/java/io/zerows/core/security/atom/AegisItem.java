@@ -1,4 +1,4 @@
-package io.zerows.core.domain.atom.commune.secure;
+package io.zerows.core.security.atom;
 
 import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonObject;

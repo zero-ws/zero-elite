@@ -10,7 +10,7 @@ import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.KName;
 import io.vertx.up.util.Ut;
-import io.zerows.core.security.atom.KPermit;
+import io.zerows.core.security.atom.manage.KPermit;
 import io.zerows.core.security.zdk.authority.HAdmit;
 
 import java.util.Optional;

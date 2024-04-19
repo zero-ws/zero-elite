@@ -5,8 +5,8 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.ext.auth.authentication.AuthenticationProvider;
 import io.vertx.ext.web.handler.AuthenticationHandler;
 import io.vertx.ext.web.handler.AuthorizationHandler;
-import io.zerows.core.domain.atom.commune.secure.Aegis;
-import io.zerows.core.domain.atom.commune.secure.AegisItem;
+import io.zerows.core.security.atom.Aegis;
+import io.zerows.core.security.atom.AegisItem;
 
 /**
  * Security Module for dispatcher,
@@ -52,9 +52,9 @@ public interface Lee {
      */
     AuthorizationHandler authorization(Vertx vertx, Aegis config);
 
-    // ------------------ Token Encode/Decode Processing ----------------------
+    // ------------------ WebToken Encode/Decode Processing ----------------------
     /*
-     * 3. Token operation
+     * 3. WebToken operation
      */
     String encode(JsonObject data, AegisItem config);
 

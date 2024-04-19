@@ -1,4 +1,4 @@
-package io.zerows.core.security.atom;
+package io.zerows.core.security.atom.manage;
 
 import io.horizon.eon.VString;
 import io.vertx.core.json.JsonObject;

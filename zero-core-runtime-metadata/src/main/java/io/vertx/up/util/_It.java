@@ -13,7 +13,7 @@ import java.util.function.Function;
 /**
  * @author lang : 2023-06-19
  */
-class _It extends _From {
+class _It extends _Ir {
     /*
      * Interator method for different usage
      *  1) itMap
