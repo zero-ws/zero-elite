@@ -69,6 +69,13 @@
             <groupId>io.reactivex.rxjava3</groupId>
             <artifactId>rxjava</artifactId>
         </dependency>
+
+
+        <!-- Jsr 311 Jws / Context -->
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-common</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
