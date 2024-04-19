@@ -1,7 +1,0 @@
-{
-    "clustered": {
-        "enabled": true
-    },
-    "port": 8081,
-    "amount": 99.87
-}

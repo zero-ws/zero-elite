@@ -1,9 +1,0 @@
-typed:
-  sessionTimeout: INTEGER
-  heartbeatInterval: INTEGER
-  maxBytesStreaming: INTEGER
-  libraryURL: STRING
-  origin: STRING
-  insertJSESSIONID: BOOLEAN
-  registerWriteHandler: BOOLEAN
-  localWriteHandler: BOOLEAN

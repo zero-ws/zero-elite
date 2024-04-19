@@ -12,8 +12,6 @@
     <packaging>pom</packaging>
     <name>Zero.Core.Runtime.POM.${zero.version}</name>
     <modules>
-        <module>zero-core-dependency-facade</module>
-        <module>zero-macro</module>
         <module>zero-core-runtime-metadata</module>
         <module>zero-core-runtime-domain</module>
         <module>zero-core-runtime-cloud</module>
@@ -21,9 +19,6 @@
         <module>zero-core-runtime-configuration</module>
         <module>zero-core-feature-toolkit-expression</module>
         <module>zero-core-feature-database-cp</module>
-        <module>zero-core-feature-web-session</module>
-        <module>zero-core-feature-web-shared</module>
-        <module>zero-core-feature-web-client</module>
         <module>zero-core-feature-database-jooq</module>
         <module>zero-core-feature-database-cache</module>
         <module>zero-core-runtime-assembly</module>

@@ -1,5 +1,0 @@
-required:
-  - instance
-typed:
-  clustered: JOBJECT
-  instance: JARRAY

@@ -1,5 +1,0 @@
-typed:
-  instance: JARRAY
-  clustered: JOBJECT
-  port: INTEGER
-  amount: DECIMAL

@@ -1,5 +1,0 @@
-etcd:
-  nodes:
-  - host: localhost
-    port: 6189
-  timeout: 2

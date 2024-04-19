@@ -1,6 +1,0 @@
-required:
-  - jdbcUrl
-  - driverClassName
-  - username
-  - password
-  - catalog

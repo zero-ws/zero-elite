@@ -1,9 +1,0 @@
-zero:
-  lime: etcd, pool, tp
-  vertx:
-    clustered:
-      enabled: false
-      manager:
-
-    instance:
-      - name: vx-mock-tlk

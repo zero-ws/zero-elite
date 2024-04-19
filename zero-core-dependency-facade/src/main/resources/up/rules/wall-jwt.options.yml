@@ -1,6 +1,0 @@
-typed:
-  jwtOptions: JOBJECT
-  keyStore: JOBJECT
-  permissionsClaimKey: STRING
-  pubSecKeys: JARRAY
-  secrets: JARRAY

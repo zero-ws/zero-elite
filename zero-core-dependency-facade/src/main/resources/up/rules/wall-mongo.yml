@@ -1,8 +1,0 @@
-required:
-  - type
-forbidden:
-  - provider
-  - handler
-  - user
-typed:
-  config: JOBJECT
