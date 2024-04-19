@@ -9,7 +9,6 @@ import io.vertx.up.exception.booting.DuplicatedImplException;
 import io.vertx.up.exception.web._412ContractFieldException;
 import io.vertx.up.fn.Fn;
 import io.zerows.core.metadata.store.classes.OClassCache;
-import io.zerows.core.metadata.zdk.running.OCache;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -85,7 +84,7 @@ final class Instance {
      */
     static Class<?> child(final Class<?> interfaceCls) {
         return Fn.runOr(null, () -> {
-            final OCache<Set<Class<?>>> cached = OClassCache.of();
+            final OClassCache cached = OClassCache.of();
             final Set<Class<?>> classes = cached.get();
             final List<Class<?>> filtered = classes.stream()
                 .filter(item -> interfaceCls.isAssignableFrom(item)

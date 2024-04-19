@@ -56,4 +56,9 @@ class LogConsole implements OLog {
     public void fatal(final Throwable ex) {
         this.internalLogger.fatal(this.targetClass, ex);
     }
+
+    @Override
+    public void fatal(final Throwable ex, final String prefix) {
+        this.internalLogger.fatal(this.targetClass, ex, prefix);
+    }
 }

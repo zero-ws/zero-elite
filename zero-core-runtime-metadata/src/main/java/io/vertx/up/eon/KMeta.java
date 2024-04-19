@@ -6,10 +6,10 @@ package io.vertx.up.eon;
 public interface KMeta {
 
     enum Typed {
-        /**
-         * {@link io.vertx.up.annotations.Infusion}
-         */
         INFUSION,
+        QUEUE,
+        ENDPOINT,
+        WORKER,
     }
 
     interface Component {

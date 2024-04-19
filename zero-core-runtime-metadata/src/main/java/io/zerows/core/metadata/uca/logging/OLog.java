@@ -1,11 +1,13 @@
 package io.zerows.core.metadata.uca.logging;
 
 import io.horizon.eon.VString;
+import io.horizon.specification.uca.HLogger;
 import io.horizon.uca.log.Annal;
 import io.vertx.up.annotations.Semantics;
 import io.zerows.core.metadata.cache.CStore;
 
 import java.util.Objects;
+import java.util.function.Supplier;
 
 /**
  * OSGI 专用日志接口，用于基础日志信息，和 OSGI Framework 相关，底层虽然采用了 {@link Annal}，但内置使用第二层用于日志输出
@@ -20,20 +22,21 @@ import java.util.Objects;
  * @author lang : 2024-04-17
  */
 @Semantics
-public interface OLog {
+public interface OLog extends HLogger {
 
     static OLog of(final Class<?> clazz, final String name) {
         Objects.requireNonNull(clazz);
         return CStore.CC_LOG.pick(() -> new LogConsole(clazz, name), clazz.getName() + VString.SLASH + name);
     }
 
-    void info(String pattern, Object... args);
+    @Override
+    default void info(final boolean condition, final String key, final Object... args) {
+        if (condition) {
+            this.info(key, args);
+        }
+    }
 
-    void debug(String pattern, Object... args);
-
-    void warn(String pattern, Object... args);
-
-    void error(String pattern, Object... args);
-
-    void fatal(Throwable ex);
+    default void info(final Supplier<Boolean> condition, final String key, final Object... args) {
+        this.info(condition.get(), key, args);
+    }
 }

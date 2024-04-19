@@ -37,6 +37,10 @@ class _Log extends _Load {
             return OLog.of(clazz, "Plugin");
         }
 
+        public static OLog uca(final Class<?> clazz) {
+            return OLog.of(clazz, "UCA");
+        }
+
         public static OLog job(final Class<?> clazz) {
             return OLog.of(clazz, "Job");
         }

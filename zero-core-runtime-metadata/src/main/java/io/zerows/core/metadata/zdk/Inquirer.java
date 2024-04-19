@@ -1,5 +1,8 @@
 package io.zerows.core.metadata.zdk;
 
+import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.uca.logging.OLog;
+
 import java.util.Set;
 
 /**
@@ -12,4 +15,8 @@ import java.util.Set;
 public interface Inquirer<R> {
 
     R scan(Set<Class<?>> clazzes);
+
+    default OLog tracker() {
+        return Ut.Log.uca(this.getClass());
+    }
 }
