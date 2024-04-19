@@ -16,7 +16,9 @@
             <groupId>io.zerows</groupId>
             <artifactId>zero-runtime-specification-ams</artifactId>
         </dependency>
-        <!-- Vertx Dependency -->
+
+
+        <!-- Vertx -->
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-config-yaml</artifactId>
@@ -25,23 +27,8 @@
             <groupId>io.vertx</groupId>
             <artifactId>vertx-codegen</artifactId>
         </dependency>
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-hazelcast</artifactId>
-        </dependency>
-        <!-- Dependency -->
-        <dependency>
-            <groupId>com.google.inject</groupId>
-            <artifactId>guice</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-        </dependency>
+
+
         <!-- OSGI Runtime -->
         <!-- https://mvnrepository.com/artifact/org.osgi/org.osgi.framework -->
         <dependency>
@@ -53,39 +40,34 @@
             <groupId>org.osgi</groupId>
             <artifactId>osgi.annotation</artifactId>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.osgi/org.osgi.service.cm -->
-        <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.service.cm</artifactId>
-        </dependency>
-        <!-- DM -->
         <!-- https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.dependencymanager -->
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.dependencymanager</artifactId>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.logback -->
-        <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.logback</artifactId>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.gogo.command -->
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.gogo.command</artifactId>
         </dependency>
-        <!-- Jsr 311 Jws -->
+
+
+        <!-- Google -->
+        <!-- Dependency -->
         <dependency>
-            <groupId>org.glassfish.jersey.core</groupId>
-            <artifactId>jersey-common</artifactId>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
         </dependency>
         <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
         </dependency>
+
+
+        <!-- RxJava3 -->
         <dependency>
-            <groupId>org.reactivestreams</groupId>
-            <artifactId>reactive-streams</artifactId>
+            <groupId>io.reactivex.rxjava3</groupId>
+            <artifactId>rxjava</artifactId>
         </dependency>
     </dependencies>
     <build>

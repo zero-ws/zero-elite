@@ -5,6 +5,13 @@ package io.vertx.up.eon;
  */
 public interface KMeta {
 
+    enum Typed {
+        /**
+         * {@link io.vertx.up.annotations.Infusion}
+         */
+        INFUSION,
+    }
+
     interface Component {
         String DEFAULT_SCANNED = "Component/Default-HScanned";
     }

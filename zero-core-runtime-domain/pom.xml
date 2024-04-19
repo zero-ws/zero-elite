@@ -24,24 +24,6 @@
             <version>${jetbrains.version}</version>
             <scope>compile</scope>
         </dependency>
-        <!-- RxJava2 -->
-        <dependency>
-            <groupId>io.reactivex.rxjava3</groupId>
-            <artifactId>rxjava</artifactId>
-        </dependency>
-        <!--
-        Fix Version Conflict
-        All following dependencies are for version conflict in External Library
-        Here to resolve the version of multi.
-        -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.dataformat</groupId>
-            <artifactId>jackson-dataformat-cbor</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.dataformat</groupId>
-            <artifactId>jackson-dataformat-smile</artifactId>
-        </dependency>
     </dependencies>
     <build>
         <plugins>

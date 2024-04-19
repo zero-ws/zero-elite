@@ -10,12 +10,17 @@
     </parent>
 
     <artifactId>zero-core-runtime-configuration</artifactId>
-    <name>Zero.Core.Region.Configuration</name>
+    <name>Zero.Core.Runtime.Configuration</name>
     <packaging>bundle</packaging>
     <dependencies>
         <dependency>
             <groupId>io.zerows</groupId>
             <artifactId>zero-core-runtime-metadata</artifactId>
+        </dependency>
+        <!-- Vertx Cluster -->
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-hazelcast</artifactId>
         </dependency>
     </dependencies>
     <build>

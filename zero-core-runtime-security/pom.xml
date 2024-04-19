@@ -10,17 +10,21 @@
     </parent>
 
     <artifactId>zero-core-runtime-security</artifactId>
-    <name>Zero.Core.Region.Security</name>
+    <name>Zero.Core.Runtime.Security</name>
     <packaging>bundle</packaging>
     <dependencies>
         <dependency>
             <groupId>io.zerows</groupId>
             <artifactId>zero-core-runtime-domain</artifactId>
         </dependency>
-        <!-- Auth Common Framework for different Authorization -->
+        <!-- Vertx Web / Auth Common Framework -->
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-auth-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-web</artifactId>
         </dependency>
     </dependencies>
     <build>

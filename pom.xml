@@ -26,6 +26,7 @@
         <module>zero-core-feature-web-client</module>
         <module>zero-core-feature-database-jooq</module>
         <module>zero-core-feature-database-cache</module>
+        <module>zero-core-runtime-assembly</module>
     </modules>
     <build>
         <plugins>

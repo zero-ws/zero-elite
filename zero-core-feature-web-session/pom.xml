@@ -17,6 +17,12 @@
             <groupId>io.zerows</groupId>
             <artifactId>zero-core-runtime-metadata</artifactId>
         </dependency>
+
+        <!-- Vertx -->
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-web</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

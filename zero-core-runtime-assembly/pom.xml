@@ -9,18 +9,13 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>zero-core-feature-database-jooq</artifactId>
-    <name>Zero.Core.Feature.Database.JOOQ</name>
+    <artifactId>zero-core-runtime-assembly</artifactId>
+    <name>Zero.Core.Runtime.Assembly</name>
     <packaging>bundle</packaging>
     <dependencies>
         <dependency>
             <groupId>io.zerows</groupId>
-            <artifactId>zero-core-feature-database-cp</artifactId>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.reactivestreams</groupId>
-            <artifactId>reactive-streams</artifactId>
+            <artifactId>zero-core-runtime-metadata</artifactId>
         </dependency>
     </dependencies>
     <build>
@@ -35,7 +30,7 @@
                             <!-- SPI Required -->
                             io.zerows.core.metadata.osgi.spi.*;-split-package:=merge-first,
 
-                            io.zerows.core.feature.database.jooq.*,
+                            io.zerows.core.assembly.*,
                         </Export-Package>
                         <Import-Package>
                             *;resolution:=optional,

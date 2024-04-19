@@ -1,11 +1,12 @@
 package io.zerows.core.feature.web.shared;
 
 import io.horizon.atom.program.Kv;
-import io.horizon.uca.log.Annal;
+import io.horizon.uca.cache.Cc;
 import io.vertx.core.Future;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
 import io.zerows.core.feature.web.shared.exception._500PoolInternalException;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -16,18 +17,22 @@ import java.util.concurrent.ConcurrentMap;
  */
 @SuppressWarnings("all")
 public class UxPool {
-    private static final Annal LOGGER = Annal.get(UxPool.class);
+
+    private static final Cc<String, UxPool> CC_UX_POOL = Cc.open();
+
     private transient final String name;
     private transient final SharedClient client;
+    // 替换：private static final Annal LOGGER = Annal.get(UxPool.class);
+    private transient OLog LOGGER = Ut.Log.ux(getClass());
 
-    public UxPool() {
-        this.name = MapInfix.getDefaultName();
-        this.client = MapInfix.getClient();
-    }
-
-    public UxPool(final String name) {
+    private UxPool(final String name) {
         this.name = name;
         this.client = MapInfix.getClient().switchClient(name);
+    }
+
+    public static UxPool of(final String name) {
+        final String nameP = Ut.isNil(name) ? MapInfix.getDefaultName() : name;
+        return CC_UX_POOL.pick(() -> new UxPool(nameP), nameP);
     }
 
     public String name() {

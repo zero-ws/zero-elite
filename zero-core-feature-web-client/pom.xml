@@ -17,6 +17,8 @@
             <groupId>io.zerows</groupId>
             <artifactId>zero-core-runtime-metadata</artifactId>
         </dependency>
+
+        
         <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
@@ -30,6 +32,12 @@
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore</artifactId>
         </dependency>
+        <!-- Jsr 311 Jws -->
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-common</artifactId>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>

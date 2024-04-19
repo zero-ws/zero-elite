@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>zero-core-runtime-cloud</artifactId>
-    <name>Zero.Core.Region.Cloud</name>
+    <name>Zero.Core.Runtime.Cloud</name>
     <packaging>bundle</packaging>
     <dependencies>
         <dependency>
