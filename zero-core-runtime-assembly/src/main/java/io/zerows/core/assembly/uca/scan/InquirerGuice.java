@@ -7,7 +7,7 @@ import io.zerows.core.assembly.uca.di.DiGuice;
 import io.zerows.core.assembly.uca.di.DiGuiceConstructor;
 import io.zerows.core.assembly.uca.di.DiGuiceField;
 import io.zerows.core.assembly.uca.di.DiGuiceMethod;
-import io.zerows.core.metadata.zdk.Inquirer;
+import io.zerows.core.metadata.zdk.uca.Inquirer;
 
 import java.lang.reflect.Modifier;
 import java.util.Arrays;

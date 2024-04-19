@@ -2,7 +2,7 @@ package io.zerows.core.assembly.uca.scan;
 
 import io.reactivex.rxjava3.core.Observable;
 import io.vertx.up.annotations.Infusion;
-import io.zerows.core.metadata.zdk.Inquirer;
+import io.zerows.core.metadata.zdk.uca.Inquirer;
 
 import java.lang.reflect.Field;
 import java.util.HashSet;

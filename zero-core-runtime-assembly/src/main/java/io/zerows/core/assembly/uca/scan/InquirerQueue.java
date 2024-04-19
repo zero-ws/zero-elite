@@ -6,7 +6,7 @@ import io.vertx.up.annotations.Address;
 import io.vertx.up.annotations.Queue;
 import io.vertx.up.fn.Fn;
 import io.zerows.core.assembly.exception.WorkerConflictException;
-import io.zerows.core.metadata.zdk.Inquirer;
+import io.zerows.core.metadata.zdk.uca.Inquirer;
 
 import java.util.Set;
 import java.util.stream.Collectors;

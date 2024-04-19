@@ -1,4 +1,4 @@
-package io.zerows.core.metadata.zdk;
+package io.zerows.core.metadata.zdk.uca;
 
 import io.vertx.up.util.Ut;
 import io.zerows.core.metadata.uca.logging.OLog;

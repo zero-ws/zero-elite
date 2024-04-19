@@ -2,7 +2,7 @@ package io.zerows.core.assembly.uca.scan;
 
 
 import io.vertx.up.annotations.Worker;
-import io.zerows.core.metadata.zdk.Inquirer;
+import io.zerows.core.metadata.zdk.uca.Inquirer;
 
 import java.util.Set;
 import java.util.stream.Collectors;

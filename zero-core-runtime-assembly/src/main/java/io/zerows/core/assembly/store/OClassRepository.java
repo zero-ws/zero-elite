@@ -1,4 +1,4 @@
-package io.zerows.core.assembly;
+package io.zerows.core.assembly.store;
 
 import com.google.inject.Injector;
 import io.horizon.runtime.Runner;
@@ -6,7 +6,7 @@ import io.vertx.up.eon.KMeta;
 import io.vertx.up.util.Ut;
 import io.zerows.core.assembly.uca.scan.*;
 import io.zerows.core.metadata.store.classes.OClassCache;
-import io.zerows.core.metadata.zdk.Inquirer;
+import io.zerows.core.metadata.zdk.uca.Inquirer;
 
 import java.util.Set;
 
@@ -19,7 +19,7 @@ import java.util.Set;
  *
  * @author lang : 2024-04-19
  */
-public class OClassAssembly {
+public class OClassRepository {
 
     private static Injector DI;
 
@@ -59,7 +59,7 @@ public class OClassAssembly {
             }
         );
         long end = System.currentTimeMillis();
-        Ut.Log.boot(OClassAssembly.class).info(" {0}ms / Zero Timer: Meditate Class Scanned!",
+        Ut.Log.boot(OClassRepository.class).info(" {0}ms / Zero Timer: Meditate Class Scanned!",
             end - start);
 
 
@@ -67,28 +67,10 @@ public class OClassAssembly {
         final Inquirer<Injector> guice = Ut.singleton(InquirerGuice.class);
         DI = guice.scan(processor.get());
         end = System.currentTimeMillis() - end;
-        Ut.Log.boot(OClassAssembly.class).info(" {1}ms / Zero Zone DI Environment.... Size= {0}", String.valueOf(processor.get().size()), String.valueOf(end));
+        Ut.Log.boot(OClassRepository.class).info(" {1}ms / Zero Zone DI Environment.... Size= {0}", String.valueOf(processor.get().size()), String.valueOf(end));
     }
 
-    public static class Stored {
-        public static synchronized Injector DI() {
-            return DI;
-        }
-
-        public static synchronized Set<Class<?>> CLASS_ALL() {
-            return OClassCache.of().get();
-        }
-
-        public static synchronized Set<Class<?>> CLASS_ENDPOINT() {
-            return OClassCache.of().get(KMeta.Typed.ENDPOINT);
-        }
-
-        public static synchronized Set<Class<?>> CLASS_QUEUE() {
-            return OClassCache.of().get(KMeta.Typed.QUEUE);
-        }
-
-        public static synchronized Set<Class<?>> CLASS_WORKER() {
-            return OClassCache.of().get(KMeta.Typed.WORKER);
-        }
+    public static synchronized Injector ofDI() {
+        return DI;
     }
 }

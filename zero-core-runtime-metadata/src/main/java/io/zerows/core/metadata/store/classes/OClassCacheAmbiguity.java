@@ -8,6 +8,7 @@ import io.vertx.up.util.Ut;
 import io.zerows.core.metadata.uca.scanner.ClassScanner;
 import io.zerows.core.metadata.zdk.AbstractAmbiguity;
 import io.zerows.core.metadata.zdk.running.OCache;
+import io.zerows.core.metadata.zdk.uca.Inquirer;
 import org.osgi.framework.Bundle;
 
 import java.util.Objects;
@@ -145,7 +146,7 @@ class OClassCacheAmbiguity extends AbstractAmbiguity implements OClassCache {
 
         /**
          * 特殊方法，可直接绑定
-         * {@link io.zerows.core.metadata.zdk.Inquirer#scan(Set)} 实现类对应的方法集，最终可保证结果的正确性，且扫描过程
+         * {@link Inquirer#scan(Set)} 实现类对应的方法集，最终可保证结果的正确性，且扫描过程
          * 一直在扫描对应的信息，不会重复扫描
          *
          * @param type     类型
