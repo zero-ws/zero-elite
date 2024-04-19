@@ -22,7 +22,6 @@ public class UxPool {
 
     private transient final String name;
     private transient final SharedClient client;
-    // 替换：private static final Annal LOGGER = Annal.get(UxPool.class);
     private transient OLog LOGGER = Ut.Log.ux(getClass());
 
     private UxPool(final String name) {

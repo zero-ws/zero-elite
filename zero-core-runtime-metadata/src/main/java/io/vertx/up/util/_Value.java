@@ -5,6 +5,7 @@ import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 
 import java.util.function.BinaryOperator;
+import java.util.function.Function;
 
 /**
  * @author lang : 2023-06-19
@@ -40,6 +41,18 @@ class _Value extends _To {
      */
     public static JsonObject valueToPage(final JsonObject pageData, final String... fields) {
         return To.valueToPage(pageData, fields);
+    }
+
+    public static JsonObject valueToPage() {
+        return To.valueToPage(new JsonArray(), 0L);
+    }
+
+    public static JsonObject valueToPage(final JsonArray data, final long size) {
+        return To.valueToPage(data, size);
+    }
+
+    public static JsonObject valueToPage(final JsonObject pageData, final Function<JsonArray, JsonArray> function) {
+        return To.valueToPage(pageData, function);
     }
 
     // Single Processing

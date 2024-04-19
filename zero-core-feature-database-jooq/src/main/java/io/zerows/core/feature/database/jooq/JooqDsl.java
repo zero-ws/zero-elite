@@ -9,10 +9,10 @@ import io.vertx.core.Promise;
 import io.vertx.core.Vertx;
 import io.vertx.core.impl.ContextInternal;
 import io.vertx.core.impl.future.PromiseImpl;
-import io.vertx.up.exception.booting.JooqClassInvalidException;
-import io.vertx.up.exception.booting.JooqVertxNullException;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
+import io.zerows.core.feature.database.jooq.exception.JooqClassInvalidException;
+import io.zerows.core.feature.database.jooq.exception.JooqVertxNullException;
 import org.jooq.Configuration;
 import org.jooq.DSLContext;
 

@@ -1,4 +1,4 @@
-package io.zerows.core.domain.atom.commune.mapping;
+package io.zerows.core.metadata.atom.mapping;
 
 interface Info {
 

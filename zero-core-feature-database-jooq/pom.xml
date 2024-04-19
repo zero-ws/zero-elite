@@ -17,7 +17,11 @@
             <groupId>io.zerows</groupId>
             <artifactId>zero-core-feature-database-cp</artifactId>
         </dependency>
-        
+        <dependency>
+            <groupId>io.zerows</groupId>
+            <artifactId>zero-core-runtime-domain</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.reactivestreams</groupId>
             <artifactId>reactive-streams</artifactId>

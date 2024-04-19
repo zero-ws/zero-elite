@@ -1,4 +1,4 @@
-package io.vertx.up.exception.booting;
+package io.zerows.core.feature.unit.testing.exception;
 
 import io.horizon.exception.BootingException;
 

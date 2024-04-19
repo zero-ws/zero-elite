@@ -307,7 +307,7 @@ public interface YmlCore {
     /**
      * vertx-job.yml
      * <pre><code>
-     * job:  {@see io.vertx.up.uca.job.store.JobConfig}
+     * job:  {@see io.vertx.up.operation.job.store.JobConfig}
      *     store:
      *        component:
      *        config:

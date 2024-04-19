@@ -11,6 +11,7 @@ import io.vertx.up.fn.Fn;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 final class To {
@@ -87,5 +88,26 @@ final class To {
             pageJ.put(KName.LIST, listRef);
         }
         return pageJ;
+    }
+
+    static JsonObject valueToPage(JsonArray data, Long count) {
+        if (Ut.isNil(data)) {
+            data = new JsonArray();
+        }
+        if (Objects.isNull(count) || 0 > count) {
+            count = 0L;
+        }
+        return new JsonObject().put(KName.LIST, data).put(KName.COUNT, count);
+    }
+
+    static JsonObject valueToPage(final JsonObject pageData, final Function<JsonArray, JsonArray> function) {
+        final JsonArray data = Ut.valueJArray(pageData.getJsonArray(KName.LIST));
+        final JsonArray updated;
+        if (Objects.nonNull(function)) {
+            updated = function.apply(data);
+        } else {
+            updated = data;
+        }
+        return pageData.put(KName.LIST, updated);
     }
 }

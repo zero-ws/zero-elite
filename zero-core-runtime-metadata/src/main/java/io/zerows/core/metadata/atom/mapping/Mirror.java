@@ -1,4 +1,4 @@
-package io.zerows.core.domain.atom.commune.mapping;
+package io.zerows.core.metadata.atom.mapping;
 
 import io.horizon.uca.cache.Cc;
 import io.horizon.uca.log.Annal;

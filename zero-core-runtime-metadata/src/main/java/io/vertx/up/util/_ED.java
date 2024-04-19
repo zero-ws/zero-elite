@@ -5,7 +5,7 @@ import io.horizon.util.HUt;
 /**
  * @author lang : 2023-06-19
  */
-class _ED extends _Bundle {
+class _ED extends _Compare {
     /*
      * Encryption method for string
      * 1) encryptMD5

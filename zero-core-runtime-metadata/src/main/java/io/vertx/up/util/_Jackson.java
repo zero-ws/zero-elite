@@ -2,6 +2,9 @@ package io.vertx.up.util;
 
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
+import io.vertx.up.eon.KName;
+
+import java.util.List;
 
 /**
  * @author lang : 2023-06-19
@@ -38,5 +41,47 @@ class _Jackson extends _It {
 
     public static <T> T deserialize(final String value, final Class<T> clazz, boolean isSmart) {
         return Jackson.deserialize(value, clazz, isSmart);
+    }
+
+    /*
+     * Mirror 镜像序列化（更标准的序列化接口）
+     * fromJson: JsonObject / JsonArray -> T
+     * toJObject / toJArray: T -> JsonObject / JsonArray
+     */
+    public static <T> T fromJson(final JsonObject data, final Class<T> clazz) {
+        return Json.from(data, clazz, "");
+    }
+
+    public static <T> List<T> fromJson(final JsonArray array, final Class<T> clazz) {
+        return Json.from(array, clazz, "");
+    }
+
+    public static <T> List<T> fromPage(final JsonObject data, final Class<T> clazz) {
+        final JsonArray pageData = Ut.valueJArray(data.getJsonArray(KName.LIST));
+        return fromJson(pageData, clazz);
+    }
+
+    public static <T> T fromJson(final JsonObject data, final Class<T> clazz, final String pojo) {
+        return Json.from(data, clazz, pojo);
+    }
+
+    public static <T> List<T> fromJson(final JsonArray array, final Class<T> clazz, final String pojo) {
+        return Json.from(array, clazz, pojo);
+    }
+
+    public static <T> JsonObject toJson(final T entity) {
+        return Json.toJObject(entity, "");
+    }
+
+    public static <T> JsonObject toJson(final T entity, final String pojo) {
+        return Json.toJObject(entity, pojo);
+    }
+
+    public static <T> JsonArray toJson(final List<T> list) {
+        return Json.toJArray(list, "");
+    }
+
+    public static <T> JsonArray toJson(final List<T> list, final String pojo) {
+        return Json.toJArray(list, pojo);
     }
 }

@@ -41,7 +41,7 @@ public class Regulation implements Serializable {
             final Formula formula = this.find(ruleKey);
             if (Objects.nonNull(formula)) {
                 /*
-                 *  The runner should be executed inner
+                 *  The operation should be executed inner
                  *  formula instead of outer execute
                  */
                 futures.add(formula.run(params, () -> ruleFn.apply(params)));

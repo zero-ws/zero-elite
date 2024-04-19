@@ -2,8 +2,8 @@ package io.zerows.core.metadata.zdk.plugins;
 
 import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.exception.booting.ConfigKeyMissingException;
 import io.vertx.up.fn.Fn;
+import io.zerows.core.metadata.exception.boot.ConfigKeyMissingException;
 import io.zerows.core.metadata.store.config.OZeroStore;
 import io.zerows.core.metadata.uca.stable.Ruler;
 

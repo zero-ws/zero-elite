@@ -1,4 +1,4 @@
-package io.vertx.up.exception.booting;
+package io.zerows.core.feature.database.jooq.exception;
 
 import io.horizon.exception.BootingException;
 import io.horizon.uca.qr.syntax.Ir;
