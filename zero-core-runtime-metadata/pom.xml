@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>io.zerows</groupId>
-            <artifactId>zero-ams</artifactId>
+            <artifactId>zero-runtime-specification-ams</artifactId>
         </dependency>
         <!-- Vertx Dependency -->
         <dependency>
