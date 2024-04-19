@@ -1,4 +1,4 @@
-package io.zerows.core.facade.junit;
+package io.zerows.core.feature.unit.testing;
 
 import io.horizon.uca.log.Annal;
 import io.horizon.uca.qr.Criteria;

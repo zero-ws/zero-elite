@@ -41,6 +41,11 @@
             <groupId>io.zerows</groupId>
             <artifactId>zero-core-feature-database-cp</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>io.zerows</groupId>
+            <artifactId>zero-core-feature-unit-testing</artifactId>
+        </dependency>
         <!-- Unit Testing -->
         <dependency>
             <groupId>io.vertx</groupId>

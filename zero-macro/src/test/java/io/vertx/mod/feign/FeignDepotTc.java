@@ -2,7 +2,7 @@ package io.vertx.mod.feign;
 
 import io.vertx.ext.unit.TestContext;
 import io.vertx.up.exception.booting.DynamicKeyMissingException;
-import io.zerows.core.facade.junit.ZeroBase;
+import io.zerows.core.feature.unit.testing.ZeroBase;
 import io.zerows.core.metadata.zdk.plugins.InfixConfig;
 import org.junit.Test;
 

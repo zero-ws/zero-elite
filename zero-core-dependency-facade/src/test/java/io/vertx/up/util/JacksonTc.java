@@ -4,7 +4,7 @@ import io.horizon.util.HUt;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.ext.unit.TestContext;
-import io.zerows.core.facade.junit.ZeroBase;
+import io.zerows.core.feature.unit.testing.ZeroBase;
 import org.junit.Test;
 
 public class JacksonTc extends ZeroBase {

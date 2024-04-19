@@ -3,7 +3,7 @@ package io.vertx.up.atom;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.util.Ut;
 import io.zerows.core.domain.atom.commune.mapping.Mirror;
-import io.zerows.core.facade.junit.ZeroBase;
+import io.zerows.core.feature.unit.testing.ZeroBase;
 import org.junit.Test;
 
 public class MirrorTc extends ZeroBase {

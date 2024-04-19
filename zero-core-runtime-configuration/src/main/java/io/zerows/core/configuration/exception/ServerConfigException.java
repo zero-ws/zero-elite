@@ -1,4 +1,4 @@
-package io.vertx.up.exception.daemon;
+package io.zerows.core.configuration.exception;
 
 import io.horizon.exception.DaemonException;
 

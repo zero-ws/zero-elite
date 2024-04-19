@@ -3,7 +3,7 @@ package io.vertx.up.atom.query;
 import io.horizon.uca.qr.Criteria;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.zerows.core.facade.junit.ZeroBase;
+import io.zerows.core.feature.unit.testing.ZeroBase;
 import org.junit.Test;
 
 /**

@@ -1,4 +1,4 @@
-package io.zerows.core.facade.junit;
+package io.zerows.core.feature.unit.testing;
 
 import io.vertx.core.Future;
 import io.vertx.core.Vertx;

@@ -2,7 +2,7 @@ package io.vertx.up.log;
 
 import io.horizon.uca.log.Annal;
 import io.horizon.uca.log.Log;
-import io.zerows.core.facade.junit.ZeroBase;
+import io.zerows.core.feature.unit.testing.ZeroBase;
 import org.junit.Test;
 
 public class AnnalTk extends ZeroBase {

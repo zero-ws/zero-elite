@@ -27,6 +27,7 @@
         <module>zero-core-feature-database-jooq</module>
         <module>zero-core-feature-database-cache</module>
         <module>zero-core-runtime-assembly</module>
+        <module>zero-core-feature-unit-testing</module>
     </modules>
     <build>
         <plugins>

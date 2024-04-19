@@ -1,7 +1,7 @@
 package io.horizon.util;
 
 import io.vertx.ext.unit.TestContext;
-import io.zerows.core.facade.junit.ZeroBase;
+import io.zerows.core.feature.unit.testing.ZeroBase;
 import org.junit.Test;
 
 import java.util.Arrays;

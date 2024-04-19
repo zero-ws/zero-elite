@@ -2,7 +2,7 @@ package io.vertx.up.commune.rule;
 
 import io.modello.specification.atom.HRule;
 import io.vertx.core.json.JsonObject;
-import io.zerows.core.facade.junit.ZeroBase;
+import io.zerows.core.feature.unit.testing.ZeroBase;
 import org.junit.Assert;
 import org.junit.Test;
 
