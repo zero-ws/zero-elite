@@ -1,4 +1,4 @@
-package io.zerows.core.configuration.uca.setup;
+package io.zerows.core.configuration.uca.transformer;
 
 import io.vertx.core.http.HttpServerOptions;
 import io.vertx.core.json.JsonObject;
@@ -9,10 +9,9 @@ import io.zerows.core.configuration.atom.option.SockOptions;
 import io.zerows.core.configuration.zdk.Transformer;
 
 /**
- * @author <a href="http://www.origin-x.cn">Lang</a>
+ * @author lang : 2024-04-20
  */
 public class SockTransformer implements Transformer<SockOptions> {
-
     @Override
     public SockOptions transform(final JsonObject config) {
         return Fn.runOr(null == config, this.tracker(), SockOptions::new, () -> {

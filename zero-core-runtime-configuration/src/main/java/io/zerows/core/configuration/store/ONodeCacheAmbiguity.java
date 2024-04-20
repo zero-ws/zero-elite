@@ -33,7 +33,9 @@ class ONodeCacheAmbiguity extends AbstractAmbiguity implements ONodeCache {
 
     @Override
     public <C> OCache<NodeVertx> configure(final C configuration) {
-
+        if (configuration instanceof final NodeNetwork component) {
+            this.network = component;
+        }
         return this;
     }
 

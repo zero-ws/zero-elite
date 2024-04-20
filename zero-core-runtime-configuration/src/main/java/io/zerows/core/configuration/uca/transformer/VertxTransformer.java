@@ -1,9 +1,9 @@
-package io.zerows.core.configuration.uca.setup;
+package io.zerows.core.configuration.uca.transformer;
 
 import io.vertx.core.VertxOptions;
 import io.vertx.core.json.JsonObject;
+import io.vertx.up.eon.configure.YmlCore;
 import io.vertx.up.fn.Fn;
-import io.zerows.core.configuration.zdk.NodeVisitor;
 import io.zerows.core.configuration.zdk.Transformer;
 
 import java.util.Objects;
@@ -21,7 +21,7 @@ public class VertxTransformer implements Transformer<VertxOptions> {
 
     @Override
     public VertxOptions transform(final JsonObject input) {
-        final JsonObject config = input.getJsonObject(NodeVisitor.YKEY_OPTIONS, null);
+        final JsonObject config = input.getJsonObject(YmlCore.vertx.OPTIONS, null);
         final VertxOptions options = Fn.runOr(null == config, this.tracker(),
             VertxOptions::new,
             () -> {

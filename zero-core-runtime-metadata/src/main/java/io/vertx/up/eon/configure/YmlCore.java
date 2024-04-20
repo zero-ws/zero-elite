@@ -5,6 +5,7 @@ import io.horizon.eon.VString;
 import io.horizon.eon.em.EmDS;
 import io.horizon.util.HUt;
 import io.vertx.up.annotations.Infusion;
+import io.vertx.up.eon.KName;
 import io.vertx.up.eon.em.EmSecure;
 import io.vertx.up.eon.em.container.SessionType;
 
@@ -50,6 +51,14 @@ public interface YmlCore {
             // vertx-{key}.yml
             return VERTX + VString.DASH + filename + VString.DOT + VPath.SUFFIX.YML;
         }
+    }
+
+    interface vertx {
+        String INSTANCE = KName.INSTANCE;
+        String NAME = KName.NAME;
+        String OPTIONS = KName.OPTIONS;
+        String CLUSTERED = "clustered";
+        String MANAGER = "manager";
     }
 
     // vertx-resolver.yml

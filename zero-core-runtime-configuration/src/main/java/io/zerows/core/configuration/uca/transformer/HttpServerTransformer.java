@@ -1,4 +1,4 @@
-package io.zerows.core.configuration.uca.setup;
+package io.zerows.core.configuration.uca.transformer;
 
 import io.vertx.core.http.HttpServerOptions;
 import io.vertx.core.json.JsonObject;
@@ -8,8 +8,10 @@ import io.zerows.core.configuration.zdk.Transformer;
 
 import java.util.Objects;
 
+/**
+ * @author lang : 2024-04-20
+ */
 public class HttpServerTransformer implements Transformer<HttpServerOptions> {
-
     @Override
     public HttpServerOptions transform(final JsonObject input) {
         final JsonObject config = input.getJsonObject(KName.CONFIG, null);

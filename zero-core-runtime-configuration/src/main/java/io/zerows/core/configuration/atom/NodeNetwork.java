@@ -26,6 +26,9 @@ public class NodeNetwork implements Serializable {
     private final ConcurrentMap<String, NodeVertx> vertxOptions = new ConcurrentHashMap<>();
     private ClusterOptions clusterOptions;
 
+    public NodeNetwork() {
+    }
+
     // 当前节点所属集群配置
     public NodeNetwork cluster(final ClusterOptions clusterOptions) {
         this.clusterOptions = clusterOptions;
@@ -40,10 +43,6 @@ public class NodeNetwork implements Serializable {
     public NodeNetwork add(final String name, final NodeVertx vertxOptions) {
         this.vertxOptions.put(name, vertxOptions);
         return this;
-    }
-
-    public NodeVertx add(final String name) {
-        return this.vertxOptions.get(name);
     }
 
     public void remove(final String name) {
