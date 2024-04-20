@@ -33,6 +33,10 @@ class _Log extends _Load {
             return OLog.of(clazz, "Command");
         }
 
+        public static OLog component(final Class<?> clazz) {
+            return OLog.of(clazz, "Component");
+        }
+
         public static OLog plugin(final Class<?> clazz) {
             return OLog.of(clazz, "Plugin");
         }

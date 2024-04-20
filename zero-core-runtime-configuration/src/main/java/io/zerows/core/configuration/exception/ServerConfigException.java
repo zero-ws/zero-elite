@@ -1,13 +1,13 @@
 package io.zerows.core.configuration.exception;
 
-import io.horizon.exception.DaemonException;
+import io.horizon.exception.BootingException;
 
 /**
  * Server config:
  * server:
  * -
  */
-public class ServerConfigException extends DaemonException {
+public class ServerConfigException extends BootingException {
     public ServerConfigException(final Class<?> clazz,
                                  final String config) {
         super(clazz, config);

@@ -1,8 +1,11 @@
 package io.zerows.core.configuration.atom;
 
+import io.horizon.eon.em.web.ServerType;
 import io.zerows.core.configuration.atom.option.ClusterOptions;
 
 import java.io.Serializable;
+import java.util.Objects;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
@@ -24,7 +27,8 @@ import java.util.concurrent.ConcurrentMap;
 public class NodeNetwork implements Serializable {
 
     private final ConcurrentMap<String, NodeVertx> vertxOptions = new ConcurrentHashMap<>();
-    private ClusterOptions clusterOptions;
+    private volatile NodeVertx vertxNodeRef;
+    private volatile ClusterOptions clusterOptions;
 
     public NodeNetwork() {
     }
@@ -41,6 +45,9 @@ public class NodeNetwork implements Serializable {
 
     // 当前节点所属 Vertx 配置
     public NodeNetwork add(final String name, final NodeVertx vertxOptions) {
+        if (Objects.isNull(this.vertxNodeRef)) {
+            this.vertxNodeRef = vertxOptions;
+        }
         this.vertxOptions.put(name, vertxOptions);
         return this;
     }
@@ -51,5 +58,24 @@ public class NodeNetwork implements Serializable {
 
     public NodeVertx get(final String name) {
         return this.vertxOptions.get(name);
+    }
+
+    public ConcurrentMap<String, NodeVertx> vertxOptions() {
+        return this.vertxOptions;
+    }
+    // ------------------- 临时方案：默认单个实例
+
+    public synchronized NodeVertx get() {
+        return this.vertxNodeRef;
+    }
+
+    public boolean okRpc() {
+        final Set<String> serverIpc = this.vertxNodeRef.optionServers(ServerType.IPC);
+        return !serverIpc.isEmpty();
+    }
+
+    public boolean okSock() {
+        final Set<String> serverSock = NodeNetwork.this.vertxNodeRef.optionServers(ServerType.SOCK);
+        return !serverSock.isEmpty();
     }
 }

@@ -1,6 +1,5 @@
 package io.zerows.core.configuration.zdk;
 
-import io.macrocosm.specification.config.HSetting;
 import io.vertx.up.util.Ut;
 import io.zerows.core.metadata.uca.logging.OLog;
 
@@ -9,9 +8,9 @@ import io.zerows.core.metadata.uca.logging.OLog;
  *
  * @author lang : 2024-04-20
  */
-public interface Processor<T> {
+public interface Processor<T, C> {
 
-    void makeup(T target, HSetting setting);
+    void makeup(T target, C setting);
 
     default OLog tracker() {
         return Ut.Log.configure(this.getClass());

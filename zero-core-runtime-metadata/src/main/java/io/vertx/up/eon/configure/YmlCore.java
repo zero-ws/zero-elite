@@ -269,7 +269,7 @@ public interface YmlCore {
      *        instances:
      *     unity:           {@see io.horizon.spi.environment.UnityApp}
      * deployment:          {@see io.vertx.up.argument.agent.Arrange}
-     *     mode:            {@see io.vertx.up.eon.em.DeployMode}
+     *     mode:            {@see io.vertx.up.eon.em.Mode}
      *     delivery:        {@link io.vertx.core.eventbus.DeliveryOptions}
      *     options:
      *        <name>:       {@link io.vertx.core.DeploymentOptions}

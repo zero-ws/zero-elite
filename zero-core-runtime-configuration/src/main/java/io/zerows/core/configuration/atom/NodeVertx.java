@@ -11,8 +11,12 @@ import io.zerows.core.configuration.atom.server.OptionBuilder;
 import io.zerows.core.configuration.zdk.OptionOfServer;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Vertx 专用节点，清单
@@ -29,13 +33,13 @@ import java.util.concurrent.ConcurrentMap;
  * @author lang : 2024-04-20
  */
 public class NodeVertx implements Serializable {
+    private static final ConcurrentMap<String, AtomicInteger> SERVER_LOG = new ConcurrentHashMap<>();
     @SuppressWarnings("all")
     private final ConcurrentMap<String, OptionOfServer> serverOptions = new ConcurrentHashMap<>();
+    private final ConcurrentMap<Class<?>, DeploymentOptions> deploymentOptions =
+        new ConcurrentHashMap<>();
     private final String vertxName;
     private VertxOptions vertxOptions;
-    private DeploymentOptions agentOptions;
-    private DeploymentOptions workerOptions;
-    private DeploymentOptions schedulerOptions;
     private DeliveryOptions deliveryOptions;
 
     private NodeVertx(final String vertxName) {
@@ -50,45 +54,25 @@ public class NodeVertx implements Serializable {
         return this.vertxName;
     }
 
-    public NodeVertx optionVertx(final VertxOptions vertxOptions) {
+    public void optionVertx(final VertxOptions vertxOptions) {
         this.vertxOptions = vertxOptions;
-        return this;
     }
 
     public VertxOptions optionVertx() {
         return this.vertxOptions;
     }
 
-    public NodeVertx optionAgent(final DeploymentOptions agentOptions) {
-        this.agentOptions = agentOptions;
-        return this;
+    public void optionDeployment(final Class<?> component,
+                                 final DeploymentOptions deploymentOptions) {
+        this.deploymentOptions.put(component, deploymentOptions);
     }
 
-    public DeploymentOptions optionAgent() {
-        return this.agentOptions;
+    public DeploymentOptions optionDeployment(final Class<?> component) {
+        return this.deploymentOptions.get(component);
     }
 
-    public NodeVertx optionWorker(final DeploymentOptions workerOptions) {
-        this.workerOptions = workerOptions;
-        return this;
-    }
-
-    public DeploymentOptions optionWorker() {
-        return this.workerOptions;
-    }
-
-    public NodeVertx optionScheduler(final DeploymentOptions schedulerOptions) {
-        this.schedulerOptions = schedulerOptions;
-        return this;
-    }
-
-    public DeploymentOptions optionScheduler() {
-        return this.schedulerOptions;
-    }
-
-    public NodeVertx optionDelivery(final DeliveryOptions deliveryOptions) {
+    public void optionDelivery(final DeliveryOptions deliveryOptions) {
         this.deliveryOptions = deliveryOptions;
-        return this;
     }
 
     public DeliveryOptions optionDelivery() {
@@ -96,25 +80,44 @@ public class NodeVertx implements Serializable {
     }
 
     // 当前节点所属 Server 配置
-    public NodeVertx optionServer(final String name,
-                                  final ServerType type,
-                                  final HttpServerOptions serverOptions) {
+    public void optionServer(final String name,
+                             final ServerType type,
+                             final HttpServerOptions serverOptions) {
         this.serverOptions.put(name, OptionBuilder.ofHttp(name, type, serverOptions));
-        return this;
+        SERVER_LOG.put(name, new AtomicInteger(0));
     }
 
-    public NodeVertx optionServer(final String name, final RpcOptions serverOptions) {
+    public void optionServer(final String name, final RpcOptions serverOptions) {
         this.serverOptions.put(name, OptionBuilder.ofRpc(name, serverOptions));
-        return this;
+        SERVER_LOG.put(name, new AtomicInteger(0));
     }
 
-    public NodeVertx optionServer(final String name, final SockOptions serverOptions) {
+    public void optionServer(final String name, final SockOptions serverOptions) {
         this.serverOptions.put(name, OptionBuilder.ofSock(name, serverOptions));
-        return this;
+        SERVER_LOG.put(name, new AtomicInteger(0));
     }
 
     @SuppressWarnings("all")
     public <T> OptionOfServer<T> optionServer(final String name) {
         return (OptionOfServer<T>) this.serverOptions.get(name);
+    }
+
+    public Set<String> optionServers(final ServerType type) {
+        if (Objects.isNull(type)) {
+            return this.serverOptions.keySet();
+        } else {
+            final Set<String> servers = new HashSet<>();
+            this.serverOptions.forEach((serverName, option) -> {
+                if (type == option.type()) {
+                    servers.add(serverName);
+                }
+            });
+            return servers;
+        }
+    }
+
+    // 日志处理（必须）
+    public AtomicInteger loggerOfServer(final String serverName) {
+        return SERVER_LOG.get(serverName);
     }
 }

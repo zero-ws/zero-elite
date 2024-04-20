@@ -23,7 +23,7 @@ import io.zerows.core.metadata.uca.stable.Ruler;
  *
  * @author lang : 2024-04-20
  */
-class VertxProcessor implements Processor<NodeNetwork> {
+class VertxProcessor implements Processor<NodeNetwork, HSetting> {
     private final transient Transformer<VertxOptions> transformerVertx;
     private final transient Transformer<ClusterOptions> transformerCluster;
 
@@ -62,11 +62,15 @@ class VertxProcessor implements Processor<NodeNetwork> {
         }
         final JsonArray instanceData = Ut.valueJArray(containerJ, YmlCore.vertx.INSTANCE);
         Ut.itJArray(instanceData).forEach(instanceJ -> {
+
+
             // Vertx 名称
             final String name = Ut.valueString(instanceJ, KName.NAME);
             // VertxOption 配置绑定
             final VertxOptions vertxOptions = this.transformerVertx.transform(vertxData);
-            // 集群配置
+
+
+            // 更新基础配置
             final NodeVertx nodeVertx = NodeVertx.of(name);
             nodeVertx.optionVertx(vertxOptions);
             network.add(name, nodeVertx);

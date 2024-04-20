@@ -16,7 +16,7 @@ public class OOptionRepository {
         final NodeNetwork network = new NodeNetwork();
 
         // 构造处理器
-        final Processor<NodeNetwork> processor = CommonProcessor.of();
+        final Processor<NodeNetwork, HSetting> processor = CommonProcessor.of();
         final HSetting setting = OZeroStore.setting();
         processor.makeup(network, setting);
 
