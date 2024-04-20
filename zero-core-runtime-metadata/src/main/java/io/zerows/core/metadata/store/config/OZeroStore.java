@@ -64,34 +64,38 @@ public class OZeroStore {
         return SETTING.hasInfix(infixKey);
     }
 
-    public static Class<?> injection(final String field) {
+    public static Class<?> classInject(final String field) {
         return INJECTION.get(field);
     }
 
-    public static ConcurrentMap<String, Class<?>> injection() {
+    public static ConcurrentMap<String, Class<?>> classInject() {
         return INJECTION;
     }
 
-    public static JsonObject containerJ() {
+    public static JsonObject configOfJContainer() {
         final HConfig container = SETTING.container();
         return container.options();
     }
 
-    public static JsonObject launcherJ() {
+    public static JsonObject configOfJLauncher() {
         final HConfig launcher = SETTING.launcher();
         return launcher.options();
     }
 
-    public static HConfig extension(final String extensionKey) {
+    public static HConfig configOfExtension(final String extensionKey) {
         return SETTING.extension(extensionKey);
     }
 
-    public static HConfig launcher() {
+    public static HConfig configOfLauncher() {
         return SETTING.launcher();
     }
 
-    public static HConfig container() {
+    public static HConfig configOfContainer() {
         return SETTING.container();
+    }
+
+    public static HSetting setting() {
+        return SETTING;
     }
 
     /**

@@ -1,6 +1,5 @@
 package io.zerows.core.configuration.uca.setup;
 
-import io.horizon.uca.log.Annal;
 import io.vertx.core.http.HttpServerOptions;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.KName;
@@ -12,13 +11,11 @@ import io.zerows.core.configuration.zdk.Transformer;
 /**
  * @author <a href="http://www.origin-x.cn">Lang</a>
  */
-public class SockSetUp implements Transformer<SockOptions> {
-
-    private static final Annal LOGGER = Annal.get(SockSetUp.class);
+public class SockTransformer implements Transformer<SockOptions> {
 
     @Override
     public SockOptions transform(final JsonObject config) {
-        return Fn.runOr(null == config, LOGGER, SockOptions::new, () -> {
+        return Fn.runOr(null == config, this.tracker(), SockOptions::new, () -> {
             /*
              * websocket:       ( SockOptions )
              * config:          ( HttpServerOptions )

@@ -11,7 +11,7 @@ import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
 import io.zerows.core.configuration.atom.option.RpcOptions;
 import io.zerows.core.configuration.exception.ServerConfigException;
-import io.zerows.core.configuration.uca.setup.RpcServerSetUp;
+import io.zerows.core.configuration.uca.setup.RpcTransformer;
 import io.zerows.core.configuration.zdk.ServerVisitor;
 import io.zerows.core.configuration.zdk.Transformer;
 import io.zerows.core.metadata.store.config.OZeroStore;
@@ -27,7 +27,7 @@ public class RpcServerVisitor implements ServerVisitor<RpcOptions> {
 
     //    private transient final Node<JsonObject> node = Node.infix(YmlCore.server.__KEY);
     private transient final Transformer<RpcOptions>
-        transformer = Ut.singleton(RpcServerSetUp.class);
+        transformer = Ut.singleton(RpcTransformer.class);
 
     @Override
     @SuppressWarnings("all")

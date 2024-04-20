@@ -9,8 +9,8 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
 import io.zerows.core.configuration.atom.option.ClusterOptions;
-import io.zerows.core.configuration.uca.setup.ClusterSetUp;
-import io.zerows.core.configuration.uca.setup.VertxSetUp;
+import io.zerows.core.configuration.uca.setup.ClusterTransformer;
+import io.zerows.core.configuration.uca.setup.VertxTransformer;
 import io.zerows.core.configuration.zdk.NodeVisitor;
 import io.zerows.core.configuration.zdk.Transformer;
 import io.zerows.core.metadata.store.config.OZeroStore;
@@ -24,9 +24,9 @@ public class VertxVisitor implements NodeVisitor {
 
     private static final String KEY = "vertx";
     private transient final Transformer<VertxOptions>
-        transformer = Ut.singleton(VertxSetUp.class);
+        transformer = Ut.singleton(VertxTransformer.class);
     private transient final Transformer<ClusterOptions>
-        clusterTransformer = Ut.singleton(ClusterSetUp.class);
+        clusterTransformer = Ut.singleton(ClusterTransformer.class);
 
     private transient ClusterOptions clusterOptions;
 
@@ -36,7 +36,7 @@ public class VertxVisitor implements NodeVisitor {
         // 1. Must be the first line, fixed position.
         //        Fn.verifyLenEq(this.getClass(), 0, (Object[]) keys);
         // 2. Visit the node for vertx
-        final JsonObject data = OZeroStore.containerJ();
+        final JsonObject data = OZeroStore.configOfJContainer();
         // 3. Vertx node validation.
         final JsonObject vertxData = data.getJsonObject(KEY);
         LOGGER.debug(VMessage.Visitor.V_BEFORE, KEY, this.getClass().getSimpleName(), vertxData);

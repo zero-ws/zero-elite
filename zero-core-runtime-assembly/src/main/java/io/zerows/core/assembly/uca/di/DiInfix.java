@@ -32,7 +32,7 @@ class DiInfix {
 
     private static ConcurrentMap<Class<?>, Class<?>> infusionMap() {
         // Extract all infixes
-        final Set<Class<?>> infixes = new HashSet<>(OZeroStore.injection().values());
+        final Set<Class<?>> infixes = new HashSet<>(OZeroStore.classInject().values());
         final ConcurrentMap<Class<?>, Class<?>> binds = new ConcurrentHashMap<>();
         Observable.fromIterable(infixes)
             .filter(Infix.class::isAssignableFrom)

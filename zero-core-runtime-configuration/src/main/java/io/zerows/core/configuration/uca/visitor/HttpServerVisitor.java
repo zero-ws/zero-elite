@@ -7,7 +7,7 @@ import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.KName;
 import io.vertx.up.util.Ut;
-import io.zerows.core.configuration.uca.setup.HttpServerSetUp;
+import io.zerows.core.configuration.uca.setup.HttpServerTransformer;
 import io.zerows.core.configuration.zdk.ServerVisitor;
 import io.zerows.core.configuration.zdk.Transformer;
 import io.zerows.core.metadata.uca.environment.MatureOn;
@@ -23,7 +23,7 @@ import java.util.concurrent.ConcurrentMap;
 public class HttpServerVisitor extends AbstractVisitor implements ServerVisitor<HttpServerOptions> {
 
     protected transient final Transformer<HttpServerOptions>
-        transformer = Ut.singleton(HttpServerSetUp.class);
+        transformer = Ut.singleton(HttpServerTransformer.class);
 
     /**
      * @return Server config to generate HttpServerOptions by port

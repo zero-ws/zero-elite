@@ -8,7 +8,7 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.KName;
 import io.vertx.up.util.Ut;
 import io.zerows.core.configuration.atom.option.SockOptions;
-import io.zerows.core.configuration.uca.setup.SockSetUp;
+import io.zerows.core.configuration.uca.setup.SockTransformer;
 import io.zerows.core.configuration.zdk.ServerVisitor;
 import io.zerows.core.configuration.zdk.Transformer;
 import io.zerows.core.metadata.uca.environment.MatureOn;
@@ -22,7 +22,7 @@ import java.util.concurrent.ConcurrentMap;
  */
 public class SockVisitor extends AbstractVisitor implements ServerVisitor<SockOptions> {
     protected transient final Transformer<SockOptions>
-        transformer = Ut.singleton(SockSetUp.class);
+        transformer = Ut.singleton(SockTransformer.class);
 
     @Override
     public ConcurrentMap<Integer, SockOptions> visit(final String... key)
