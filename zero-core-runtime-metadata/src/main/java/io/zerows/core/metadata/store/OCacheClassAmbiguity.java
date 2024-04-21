@@ -7,7 +7,6 @@ import io.vertx.up.eon.KMeta;
 import io.vertx.up.util.Ut;
 import io.zerows.core.metadata.uca.scanner.ClassScanner;
 import io.zerows.core.metadata.zdk.AbstractAmbiguity;
-import io.zerows.core.metadata.zdk.running.OCache;
 import io.zerows.core.metadata.zdk.uca.Inquirer;
 import org.osgi.framework.Bundle;
 
@@ -80,13 +79,13 @@ class OCacheClassAmbiguity extends AbstractAmbiguity implements OCacheClass {
     }
 
     @Override
-    public OCache<Set<Class<?>>> add(final Set<Class<?>> classes) {
+    public OCacheClass add(final Set<Class<?>> classes) {
         this.meta.add(classes);
         return this;
     }
 
     @Override
-    public OCache<Set<Class<?>>> remove(final Set<Class<?>> classes) {
+    public OCacheClass remove(final Set<Class<?>> classes) {
         this.meta.remove(classes);
         return this;
     }

@@ -29,7 +29,7 @@ public @interface Subscribe {
      *
      * As workflow
      *
-     * 1. The job will execute and send the message to `address`,
+     * 1. The job will action and send the message to `address`,
      *    the `address` will be bind to EventBus
      * 2. The critical `address` is stored into `value` for Router mounting
      */

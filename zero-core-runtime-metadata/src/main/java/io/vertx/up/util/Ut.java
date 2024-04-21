@@ -5,6 +5,7 @@ import io.vertx.core.json.JsonObject;
 
 import java.lang.reflect.Field;
 import java.util.function.BiFunction;
+import java.util.regex.Pattern;
 
 @SuppressWarnings("all")
 public final class Ut extends _Visit {
@@ -16,6 +17,11 @@ public final class Ut extends _Visit {
      * 1) inverseCount
      * 2) inverseSet
      */
+
+    public static boolean uriMatch(final String uri, final String pattern) {
+        final Pattern compiler = Uri.createRegex(pattern);
+        return compiler.matcher(uri).matches();
+    }
 
     // This is usage in case1 for integration, that's why keep here
     //    public static String encryptRSAPIo(final String input, final String keyPath) {

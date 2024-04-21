@@ -42,7 +42,7 @@ public class Regulation implements Serializable {
             if (Objects.nonNull(formula)) {
                 /*
                  *  The operation should be executed inner
-                 *  formula instead of outer execute
+                 *  formula instead of outer action
                  */
                 futures.add(formula.run(params, () -> ruleFn.apply(params)));
             }

@@ -6,7 +6,6 @@ import io.vertx.up.eon.KMeta;
 import io.zerows.core.configuration.atom.NodeNetwork;
 import io.zerows.core.configuration.atom.NodeVertx;
 import io.zerows.core.metadata.zdk.AbstractAmbiguity;
-import io.zerows.core.metadata.zdk.running.OCache;
 import org.osgi.framework.Bundle;
 
 /**
@@ -42,13 +41,13 @@ class OCacheNodeAmbiguity extends AbstractAmbiguity implements OCacheNode {
     }
 
     @Override
-    public OCache<NodeVertx> add(final NodeVertx nodeVertx) {
+    public OCacheNode add(final NodeVertx nodeVertx) {
         this.network.add(nodeVertx.name(), nodeVertx);
         return this;
     }
 
     @Override
-    public OCache<NodeVertx> remove(final NodeVertx nodeVertx) {
+    public OCacheNode remove(final NodeVertx nodeVertx) {
         this.network.remove(nodeVertx.name());
         return this;
     }

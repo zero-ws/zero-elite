@@ -199,7 +199,7 @@ public abstract class AbstractAggregator extends AbstractAction {
 
     // ---------------- Private Operation -----------
     /*
-     * Uniform method to execute
+     * Uniform method to action
      */
     private <T> T aggregateBy(final String fieldName, final T defaultValue, final Function<Field, T> function) {
         /*

@@ -197,7 +197,7 @@ error:
 
   # (Web) Exception for standard third part
   E60034: "(500) - (Shared) SharedMap Error happened when do operation：{0}"
-  E60035: "(500) - (Shared) Your map {0} processing met issue when execute method {1}"
+  E60035: "(500) - (Shared) Your map {0} processing met issue when action method {1}"
 
   # Excel exception
   E60037: "(404) - (Excel) The file that you provided ( filename = `{0}` ) is missing or null"
@@ -291,7 +291,7 @@ error:
 
   # Atom
   E80500: "(409) - (Atom) There are conflicts that found duplicated key, the default is: {0}"
-  E80501: "(500) - (Atom) Sorry, there are error when execute DDL operations to modify database"
+  E80501: "(500) - (Atom) Sorry, there are error when action DDL operations to modify database"
   E80502: "(500) - (Atom) System detect empty sql statement, it''s invalid"
   E80503: "(501) - (Atom) Sorry the implementation class  of `Ingest` is invalid"
   E80504: "(500) - (Atom) You''ll try to add `not null` column to table, it''s invalid, table = {0}, column = {1}"

@@ -29,12 +29,12 @@ class ActionSearch extends AbstractAction {
     <T> Future<JsonObject> searchAsync(final JsonObject query, final JqFlow workflow) {
         return workflow.inputQrAsync(query).compose(inquiry -> {
             // Search Result
-            final Future<JsonArray> dataFuture = this.qr.searchAsync(inquiry)   // execute
+            final Future<JsonArray> dataFuture = this.qr.searchAsync(inquiry)   // action
                 .compose(workflow::outputAsync);                            // after : pojo processing
             // Count Result
             final JsonObject criteria = Objects.nonNull(inquiry.getCriteria()) ?
                 inquiry.getCriteria().toJson() : new JsonObject();
-            final Future<Long> countFuture = this.counter.countAsync(criteria);  // execute
+            final Future<Long> countFuture = this.counter.countAsync(criteria);  // action
 
             return CompositeFuture.join(dataFuture, countFuture).compose(result -> {
                 // Processing result

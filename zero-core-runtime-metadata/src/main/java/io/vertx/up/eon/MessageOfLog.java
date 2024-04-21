@@ -10,7 +10,7 @@ public interface MessageOfLog {
     }
 
     interface COMMAND {
-        String REGISTER = "The command \"{0}\" is Ok for execute!";
+        String REGISTER = "The command \"{0}\" is Ok for action!";
         String UNREGISTER = "The command \"{0}\" will be Invalid!";
     }
 

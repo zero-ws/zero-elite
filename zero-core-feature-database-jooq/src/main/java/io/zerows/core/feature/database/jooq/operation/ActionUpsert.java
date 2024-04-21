@@ -130,7 +130,7 @@ class ActionUpsert extends AbstractAction {
     }
 
     /*
-     * Combine for `Saving` here, it could help Jooq to execute
+     * Combine for `Saving` here, it could help Jooq to action
      * Saving operation.
      *
      * Insert / Update merged
