@@ -4,7 +4,7 @@ import com.google.inject.Injector;
 import io.horizon.uca.cache.Cc;
 import io.horizon.uca.log.Annal;
 import io.vertx.up.util.Ut;
-import io.zerows.core.assembly.atom.VInstance;
+import io.zerows.core.assembly.atom.OProxyInstance;
 import io.zerows.core.assembly.store.OClassRepository;
 import jakarta.inject.Named;
 
@@ -75,7 +75,7 @@ public class DiPlugin {
                  * send to event bus direct. It's not needed to set
                  * implementation class.
                  */
-                instance = VInstance.create(clazz);
+                instance = OProxyInstance.create(clazz);
             }
         } else {
             if (Objects.isNull(action)) {

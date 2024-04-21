@@ -1,4 +1,4 @@
-package io.zerows.core.metadata.store.config;
+package io.zerows.core.metadata.store;
 
 import io.horizon.uca.log.internal.Log4JAnnal;
 import io.macrocosm.specification.config.HConfig;
@@ -21,8 +21,8 @@ public class OZeroStore {
 
     static {
         {
-            // 容器部分配置, 对接 OZeroFailure
-            final OZeroFailure cache = OZeroFailure.of(null);
+            // 容器部分配置, 对接 OCacheFailure
+            final OCacheFailure cache = OCacheFailure.of(null);
             cache.initialize();
             SETTING = cache.setting();
         }
@@ -70,28 +70,6 @@ public class OZeroStore {
 
     public static ConcurrentMap<String, Class<?>> classInject() {
         return INJECTION;
-    }
-
-    public static JsonObject configOfJContainer() {
-        final HConfig container = SETTING.container();
-        return container.options();
-    }
-
-    public static JsonObject configOfJLauncher() {
-        final HConfig launcher = SETTING.launcher();
-        return launcher.options();
-    }
-
-    public static HConfig configOfExtension(final String extensionKey) {
-        return SETTING.extension(extensionKey);
-    }
-
-    public static HConfig configOfLauncher() {
-        return SETTING.launcher();
-    }
-
-    public static HConfig configOfContainer() {
-        return SETTING.container();
     }
 
     public static HSetting setting() {

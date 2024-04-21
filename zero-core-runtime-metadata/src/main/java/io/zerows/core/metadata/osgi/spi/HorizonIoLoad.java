@@ -4,7 +4,7 @@ import io.horizon.spi.HorizonIo;
 import io.horizon.uca.log.internal.Log4JAnnal;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.KName;
-import io.zerows.core.metadata.store.config.OZeroFailure;
+import io.zerows.core.metadata.store.OCacheFailure;
 import io.zerows.core.metadata.zdk.running.OCache;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.FrameworkUtil;
@@ -17,7 +17,7 @@ public class HorizonIoLoad implements HorizonIo {
 
     public HorizonIoLoad() {
         final Bundle bundle = FrameworkUtil.getBundle(this.getClass());
-        this.cache = OZeroFailure.of(bundle);
+        this.cache = OCacheFailure.of(bundle);
     }
 
     @Override

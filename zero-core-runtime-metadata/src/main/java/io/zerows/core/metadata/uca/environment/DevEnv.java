@@ -3,7 +3,7 @@ package io.zerows.core.metadata.uca.environment;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.configure.YmlCore;
 import io.vertx.up.util.Ut;
-import io.zerows.core.metadata.store.config.OZeroStore;
+import io.zerows.core.metadata.store.OZeroStore;
 
 /**
  * # 「Co」Zero Extension for Debugger to process logs

@@ -5,7 +5,7 @@ import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.configure.YmlCore;
 import io.zerows.core.feature.database.cache.l1.L1Cache;
-import io.zerows.core.metadata.store.config.OZeroStore;
+import io.zerows.core.metadata.store.OZeroStore;
 
 import java.util.Objects;
 

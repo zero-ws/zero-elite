@@ -1,7 +1,7 @@
 package io.zerows.core.metadata.uca.scanner;
 
 import io.horizon.uca.cache.Cc;
-import io.vertx.up.annotations.Semantics;
+import io.vertx.up.annotations.internal.Semantics;
 
 import java.util.Set;
 

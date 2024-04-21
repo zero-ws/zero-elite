@@ -1,7 +1,7 @@
 package io.zerows.core.metadata.zdk.running;
 
 import io.horizon.exception.web._501NotSupportException;
-import io.vertx.up.annotations.Semantics;
+import io.vertx.up.annotations.internal.Semantics;
 
 import java.util.Set;
 

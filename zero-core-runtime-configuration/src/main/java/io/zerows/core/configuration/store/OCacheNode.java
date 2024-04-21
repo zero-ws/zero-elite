@@ -8,14 +8,14 @@ import org.osgi.framework.Bundle;
 /**
  * @author lang : 2024-04-20
  */
-public interface ONodeCache extends OCache<NodeVertx> {
+public interface OCacheNode extends OCache<NodeVertx> {
 
-    static ONodeCache of() {
-        return ONodeCacheAmbiguity.of();
+    static OCacheNode of() {
+        return OCacheNodeAmbiguity.of();
     }
 
-    static ONodeCache of(final Bundle bundle) {
-        return ONodeCacheAmbiguity.of(bundle);
+    static OCacheNode of(final Bundle bundle) {
+        return OCacheNodeAmbiguity.of(bundle);
     }
 
     NodeNetwork network();

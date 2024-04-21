@@ -7,8 +7,8 @@ import io.vertx.up.annotations.Infusion;
 import io.vertx.up.eon.KMeta;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
-import io.zerows.core.metadata.store.classes.OClassCache;
-import io.zerows.core.metadata.store.config.OZeroStore;
+import io.zerows.core.metadata.store.OCacheClass;
+import io.zerows.core.metadata.store.OZeroStore;
 import io.zerows.core.metadata.zdk.plugins.Infix;
 
 import java.lang.reflect.Method;
@@ -51,7 +51,7 @@ class DiInfix {
         }
         final Class<?> typeOf = proxy.getClass();
 
-        final OClassCache processor = OClassCache.of();
+        final OCacheClass processor = OCacheClass.of();
         final Set<Class<?>> classTps = processor.get(KMeta.Typed.INFUSION);
         if (!classTps.contains(typeOf)) {
             return proxy;

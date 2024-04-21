@@ -1,4 +1,4 @@
-package io.zerows.core.metadata.store.config;
+package io.zerows.core.metadata.store;
 
 import io.horizon.eon.VPath;
 import io.horizon.eon.VString;

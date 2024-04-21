@@ -4,7 +4,7 @@ import io.macrocosm.specification.config.HSetting;
 import io.zerows.core.configuration.atom.NodeNetwork;
 import io.zerows.core.configuration.uca.setup.CommonProcessor;
 import io.zerows.core.configuration.zdk.Processor;
-import io.zerows.core.metadata.store.config.OZeroStore;
+import io.zerows.core.metadata.store.OZeroStore;
 
 /**
  * @author lang : 2024-04-20
@@ -22,7 +22,7 @@ public class OOptionRepository {
 
 
         // 处理完成之后和缓存绑定
-        final ONodeCache cache = ONodeCache.of();
+        final OCacheNode cache = OCacheNode.of();
         cache.configure(network);
     }
 }

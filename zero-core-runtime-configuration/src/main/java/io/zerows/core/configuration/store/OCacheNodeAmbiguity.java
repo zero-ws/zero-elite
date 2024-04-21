@@ -12,23 +12,23 @@ import org.osgi.framework.Bundle;
 /**
  * @author lang : 2024-04-20
  */
-class ONodeCacheAmbiguity extends AbstractAmbiguity implements ONodeCache {
+class OCacheNodeAmbiguity extends AbstractAmbiguity implements OCacheNode {
 
-    private static final Cc<String, ONodeCache> CC_SCANNED = Cc.open();
+    private static final Cc<String, OCacheNode> CC_SCANNED = Cc.open();
 
     private NodeNetwork network;
 
-    private ONodeCacheAmbiguity(final Bundle bundle) {
+    private OCacheNodeAmbiguity(final Bundle bundle) {
         super(bundle);
     }
 
-    static ONodeCache of(final Bundle bundle) {
+    static OCacheNode of(final Bundle bundle) {
         final String key = bundle.getSymbolicName() + VString.SLASH + bundle.getVersion().getQualifier();
-        return CC_SCANNED.pick(() -> new ONodeCacheAmbiguity(bundle), key);
+        return CC_SCANNED.pick(() -> new OCacheNodeAmbiguity(bundle), key);
     }
 
-    static ONodeCache of() {
-        return CC_SCANNED.pick(() -> new ONodeCacheAmbiguity(null), KMeta.Component.DEFAULT_SCANNED);
+    static OCacheNode of() {
+        return CC_SCANNED.pick(() -> new OCacheNodeAmbiguity(null), KMeta.Component.DEFAULT_SCANNED);
     }
 
     @Override

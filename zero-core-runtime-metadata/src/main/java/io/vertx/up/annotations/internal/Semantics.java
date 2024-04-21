@@ -1,4 +1,4 @@
-package io.vertx.up.annotations;
+package io.vertx.up.annotations.internal;
 
 import io.vertx.up.eon.em.EmMonitor;
 

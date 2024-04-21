@@ -1,4 +1,4 @@
-package io.zerows.core.metadata.store.classes;
+package io.zerows.core.metadata.store;
 
 import io.horizon.eon.VString;
 import io.horizon.uca.cache.Cc;
@@ -29,14 +29,14 @@ import java.util.function.Function;
  *
  * @author lang : 2024-04-17
  */
-class OClassCacheAmbiguity extends AbstractAmbiguity implements OClassCache {
+class OCacheClassAmbiguity extends AbstractAmbiguity implements OCacheClass {
 
-    private static final Cc<String, OClassCache> CC_SCANNED = Cc.open();
+    private static final Cc<String, OCacheClass> CC_SCANNED = Cc.open();
     private static final String INFO_SCANNED = "Zero system scanned `{0}` classes in total. MetaTree = {1}";
 
     private final OClassCacheInternal meta;
 
-    private OClassCacheAmbiguity(final Bundle bundle) {
+    private OCacheClassAmbiguity(final Bundle bundle) {
         super(bundle);
         this.meta = OClassCacheInternal.of();
         final ClassLoader loader;
@@ -48,7 +48,7 @@ class OClassCacheAmbiguity extends AbstractAmbiguity implements OClassCache {
         // Scanner
         final ClassScanner scanner = ClassScanner.of();
         final Set<Class<?>> scanned = scanner.scan(loader);
-        Ut.Log.metadata(this.getClass()).info(OClassCacheAmbiguity.INFO_SCANNED,
+        Ut.Log.metadata(this.getClass()).info(OCacheClassAmbiguity.INFO_SCANNED,
             String.valueOf(scanned.size()), String.valueOf(this.meta.hashCode()));
         this.meta.add(scanned);
     }
@@ -60,13 +60,13 @@ class OClassCacheAmbiguity extends AbstractAmbiguity implements OClassCache {
      *
      * @return OCache
      */
-    static OClassCache of(final Bundle bundle) {
+    static OCacheClass of(final Bundle bundle) {
         final String key = bundle.getSymbolicName() + VString.SLASH + bundle.getVersion().getQualifier();
-        return CC_SCANNED.pick(() -> new OClassCacheAmbiguity(bundle), key);
+        return CC_SCANNED.pick(() -> new OCacheClassAmbiguity(bundle), key);
     }
 
-    static OClassCache of() {
-        return CC_SCANNED.pick(() -> new OClassCacheAmbiguity(null), KMeta.Component.DEFAULT_SCANNED);
+    static OCacheClass of() {
+        return CC_SCANNED.pick(() -> new OCacheClassAmbiguity(null), KMeta.Component.DEFAULT_SCANNED);
     }
 
     @Override
@@ -92,19 +92,19 @@ class OClassCacheAmbiguity extends AbstractAmbiguity implements OClassCache {
     }
 
     @Override
-    public OClassCache remove(final KMeta.Typed type) {
+    public OCacheClass remove(final KMeta.Typed type) {
         this.meta.remove(type);
         return this;
     }
 
     @Override
-    public OClassCache remove(final Class<?> clazz) {
+    public OCacheClass remove(final Class<?> clazz) {
         this.meta.remove(clazz);
         return this;
     }
 
     @Override
-    public OClassCache compile(final KMeta.Typed type, final Function<Set<Class<?>>, Set<Class<?>>> compiler) {
+    public OCacheClass compile(final KMeta.Typed type, final Function<Set<Class<?>>, Set<Class<?>>> compiler) {
         this.meta.compile(type, compiler);
         return this;
     }

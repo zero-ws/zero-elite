@@ -1,4 +1,4 @@
-package io.zerows.core.metadata.store.config;
+package io.zerows.core.metadata.store;
 
 import io.horizon.eon.VName;
 import io.horizon.eon.VString;
@@ -20,14 +20,14 @@ import java.util.concurrent.ConcurrentMap;
 /**
  * @author lang : 2024-04-17
  */
-public class OZeroFailure implements OCache<JsonObject> {
+public class OCacheFailure implements OCache<JsonObject> {
     private static final ConcurrentMap<String, JsonObject> STORE_DATA = new ConcurrentHashMap<>();
     private static final Cc<String, OCache<JsonObject>> CC_FAILURE = Cc.open();
     private static OCache<JsonObject> INSTANCE;
     private static HSetting SETTING;
     private final Bundle bundle;
 
-    private OZeroFailure(final Bundle bundle) {
+    private OCacheFailure(final Bundle bundle) {
         this.bundle = bundle;
     }
 
@@ -35,12 +35,12 @@ public class OZeroFailure implements OCache<JsonObject> {
     public static <T extends OCache<JsonObject>> T of(final Bundle bundle) {
         if (Objects.isNull(bundle)) {
             if (INSTANCE == null) {
-                INSTANCE = new OZeroFailure(null);
+                INSTANCE = new OCacheFailure(null);
             }
             return (T) INSTANCE;
         } else {
             final String key = bundle.getSymbolicName() + VString.SLASH + bundle.getVersion().getQualifier();
-            return (T) CC_FAILURE.pick(() -> new OZeroFailure(bundle), key);
+            return (T) CC_FAILURE.pick(() -> new OCacheFailure(bundle), key);
         }
     }
 

@@ -5,7 +5,7 @@ import io.horizon.runtime.Runner;
 import io.vertx.up.eon.KMeta;
 import io.vertx.up.util.Ut;
 import io.zerows.core.assembly.uca.scan.*;
-import io.zerows.core.metadata.store.classes.OClassCache;
+import io.zerows.core.metadata.store.OCacheClass;
 import io.zerows.core.metadata.zdk.uca.Inquirer;
 
 import java.util.Set;
@@ -34,7 +34,7 @@ public class OClassRepository {
      */
     public static void configure() {
         // 读取全局类缓存
-        final OClassCache processor = OClassCache.of();
+        final OCacheClass processor = OCacheClass.of();
         final long start = System.currentTimeMillis();
         Runner.run("meditate-class",
             // @Infusion
