@@ -5,7 +5,7 @@ import io.horizon.uca.cache.Cc;
 import io.horizon.uca.log.Annal;
 import io.vertx.up.util.Ut;
 import io.zerows.core.assembly.atom.OProxyInstance;
-import io.zerows.core.assembly.store.OClassRepository;
+import io.zerows.core.assembly.store.ORepositoryClass;
 import jakarta.inject.Named;
 
 import java.lang.annotation.Annotation;
@@ -38,7 +38,7 @@ public class DiPlugin {
 
     // 直接创建一个单例
     public <T> T createSingleton(final Class<?> clazz) {
-        final Injector di = OClassRepository.ofDI();
+        final Injector di = ORepositoryClass.ofDI();
         /*
          * Add @Named Support
          */
@@ -61,7 +61,7 @@ public class DiPlugin {
 
     // 创建一个新的
     public Object createProxy(final Class<?> clazz, final Method action) {
-        final Injector di = OClassRepository.ofDI();
+        final Injector di = ORepositoryClass.ofDI();
         final Object instance;
         if (clazz.isInterface()) {
             final Class<?> implClass = Ut.child(clazz);

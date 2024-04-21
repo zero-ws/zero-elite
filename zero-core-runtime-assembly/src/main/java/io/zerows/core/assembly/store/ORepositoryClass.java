@@ -19,7 +19,7 @@ import java.util.Set;
  *
  * @author lang : 2024-04-19
  */
-public class OClassRepository {
+public class ORepositoryClass {
 
     private static Injector DI;
 
@@ -59,7 +59,7 @@ public class OClassRepository {
             }
         );
         long end = System.currentTimeMillis();
-        Ut.Log.boot(OClassRepository.class).info(" {0}ms / Zero Timer: Meditate Class Scanned!",
+        Ut.Log.boot(ORepositoryClass.class).info(" {0}ms / Zero Timer: Meditate Class Scanned!",
             end - start);
 
 
@@ -67,7 +67,8 @@ public class OClassRepository {
         final Inquirer<Injector> guice = Ut.singleton(InquirerGuice.class);
         DI = guice.scan(processor.get());
         end = System.currentTimeMillis() - end;
-        Ut.Log.boot(OClassRepository.class).info(" {1}ms / Zero Zone DI Environment.... Size= {0}", String.valueOf(processor.get().size()), String.valueOf(end));
+        Ut.Log.boot(ORepositoryClass.class).info(" {1}ms / Zero Zone DI Environment.... Size= {0}", String.valueOf(processor.get().size()), String.valueOf(end));
+        
     }
 
     public static synchronized Injector ofDI() {

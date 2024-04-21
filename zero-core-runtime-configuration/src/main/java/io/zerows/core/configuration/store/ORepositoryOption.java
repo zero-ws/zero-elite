@@ -9,20 +9,16 @@ import io.zerows.core.metadata.store.OZeroStore;
 /**
  * @author lang : 2024-04-20
  */
-public class OOptionRepository {
+public class ORepositoryOption {
 
     public static void configure() {
         // 构造缓存基础数据
-        final NodeNetwork network = new NodeNetwork();
+        final OCacheNode cache = OCacheNode.of();
+        final NodeNetwork network = cache.network();
 
         // 构造处理器
         final Processor<NodeNetwork, HSetting> processor = CommonProcessor.of();
         final HSetting setting = OZeroStore.setting();
         processor.makeup(network, setting);
-
-
-        // 处理完成之后和缓存绑定
-        final OCacheNode cache = OCacheNode.of();
-        cache.configure(network);
     }
 }

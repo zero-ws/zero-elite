@@ -16,7 +16,7 @@ class OCacheNodeAmbiguity extends AbstractAmbiguity implements OCacheNode {
 
     private static final Cc<String, OCacheNode> CC_SCANNED = Cc.open();
 
-    private NodeNetwork network;
+    private final NodeNetwork network = new NodeNetwork();
 
     private OCacheNodeAmbiguity(final Bundle bundle) {
         super(bundle);
@@ -29,14 +29,6 @@ class OCacheNodeAmbiguity extends AbstractAmbiguity implements OCacheNode {
 
     static OCacheNode of() {
         return CC_SCANNED.pick(() -> new OCacheNodeAmbiguity(null), KMeta.Component.DEFAULT_SCANNED);
-    }
-
-    @Override
-    public <C> OCache<NodeVertx> configure(final C configuration) {
-        if (configuration instanceof final NodeNetwork component) {
-            this.network = component;
-        }
-        return this;
     }
 
     @Override
