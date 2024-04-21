@@ -1,4 +1,4 @@
-package io.vertx.up.annotations;
+package io.zerows.core.security.annotations;
 
 import io.horizon.eon.VValue;
 

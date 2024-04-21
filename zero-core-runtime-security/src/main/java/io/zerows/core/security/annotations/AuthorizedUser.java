@@ -1,4 +1,4 @@
-package io.vertx.up.annotations;
+package io.zerows.core.security.annotations;
 
 import java.lang.annotation.*;
 
@@ -10,5 +10,5 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Inherited
-public @interface Authorized {
+public @interface AuthorizedUser {
 }

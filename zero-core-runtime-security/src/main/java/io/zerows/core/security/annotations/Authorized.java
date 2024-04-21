@@ -1,15 +1,14 @@
-package io.vertx.up.annotations;
+package io.zerows.core.security.annotations;
 
 import java.lang.annotation.*;
 
 /**
  * This annotation must be inner @Wall
- * It's for 401 Response
+ * It's for 403 Response
  */
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Inherited
-public @interface Authenticate {
-
+public @interface Authorized {
 }
