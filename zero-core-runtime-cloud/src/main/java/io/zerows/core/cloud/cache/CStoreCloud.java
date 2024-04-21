@@ -12,12 +12,7 @@ import io.zerows.core.metadata.cache.CStore;
  * @author lang : 2023/5/2
  */
 public interface CStoreCloud extends CStore {
-    /*
-     * 「验证规则集」
-     * 原 ZeroCodex 部分代码
-     */
-    @Memory(JsonObject.class)
-    Cc<String, JsonObject> CC_CODEX = Cc.open();
+
 
     /*
      * 「应用配置集」
