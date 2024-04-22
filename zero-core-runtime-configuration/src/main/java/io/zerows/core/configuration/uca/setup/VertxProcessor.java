@@ -67,7 +67,7 @@ class VertxProcessor implements Processor<NodeNetwork, HSetting> {
             // Vertx 名称
             final String name = Ut.valueString(instanceJ, KName.NAME);
             // VertxOption 配置绑定
-            final VertxOptions vertxOptions = this.transformerVertx.transform(vertxData);
+            final VertxOptions vertxOptions = this.transformerVertx.transform(instanceJ);
 
 
             // 更新基础配置
