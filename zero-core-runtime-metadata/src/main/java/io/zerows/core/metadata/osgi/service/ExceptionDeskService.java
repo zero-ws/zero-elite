@@ -7,13 +7,12 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.configure.YmlCore;
 import io.zerows.core.metadata.store.OCacheFailure;
 import io.zerows.core.metadata.store.OZeroEquip;
-import io.zerows.core.metadata.zdk.running.ORegistry;
 import org.osgi.framework.Bundle;
 
 /**
  * @author lang : 2024-04-17
  */
-public class OExceptionRegistry implements ORegistry {
+public class ExceptionDeskService implements ExceptionDesk {
 
     @Override
     public void install(final Bundle bundle) {

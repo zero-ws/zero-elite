@@ -2,8 +2,8 @@ package io.zerows.core.metadata.zdk.service;
 
 import io.horizon.uca.cache.Cc;
 import io.vertx.up.eon.KName;
+import io.zerows.core.metadata.osgi.service.ExceptionDesk;
 import io.zerows.core.metadata.uca.callback.SettingCallback;
-import io.zerows.core.metadata.zdk.running.ORegistry;
 import org.apache.felix.dm.Component;
 import org.apache.felix.dm.DependencyManager;
 import org.apache.felix.dm.ServiceDependency;
@@ -33,8 +33,8 @@ public abstract class AbstractServiceConnector implements ServiceConnector {
                                   final Supplier<Component> supplier,
                                   final Supplier<ServiceDependency> serviceSupplier) {
         dm.add(supplier.get().setImplementation(new SettingCallback(this.bundle))
-            // ExceptionAdmin
-            .add(serviceSupplier.get().setService(ORegistry.class)
+            // ExceptionDesk
+            .add(serviceSupplier.get().setService(ExceptionDesk.class)
                 .setRequired(Boolean.TRUE).setCallbacks(KName.START, KName.STOP))
         );
     }
