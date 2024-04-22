@@ -8,6 +8,7 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.up.fn.Fn;
 import org.osgi.framework.Bundle;
 
+import java.io.InputStream;
 import java.net.URL;
 import java.util.Objects;
 import java.util.function.Function;
@@ -83,7 +84,7 @@ final class BundleIo {
         return ioSafe(filename, bundle, HUt::ioYaml);
     }
 
-    private static JsonObject ioSafe(final String filename, final Bundle bundle, final Function<URL, JsonObject> executor) {
+    private static JsonObject ioSafe(final String filename, final Bundle bundle, final Function<InputStream, JsonObject> executor) {
         URL url;
         if (Objects.isNull(bundle)) {
             url = Thread.currentThread().getContextClassLoader().getResource(filename);
@@ -98,7 +99,7 @@ final class BundleIo {
             if (Objects.isNull(finalUrl)) {
                 return new JsonObject();
             }
-            return Ut.ioExist(finalUrl) ? executor.apply(finalUrl) : new JsonObject();
+            return executor.apply(finalUrl.openStream());
         });
     }
 }
