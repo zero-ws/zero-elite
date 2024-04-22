@@ -1,10 +1,10 @@
 package io.zerows.core.feature.toolkit.expression.wffs;
 
-import io.horizon.uca.log.Annal;
 import io.vertx.core.Future;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.util.Ut;
 import io.zerows.core.feature.toolkit.expression.script.Inlet;
+import io.zerows.core.metadata.uca.logging.OLog;
 import org.apache.commons.jexl3.*;
 
 import java.io.Serializable;
@@ -48,7 +48,7 @@ import java.io.Serializable;
  * @author <a href="http://www.origin-x.cn">Lang</a>
  */
 public class Playbook implements Serializable {
-    private static final Annal LOGGER = Annal.get(Playbook.class);
+    private static final OLog LOGGER = Ut.Log.plugin(Playbook.class);
     private static final JexlEngine EXPR = new JexlBuilder().cache(4096).silent(false).create();
 
     private final String expression;

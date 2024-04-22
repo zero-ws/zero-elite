@@ -2,9 +2,9 @@ package io.zerows.core.security.atom;
 
 import io.horizon.eon.VValue;
 import io.horizon.specification.typed.TCopy;
-import io.horizon.uca.log.Annal;
 import io.vertx.up.eon.em.EmSecure;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.uca.logging.OLog;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.Serializable;
@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
  * Scanned ( Metadata ) for each @Wall.
  */
 public class Aegis implements Serializable, Comparable<Aegis>, TCopy<Aegis> {
-    private static final Annal LOGGER = Annal.get(Aegis.class);
+    private static final OLog LOGGER = Ut.Log.security(Aegis.class);
     /**
      * defined = false
      * Standard Authorization

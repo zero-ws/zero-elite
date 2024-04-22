@@ -3,11 +3,11 @@ package io.vertx.up.util;
 
 import io.horizon.atom.program.Kv;
 import io.horizon.eon.VString;
-import io.horizon.uca.log.Annal;
 import io.horizon.uca.qr.syntax.Ir;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.KWeb;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 import java.util.Objects;
 import java.util.Set;
@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
  * 2. irH: 合并 criteria
  */
 final class QrIr {
-    private static final Annal LOGGER = Annal.get(QrIr.class);
+    private static final OLog LOGGER = _Log.Log.ux(QrIr.class);
 
     /*
      * Move `RibIr` code to current method, complex algorithm to combine qr parts directly

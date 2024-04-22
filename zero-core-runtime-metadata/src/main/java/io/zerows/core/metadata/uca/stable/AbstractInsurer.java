@@ -2,12 +2,12 @@ package io.zerows.core.metadata.uca.stable;
 
 import io.horizon.eon.VValue;
 import io.horizon.exception.ProgramException;
-import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
 import io.zerows.core.metadata.exception.DaemonJElementException;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 /**
  * @author lang
@@ -24,7 +24,7 @@ public abstract class AbstractInsurer implements Insurer {
             for (int idx = VValue.IDX; idx < size; idx++) {
                 final Object value = array.getValue(idx);
                 // 2. Call check method to confirm JsonObject
-                Fn.outBug(!Ut.isJObject(value), this.getLogger(),
+                Fn.outBug(!Ut.isJObject(value), this.logger(),
                     DaemonJElementException.class,
                     this.getClass(), idx, value);
 
@@ -35,7 +35,7 @@ public abstract class AbstractInsurer implements Insurer {
         }, array, elementRule);
     }
 
-    protected Annal getLogger() {
-        return Annal.get(this.getClass());
+    protected OLog logger() {
+        return Ut.Log.uca(this.getClass());
     }
 }

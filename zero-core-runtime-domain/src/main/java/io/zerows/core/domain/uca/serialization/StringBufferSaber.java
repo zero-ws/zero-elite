@@ -12,7 +12,7 @@ class StringBufferSaber extends AbstractSaber {
                        final String literal) {
         return Fn.runOr(() ->
                 Fn.runOr(StringBuilder.class == paramType
-                        || StringBuffer.class == paramType, this.getLogger(),
+                        || StringBuffer.class == paramType, this.logger(),
                     () -> {
                         if (StringBuffer.class == paramType) {
                             return new StringBuffer(literal);

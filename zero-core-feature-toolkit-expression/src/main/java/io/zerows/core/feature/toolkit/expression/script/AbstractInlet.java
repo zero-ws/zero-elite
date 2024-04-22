@@ -1,7 +1,8 @@
 package io.zerows.core.feature.toolkit.expression.script;
 
-import io.horizon.uca.log.Annal;
+import io.vertx.up.util.Ut;
 import io.zerows.core.metadata.uca.environment.DevEnv;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 /**
  * @author <a href="http://www.origin-x.cn">Lang</a>
@@ -24,7 +25,7 @@ public abstract class AbstractInlet implements Inlet {
 
     protected void console(final String message, final Object... args) {
         if (DevEnv.devExprBind()) {
-            final Annal logger = Annal.get(this.getClass());
+            final OLog logger = Ut.Log.plugin(this.getClass());
             logger.info(message, args);
         }
     }

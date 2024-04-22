@@ -12,7 +12,7 @@ public interface Processor<T, C> {
 
     void makeup(T target, C setting);
 
-    default OLog tracker() {
+    default OLog logger() {
         return Ut.Log.configure(this.getClass());
     }
 }

@@ -12,7 +12,7 @@ public class RpcTransformer implements Transformer<RpcOptions> {
 
     @Override
     public RpcOptions transform(final JsonObject input) {
-        return Fn.runOr(null == input, this.tracker(),
+        return Fn.runOr(null == input, this.logger(),
             RpcOptions::new,
             () -> new RpcOptions(input));
     }

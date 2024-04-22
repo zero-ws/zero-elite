@@ -1,7 +1,8 @@
 package io.zerows.core.feature.database.jooq.condition;
 
-import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonArray;
+import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.uca.logging.OLog;
 import org.jooq.Condition;
 import org.jooq.Field;
 
@@ -17,8 +18,8 @@ public class ClauseString implements Clause {
         return term.where(columnName, fieldName, value);
     }
 
-    protected Annal logger() {
-        return Annal.get(getClass());
+    protected OLog logger() {
+        return Ut.Log.database(getClass());
     }
 
     /*

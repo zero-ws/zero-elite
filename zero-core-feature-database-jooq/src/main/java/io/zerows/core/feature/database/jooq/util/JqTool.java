@@ -1,7 +1,6 @@
 package io.zerows.core.feature.database.jooq.util;
 
 import io.horizon.eon.VString;
-import io.horizon.uca.log.Annal;
 import io.horizon.uca.qr.syntax.Ir;
 import io.vertx.core.CompositeFuture;
 import io.vertx.core.Future;
@@ -11,6 +10,7 @@ import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
 import io.zerows.core.metadata.atom.mapping.Mirror;
 import io.zerows.core.metadata.atom.mapping.Mojo;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 import java.util.HashSet;
 import java.util.List;
@@ -21,7 +21,7 @@ import java.util.concurrent.ConcurrentMap;
 
 public class JqTool {
 
-    private static final Annal LOGGER = Annal.get(JqTool.class);
+    private static final OLog LOGGER = Ut.Log.database(JqTool.class);
 
     public static <T> CompositeFuture joinAsync(final JsonObject criteria, final JsonObject data, final JqFlow flow) {
         final Future<JsonObject> criteriaFuture = flow.inputQrJAsync(criteria);

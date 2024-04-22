@@ -1,7 +1,6 @@
 package io.vertx.up.util;
 
 import io.horizon.eon.VValue;
-import io.horizon.uca.log.Annal;
 import io.horizon.util.HUt;
 import io.vertx.core.json.JsonObject;
 
@@ -18,7 +17,6 @@ import java.util.function.Function;
  * For collection
  */
 final class CollectionIt {
-    private static final Annal LOGGER = Annal.get(CollectionIt.class);
 
     private CollectionIt() {
     }

@@ -1,11 +1,12 @@
 package io.zerows.core.feature.database.cache;
 
-import io.horizon.uca.log.Annal;
 import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.configure.YmlCore;
+import io.vertx.up.util.Ut;
 import io.zerows.core.feature.database.cache.l1.L1Cache;
 import io.zerows.core.metadata.store.OZeroStore;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Life Cycle for cache when processing in
  */
 public class Harp {
-    private static final Annal LOGGER = Annal.get(Harp.class);
+    private static final OLog LOGGER = Ut.Log.plugin(Harp.class);
     private static HarpBus BUS_HARP;
 
     /*

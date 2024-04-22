@@ -1,6 +1,5 @@
 package io.zerows.core.assembly.uca.di;
 
-import io.horizon.uca.log.Annal;
 import io.reactivex.rxjava3.core.Observable;
 import io.vertx.up.annotations.Infusion;
 import io.vertx.up.eon.KMeta;
@@ -9,6 +8,7 @@ import io.vertx.up.util.Ut;
 import io.zerows.core.assembly.eon.MessageOfDI;
 import io.zerows.core.metadata.store.OCacheClass;
 import io.zerows.core.metadata.store.OZeroStore;
+import io.zerows.core.metadata.uca.logging.OLog;
 import io.zerows.core.metadata.zdk.plugins.Infix;
 
 import java.lang.reflect.Method;
@@ -24,10 +24,10 @@ import java.util.concurrent.ConcurrentMap;
 class DiInfix {
 
     private static final ConcurrentMap<Class<?>, Class<?>> INFUSION = infusionMap();
-    private transient final Annal logger;
+    private transient final OLog logger;
 
     DiInfix(final Class<?> clazz) {
-        this.logger = Annal.get(clazz);
+        this.logger = Ut.Log.metadata(clazz);
     }
 
     private static ConcurrentMap<Class<?>, Class<?>> infusionMap() {

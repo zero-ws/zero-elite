@@ -32,7 +32,7 @@ class Java8DataTimeSaber extends AbstractSaber {
     public Object from(final Class<?> paramType, final String literal) {
         return Fn.runOr(() ->
                 Fn.runOr(Date.class == paramType ||
-                        Calendar.class == paramType, this.getLogger(),
+                        Calendar.class == paramType, this.logger(),
                     () -> {
                         this.verifyInput(!Ut.isDate(literal), paramType, literal);
                         final Date reference = Ut.parse(literal);

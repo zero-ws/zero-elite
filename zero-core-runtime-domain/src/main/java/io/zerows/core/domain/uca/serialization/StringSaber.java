@@ -12,7 +12,7 @@ class StringSaber extends AbstractSaber {
     public Object from(final Class<?> paramType,
                        final String literal) {
         return Fn.runOr(() ->
-                Fn.runOr(String.class == paramType, this.getLogger(),
+                Fn.runOr(String.class == paramType, this.logger(),
                     () -> literal, () -> VString.EMPTY),
             paramType, literal);
     }

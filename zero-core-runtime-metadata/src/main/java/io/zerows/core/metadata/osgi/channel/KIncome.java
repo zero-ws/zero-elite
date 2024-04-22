@@ -1,7 +1,8 @@
 package io.zerows.core.metadata.osgi.channel;
 
-import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonObject;
+import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ import java.util.Vector;
  * Stack of fluent api here to store parameters
  */
 public class KIncome implements Serializable {
-    private static final Annal LOGGER = Annal.get(KIncome.class);
+    private static final OLog LOGGER = Ut.Log.service(KIncome.class);
     private final transient Vector<Object> queue = new Vector<>();
     private final transient List<String> names = new ArrayList<>();
 

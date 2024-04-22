@@ -43,7 +43,7 @@ public class ActorTransformer implements Transformer<ActorOptions> {
          * 三种模式判断，对应到 Vert.x 的三种模式
          */
         final EmDeploy.Mode mode = actorOptions.getMode();
-        this.tracker().info(INFO.INFO_ROTATE, mode);
+        this.logger().info(INFO.INFO_ROTATE, mode);
 
 
         /* DeploymentOptions 初始化 */
@@ -80,7 +80,7 @@ public class ActorTransformer implements Transformer<ActorOptions> {
             deliveryOptions.setSendTimeout(delivery.getLong("timeout", deliveryOptions.getSendTimeout()));
 
 
-            this.tracker().info(INFO.INFO_DELIVERY, deliveryOptions.toJson());
+            this.logger().info(INFO.INFO_DELIVERY, deliveryOptions.toJson());
             actorOptions.optionDelivery(deliveryOptions);
         }
         return actorOptions;
@@ -123,7 +123,7 @@ public class ActorTransformer implements Transformer<ActorOptions> {
             final int instances = Ut.invoke(annotation, "instances");
             deploymentOptions.setInstances(instances);
         }
-        this.tracker().info(INFO.INFO_VTC, deploymentOptions.getInstances(), deploymentOptions.isHa(), deploymentOptions.toJson());
+        this.logger().info(INFO.INFO_VTC, deploymentOptions.getInstances(), deploymentOptions.isHa(), deploymentOptions.toJson());
         return deploymentOptions;
     }
 }

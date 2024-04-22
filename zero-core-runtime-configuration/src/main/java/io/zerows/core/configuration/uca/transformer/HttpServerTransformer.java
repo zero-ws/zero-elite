@@ -15,7 +15,7 @@ public class HttpServerTransformer implements Transformer<HttpServerOptions> {
     @Override
     public HttpServerOptions transform(final JsonObject input) {
         final JsonObject config = input.getJsonObject(KName.CONFIG, null);
-        return Fn.runOr(null == config, this.tracker(),
+        return Fn.runOr(null == config, this.logger(),
             HttpServerOptions::new,
             () -> {
                 assert Objects.nonNull(config) : "`config` is not null";

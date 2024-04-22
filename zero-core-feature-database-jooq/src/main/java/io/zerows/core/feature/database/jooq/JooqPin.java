@@ -1,7 +1,6 @@
 package io.zerows.core.feature.database.jooq;
 
 import io.horizon.eon.em.EmDS;
-import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.KName;
 import io.vertx.up.eon.configure.YmlCore;
@@ -11,6 +10,7 @@ import io.zerows.core.feature.database.atom.Database;
 import io.zerows.core.feature.database.cp.zdk.DataPool;
 import io.zerows.core.feature.database.jooq.exception.BootJooqConfigurationException;
 import io.zerows.core.metadata.uca.environment.MatureOn;
+import io.zerows.core.metadata.uca.logging.OLog;
 import org.jooq.Configuration;
 import org.jooq.Table;
 
@@ -20,7 +20,7 @@ import java.util.concurrent.ConcurrentMap;
 
 public class JooqPin {
 
-    private static final Annal LOGGER = Annal.get(JooqPin.class);
+    private static final OLog LOGGER = Ut.Log.database(JooqPin.class);
 
     public static String initTable(final Class<?> clazz) {
         final JooqDsl dsl = JooqInfix.getDao(clazz);

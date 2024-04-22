@@ -7,7 +7,7 @@ import io.zerows.core.metadata.uca.logging.OLog;
 public interface Transformer<T> {
     T transform(JsonObject input);
 
-    default OLog tracker() {
+    default OLog logger() {
         return Ut.Log.configure(this.getClass());
     }
 }

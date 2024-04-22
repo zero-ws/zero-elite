@@ -1,9 +1,9 @@
 package io.vertx.up.util;
 
-import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.fn.Fn;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 import java.math.BigDecimal;
 
@@ -11,7 +11,7 @@ import java.math.BigDecimal;
  * Number checking
  */
 final class Numeric {
-    private static final Annal LOGGER = Annal.get(Numeric.class);
+    private static final OLog LOGGER = _Log.Log.ux(Numeric.class);
 
     private Numeric() {
     }

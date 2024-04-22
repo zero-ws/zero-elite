@@ -11,7 +11,7 @@ import io.zerows.core.configuration.zdk.Transformer;
 public class ClusterTransformer implements Transformer<ClusterOptions> {
     @Override
     public ClusterOptions transform(final JsonObject config) {
-        return Fn.runOr(null == config, this.tracker(),
+        return Fn.runOr(null == config, this.logger(),
             ClusterOptions::new,
             () -> new ClusterOptions(config));
     }

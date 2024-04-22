@@ -4,12 +4,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.horizon.eon.VString;
 import io.horizon.eon.VValue;
 import io.horizon.eon.em.typed.ChangeFlag;
-import io.horizon.uca.log.Annal;
 import io.horizon.util.HUt;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.KName;
 import io.vertx.up.fn.Fn;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -21,7 +21,7 @@ import java.util.concurrent.ConcurrentMap;
  */
 @SuppressWarnings("all")
 final class Jackson {
-    private static final Annal LOGGER = Annal.get(Jackson.class);
+    private static final OLog LOGGER = _Log.Log.ux(Jackson.class);
 
     private Jackson() {
     }

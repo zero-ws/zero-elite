@@ -2,8 +2,8 @@ package io.zerows.core.assembly.uca.di;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;
-import io.horizon.uca.log.Annal;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.uca.logging.OLog;
 import jakarta.inject.Named;
 
 import java.lang.annotation.Annotation;
@@ -19,7 +19,7 @@ import java.util.concurrent.ConcurrentMap;
  */
 @Deprecated
 public class JsrDi<I, T extends I> extends AbstractModule {
-    private static final Annal LOGGER = Annal.get(JsrDi.class);
+    private static final OLog LOGGER = Ut.Log.uca(JsrDi.class);
     private final transient ConcurrentMap<Class<I>, Set<Class<T>>> classes
         = new ConcurrentHashMap<>();
 

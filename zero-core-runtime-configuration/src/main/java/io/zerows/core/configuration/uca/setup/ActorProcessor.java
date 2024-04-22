@@ -26,7 +26,7 @@ class ActorProcessor implements Processor<NodeVertx, HSetting> {
     @Override
     public void makeup(final NodeVertx target, final HSetting setting) {
         if (!setting.hasInfix(YmlCore.deployment.__KEY)) {
-            this.tracker().info(INFO.V_DEPLOYMENT);
+            this.logger().info(INFO.V_DEPLOYMENT);
             return;
         }
         final HConfig config = setting.infix(YmlCore.deployment.__KEY);

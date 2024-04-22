@@ -3,9 +3,9 @@ package io.zerows.core.domain.atom.element;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.uca.logging.OLog;
 import io.zerows.jackson.databind.ClassDeserializer;
 import io.zerows.jackson.databind.ClassSerializer;
 import io.zerows.jackson.databind.JsonObjectDeserializer;
@@ -31,7 +31,7 @@ import java.util.Objects;
  * @author <a href="http://www.origin-x.cn">Lang</a>
  */
 public class JComponent implements Serializable {
-    private static final Annal LOGGER = Annal.get(JComponent.class);
+    private static final OLog LOGGER = Ut.Log.uca(JComponent.class);
     @JsonSerialize(using = JsonObjectSerializer.class)
     @JsonDeserialize(using = JsonObjectDeserializer.class)
     private final JsonObject config = new JsonObject();

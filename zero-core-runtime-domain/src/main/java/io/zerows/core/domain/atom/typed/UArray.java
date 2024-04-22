@@ -1,10 +1,11 @@
 package io.zerows.core.domain.atom.typed;
 
-import io.horizon.uca.log.Annal;
 import io.vertx.core.Future;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.fn.Fn;
+import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
@@ -17,7 +18,7 @@ import java.util.stream.Collectors;
  * Stream tool for JsonArray
  */
 public class UArray {
-    private static final Annal LOGGER = Annal.get(UArray.class);
+    private static final OLog LOGGER = Ut.Log.data(UArray.class);
 
     private final JsonArray arrayReference;
 

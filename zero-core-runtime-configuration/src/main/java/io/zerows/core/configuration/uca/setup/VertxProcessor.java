@@ -41,7 +41,7 @@ class VertxProcessor implements Processor<NodeNetwork, HSetting> {
 
         // 提取 Vertx 基本配置
         final JsonObject vertxData = Ut.valueJObject(containerJ, YmlCore.VERTX);
-        this.tracker().debug(INFO.V_BEFORE, YmlCore.VERTX,
+        this.logger().debug(INFO.V_BEFORE, YmlCore.VERTX,
             this.getClass().getName(), vertxData);
 
 

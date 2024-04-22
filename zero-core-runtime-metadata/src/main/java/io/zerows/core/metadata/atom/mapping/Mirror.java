@@ -1,11 +1,11 @@
 package io.zerows.core.metadata.atom.mapping;
 
 import io.horizon.uca.cache.Cc;
-import io.horizon.uca.log.Annal;
 import io.reactivex.rxjava3.core.Observable;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 import java.text.MessageFormat;
 import java.util.concurrent.ConcurrentMap;
@@ -22,13 +22,13 @@ public class Mirror {
 
     private static final String POJO = "pojo/{0}.yml";
     private static final Cc<String, Mojo> CC_MOJO = Cc.open();
-    private final Annal logger;
+    private final OLog logger;
     private final JsonObject converted = new JsonObject();
     private Mojo mojo;
     private JsonObject data = new JsonObject();
 
     private Mirror(final Class<?> clazz) {
-        this.logger = Annal.get(clazz);
+        this.logger = Ut.Log.metadata(clazz);
     }
 
     public static Mirror create(final Class<?> clazz) {

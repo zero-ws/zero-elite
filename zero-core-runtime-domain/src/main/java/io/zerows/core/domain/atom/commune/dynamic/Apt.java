@@ -2,13 +2,13 @@ package io.zerows.core.domain.atom.commune.dynamic;
 
 import io.horizon.eon.em.typed.ChangeFlag;
 import io.horizon.fn.Actuator;
-import io.horizon.uca.log.Annal;
 import io.vertx.codegen.annotations.Fluent;
 import io.vertx.core.Future;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.util.Ut;
 import io.zerows.core.domain.exception._AptParameterException;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
@@ -35,7 +35,7 @@ import java.util.function.Supplier;
  */
 @SuppressWarnings("unchecked")
 public class Apt {
-    private final static Annal LOGGER = Annal.get(Apt.class);
+    private final static OLog LOGGER = Ut.Log.data(Apt.class);
 
     private final static String MSG_APT_BATCH = "Current api does not support `isBatch = false`. Method = {0}";
 

@@ -1,8 +1,8 @@
 package io.zerows.core.assembly.uca.di;
 
 import com.google.inject.AbstractModule;
-import io.horizon.uca.log.Annal;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Member;
@@ -22,7 +22,7 @@ import java.util.concurrent.ConcurrentMap;
  */
 @Deprecated
 public class JavaDi<T extends I, I> extends AbstractModule {
-    private static final Annal LOGGER = Annal.get(JavaDi.class);
+    private static final OLog LOGGER = Ut.Log.uca(JavaDi.class);
     private final transient ConcurrentMap<Class<T>, Set<Class<I>>> classes
         = new ConcurrentHashMap<>();
 

@@ -26,7 +26,7 @@ class ProcessorOfSock implements Processor<NodeVertx, JsonArray> {
 
     @Override
     public void makeup(final NodeVertx target, final JsonArray setting) {
-        this.tracker().debug(INFO.V_BEFORE, KName.SERVER, ServerType.SOCK, setting);
+        this.logger().debug(INFO.V_BEFORE, KName.SERVER, ServerType.SOCK, setting);
 
 
         Ut.itJArray(setting, (item, index) -> {
@@ -41,7 +41,7 @@ class ProcessorOfSock implements Processor<NodeVertx, JsonArray> {
             target.optionServer(serverName, options);
         });
         if (Ut.isNotNil(setting)) {
-            this.tracker().info(INFO.V_AFTER, KName.SERVER, ServerType.SOCK, setting);
+            this.logger().info(INFO.V_AFTER, KName.SERVER, ServerType.SOCK, setting);
         }
     }
 }

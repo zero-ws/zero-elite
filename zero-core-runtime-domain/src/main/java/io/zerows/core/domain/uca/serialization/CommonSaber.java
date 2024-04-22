@@ -8,7 +8,7 @@ class CommonSaber extends AbstractSaber {
     public Object from(final Class<?> paramType,
                        final String literal) {
         return Fn.runOr(() ->
-                Fn.runOr(!SaberTypes.isSupport(paramType), this.getLogger(),
+                Fn.runOr(!SaberTypes.isSupport(paramType), this.logger(),
                     // Turn On / Off
                     () -> Ut.deserialize(literal, paramType, true),
                     () -> null),

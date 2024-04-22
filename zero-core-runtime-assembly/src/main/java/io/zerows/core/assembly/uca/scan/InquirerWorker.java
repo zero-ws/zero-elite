@@ -17,7 +17,7 @@ public class InquirerWorker implements Inquirer<Set<Class<?>>> {
         final Set<Class<?>> workers = classes.stream()
             .filter((item) -> item.isAnnotationPresent(Worker.class))
             .collect(Collectors.toSet());
-        this.tracker().info(INFO.WORKER, workers.size());
+        this.logger().info(INFO.WORKER, workers.size());
         return workers;
     }
 }

@@ -22,7 +22,7 @@ public class VertxTransformer implements Transformer<VertxOptions> {
     @Override
     public VertxOptions transform(final JsonObject input) {
         final JsonObject config = input.getJsonObject(YmlCore.vertx.OPTIONS, null);
-        final VertxOptions options = Fn.runOr(null == config, this.tracker(),
+        final VertxOptions options = Fn.runOr(null == config, this.logger(),
             VertxOptions::new,
             () -> {
                 assert Objects.nonNull(config) : "`config` should not be null";

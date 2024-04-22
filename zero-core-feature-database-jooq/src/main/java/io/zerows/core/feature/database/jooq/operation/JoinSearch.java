@@ -1,6 +1,5 @@
 package io.zerows.core.feature.database.jooq.operation;
 
-import io.horizon.uca.log.Annal;
 import io.horizon.uca.qr.Pager;
 import io.horizon.uca.qr.syntax.Ir;
 import io.vertx.core.json.JsonArray;
@@ -11,6 +10,7 @@ import io.zerows.core.feature.database.jooq.util.JqAnalyzer;
 import io.zerows.core.feature.database.jooq.util.JqOut;
 import io.zerows.core.metadata.atom.mapping.Mojo;
 import io.zerows.core.metadata.uca.environment.DevEnv;
+import io.zerows.core.metadata.uca.logging.OLog;
 import org.jooq.*;
 import org.jooq.impl.DSL;
 
@@ -23,7 +23,7 @@ import java.util.Set;
  */
 @SuppressWarnings("all")
 class JoinSearch {
-    private static final Annal LOGGER = Annal.get(JoinSearch.class);
+    private static final OLog LOGGER = Ut.Log.database(JoinSearch.class);
     private final transient JoinStore store;
 
     JoinSearch(final JoinStore store) {

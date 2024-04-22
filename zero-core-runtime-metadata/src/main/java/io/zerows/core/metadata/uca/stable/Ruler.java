@@ -4,11 +4,11 @@ import io.horizon.eon.VPath;
 import io.horizon.eon.VString;
 import io.horizon.exception.ProgramException;
 import io.horizon.uca.cache.Cc;
-import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 import java.text.MessageFormat;
 import java.util.Objects;
@@ -19,7 +19,7 @@ import java.util.concurrent.ConcurrentMap;
  */
 public class Ruler {
 
-    private static final Annal LOGGER = Annal.get(Ruler.class);
+    private static final OLog LOGGER = Ut.Log.uca(Ruler.class);
 
     private static final Cc<String, JsonObject> CC_RULE = Cc.open();
     private static final Cc<String, Insurer> CC_INSURER = Cc.open();

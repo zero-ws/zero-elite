@@ -58,7 +58,7 @@ class ServerProcessor implements Processor<NodeVertx, HSetting> {
             if (Objects.nonNull(supplier)) {
                 supplier.get().makeup(target, serverA);
             } else {
-                this.tracker().warn("The server type {0} processor could not be found.", type);
+                this.logger().warn("The server type {0} processor could not be found.", type);
             }
         });
     }

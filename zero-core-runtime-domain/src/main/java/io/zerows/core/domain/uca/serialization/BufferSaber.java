@@ -11,7 +11,7 @@ class BufferSaber extends AbstractSaber {
     public Object from(final Class<?> paramType,
                        final String literal) {
         return Fn.runOr(() ->
-                Fn.runOr(Buffer.class == paramType, this.getLogger(),
+                Fn.runOr(Buffer.class == paramType, this.logger(),
                     () -> {
                         final Buffer buffer = Buffer.buffer();
                         buffer.appendString(literal);

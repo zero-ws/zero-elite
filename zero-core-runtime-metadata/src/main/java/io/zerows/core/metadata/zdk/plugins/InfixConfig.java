@@ -1,11 +1,12 @@
 package io.zerows.core.metadata.zdk.plugins;
 
 import io.horizon.uca.cache.Cc;
-import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.fn.Fn;
+import io.vertx.up.util.Ut;
 import io.zerows.core.metadata.exception.BootDynamicKeyMissingException;
 import io.zerows.core.metadata.store.OZeroStore;
+import io.zerows.core.metadata.uca.logging.OLog;
 import io.zerows.core.metadata.uca.stable.Ruler;
 
 import java.io.Serializable;
@@ -17,7 +18,7 @@ import java.io.Serializable;
  */
 public class InfixConfig implements Serializable {
 
-    private static final Annal LOGGER = Annal.get(InfixConfig.class);
+    private static final OLog LOGGER = Ut.Log.configure(InfixConfig.class);
 
     private static final Cc<String, InfixConfig> CC_CACHE = Cc.open();
 

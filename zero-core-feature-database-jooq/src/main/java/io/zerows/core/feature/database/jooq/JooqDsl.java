@@ -2,7 +2,6 @@ package io.zerows.core.feature.database.jooq;
 
 import io.github.jklingsporn.vertx.jooq.classic.VertxDAO;
 import io.horizon.uca.cache.Cc;
-import io.horizon.uca.log.Annal;
 import io.vertx.core.Future;
 import io.vertx.core.Handler;
 import io.vertx.core.Promise;
@@ -13,6 +12,7 @@ import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
 import io.zerows.core.feature.database.jooq.exception.BootJooqClassInvalidException;
 import io.zerows.core.feature.database.jooq.exception.BootJooqVertxNullException;
+import io.zerows.core.metadata.uca.logging.OLog;
 import org.jooq.Configuration;
 import org.jooq.DSLContext;
 
@@ -31,7 +31,7 @@ import org.jooq.DSLContext;
  */
 @SuppressWarnings("all")
 public class JooqDsl {
-    private static final Annal LOGGER = Annal.get(JooqDsl.class);
+    private static final OLog LOGGER = Ut.Log.database(JooqDsl.class);
 
     private static final Cc<String, JooqDsl> CC_DSL = Cc.open();
     private transient Vertx vertxRef;

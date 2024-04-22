@@ -14,7 +14,7 @@ public interface ServiceCallback<T> extends ServiceMonitor {
     void stop(T service, Bundle bundle);
 
     @Override
-    default OLog tracker() {
+    default OLog logger() {
         return Ut.Log.callback(this.getClass());
     }
 }

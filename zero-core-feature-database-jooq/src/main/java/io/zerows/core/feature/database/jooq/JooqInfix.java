@@ -1,13 +1,14 @@
 package io.zerows.core.feature.database.jooq;
 
-import io.horizon.uca.log.Annal;
 import io.modello.atom.app.KDatabase;
 import io.vertx.core.Vertx;
 import io.vertx.up.annotations.Infusion;
 import io.vertx.up.eon.configure.YmlCore;
 import io.vertx.up.fn.Fn;
+import io.vertx.up.util.Ut;
 import io.zerows.core.feature.database.cp.zdk.DataPool;
 import io.zerows.core.feature.database.jooq.exception.BootJooqConfigurationException;
+import io.zerows.core.metadata.uca.logging.OLog;
 import io.zerows.core.metadata.zdk.plugins.Infix;
 import org.jooq.Configuration;
 import org.jooq.DSLContext;
@@ -20,7 +21,7 @@ import java.util.concurrent.ConcurrentMap;
 @SuppressWarnings("unchecked")
 public class JooqInfix implements Infix {
 
-    private static final Annal LOGGER = Annal.get(JooqInfix.class);
+    private static final OLog LOGGER = Ut.Log.database(JooqInfix.class);
 
     private static final ConcurrentMap<String, Configuration> CONFIGURATION
         = new ConcurrentHashMap<>();

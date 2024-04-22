@@ -2,10 +2,11 @@ package io.zerows.core.feature.database.cp.ds;
 
 import com.zaxxer.hikari.HikariDataSource;
 import io.horizon.uca.cache.Cc;
-import io.horizon.uca.log.Annal;
 import io.modello.atom.app.KDatabase;
+import io.vertx.up.util.Ut;
 import io.zerows.core.feature.database.atom.Database;
 import io.zerows.core.feature.database.cp.zdk.DataPool;
+import io.zerows.core.metadata.uca.logging.OLog;
 import org.jooq.Configuration;
 import org.jooq.DSLContext;
 import org.jooq.SQLDialect;
@@ -14,7 +15,7 @@ import org.jooq.impl.DSL;
 import java.util.Objects;
 
 public class HikariDataPool implements DataPool {
-    private static final Annal LOGGER = Annal.get(HikariDataPool.class);
+    private static final OLog LOGGER = Ut.Log.database(HikariDataPool.class);
     private static final String OPT_AUTO_COMMIT = "hikari.auto.commit";
     private static final String OPT_CONNECTION_TIMEOUT = "hikari.connection.timeout";
     private static final String OPT_IDLE_TIMEOUT = "hikari.idle.timeout";
@@ -116,7 +117,7 @@ public class HikariDataPool implements DataPool {
              */
             database.getOptions().remove(OPT_AUTO_COMMIT);
             final DataPool ds = new HikariDataPool(database);
-            final Annal logger = Annal.get(this.getClass());
+            final OLog logger = Ut.Log.database(this.getClass());
             logger.info("[ DP ] Data Pool Hash : {0}", ds.hashCode());
             return ds;
         }, this.database.getJdbcUrl());

@@ -1,12 +1,12 @@
 package io.zerows.core.security.atom;
 
-import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.configure.YmlCore;
 import io.vertx.up.eon.em.EmSecure;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
 import io.zerows.core.metadata.store.OZeroStore;
+import io.zerows.core.metadata.uca.logging.OLog;
 import io.zerows.core.metadata.uca.stable.Ruler;
 
 import java.io.Serializable;
@@ -19,7 +19,7 @@ import java.util.concurrent.ConcurrentMap;
  */
 public class AegisItem implements Serializable {
     private static final ConcurrentMap<String, AegisItem> SECURE = new ConcurrentHashMap<>();
-    private static final Annal LOGGER = Annal.get(AegisItem.class);
+    private static final OLog LOGGER = Ut.Log.security(AegisItem.class);
 
     static {
         //    final JsonObject configuration = Ut.valueJObject(config.getJsonObject(YmlCore.inject.SECURE));

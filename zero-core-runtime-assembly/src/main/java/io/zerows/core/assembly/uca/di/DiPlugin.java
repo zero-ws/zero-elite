@@ -2,10 +2,10 @@ package io.zerows.core.assembly.uca.di;
 
 import com.google.inject.Injector;
 import io.horizon.uca.cache.Cc;
-import io.horizon.uca.log.Annal;
 import io.vertx.up.util.Ut;
 import io.zerows.core.assembly.atom.OProxyInstance;
 import io.zerows.core.assembly.store.ORepositoryClass;
+import io.zerows.core.metadata.uca.logging.OLog;
 import jakarta.inject.Named;
 
 import java.lang.annotation.Annotation;
@@ -18,11 +18,11 @@ public class DiPlugin {
     private static final Cc<Class<?>, DiPlugin> CC_DI = Cc.open();
     private transient final Class<?> clazz;
     private transient final DiInfix infix;
-    private transient final Annal logger;
+    private transient final OLog logger;
 
     private DiPlugin(final Class<?> clazz) {
         this.clazz = clazz;
-        this.logger = Annal.get(clazz);
+        this.logger = Ut.Log.metadata(clazz);
         this.infix = new DiInfix(clazz);
     }
 

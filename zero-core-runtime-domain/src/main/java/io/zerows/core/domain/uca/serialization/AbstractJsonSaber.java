@@ -14,7 +14,7 @@ public abstract class AbstractJsonSaber extends AbstractSaber {
     @Override
     public Object from(final Class<?> paramType,
                        final String literal) {
-        return Fn.runOr(() -> Fn.runOr(this.isValid(paramType), this.getLogger(),
+        return Fn.runOr(() -> Fn.runOr(this.isValid(paramType), this.logger(),
                 () -> {
                     try {
                         return this.getFun().apply(literal);

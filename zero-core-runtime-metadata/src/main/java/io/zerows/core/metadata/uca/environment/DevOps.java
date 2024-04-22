@@ -1,13 +1,14 @@
 package io.zerows.core.metadata.uca.environment;
 
-import io.horizon.uca.log.Annal;
 import io.vertx.core.DeploymentOptions;
 import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonObject;
 import io.vertx.core.shareddata.AsyncMap;
 import io.vertx.up.eon.KName;
 import io.vertx.up.eon.KWeb;
+import io.vertx.up.util.Ut;
 import io.zerows.core.metadata.eon.MessageOfMeta;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 /**
  * @author lang : 2023/4/25
@@ -37,7 +38,7 @@ public class DevOps {
                 final AsyncMap<String, Object> data = mapped.result();
                 data.put(name, instance, result -> {
                     if (result.succeeded()) {
-                        final Annal logger = Annal.get(DevOps.class);
+                        final OLog logger = Ut.Log.boot(DevOps.class);
                         logger.info(MessageOfMeta.Measure.ADD, name,
                             String.valueOf(options.getInstances()), options.isWorker());
                     }
@@ -52,7 +53,7 @@ public class DevOps {
                 final AsyncMap<String, Object> data = mapped.result();
                 data.remove(name, result -> {
                     if (result.succeeded()) {
-                        final Annal logger = Annal.get(DevOps.class);
+                        final OLog logger = Ut.Log.boot(DevOps.class);
                         logger.info(MessageOfMeta.Measure.REMOVE, name, String.valueOf(options.getInstances()));
                     }
                 });

@@ -25,7 +25,7 @@ class ProcessorOfHttp implements Processor<NodeVertx, JsonArray> {
     @Override
     public void makeup(final NodeVertx target, final JsonArray setting) {
         // 此处保证所有的配置都为同一种类型的服务器配置
-        this.tracker().debug(INFO.V_BEFORE, KName.SERVER, this.typeOfHttp(), setting);
+        this.logger().debug(INFO.V_BEFORE, KName.SERVER, this.typeOfHttp(), setting);
 
 
         // 验证已通过，直接构造 HttpServerOptions
@@ -47,7 +47,7 @@ class ProcessorOfHttp implements Processor<NodeVertx, JsonArray> {
             target.optionServer(serverName, this.typeOfHttp(), options);
         });
         if (Ut.isNotNil(setting)) {
-            this.tracker().info(INFO.V_AFTER, KName.SERVER, this.typeOfHttp(), setting);
+            this.logger().info(INFO.V_AFTER, KName.SERVER, this.typeOfHttp(), setting);
         }
     }
 

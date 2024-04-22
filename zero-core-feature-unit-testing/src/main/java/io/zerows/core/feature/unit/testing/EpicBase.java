@@ -1,6 +1,5 @@
 package io.zerows.core.feature.unit.testing;
 
-import io.horizon.uca.log.Annal;
 import io.horizon.uca.qr.Criteria;
 import io.modello.atom.app.KIntegration;
 import io.vertx.core.buffer.Buffer;
@@ -8,6 +7,7 @@ import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.util.Ut;
 import io.zerows.core.feature.database.atom.Database;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 /**
  * # 「Co」 Testing Framework
@@ -78,8 +78,8 @@ public abstract class EpicBase {
         return Ut.ioJArray(this.ioString(filename));
     }
 
-    protected Annal logger() {
-        return Annal.get(this.getClass());
+    protected OLog logger() {
+        return Ut.Log.test(this.getClass());
     }
 
 }

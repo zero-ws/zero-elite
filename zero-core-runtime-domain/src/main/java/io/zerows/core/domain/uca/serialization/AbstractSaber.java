@@ -1,20 +1,21 @@
 package io.zerows.core.domain.uca.serialization;
 
-import io.horizon.uca.log.Annal;
 import io.vertx.up.fn.Fn;
+import io.vertx.up.util.Ut;
 import io.zerows.core.domain.exception._400ParameterFromStringException;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 public abstract class AbstractSaber implements Saber {
 
-    protected Annal getLogger() {
-        return Annal.get(this.getClass());
+    protected OLog logger() {
+        return Ut.Log.uca(this.getClass());
     }
 
     void verifyInput(final boolean condition,
                      final Class<?> paramType,
                      final String literal) {
         Fn.outWeb(condition,
-            this.getLogger(), _400ParameterFromStringException.class,
+            this.logger(), _400ParameterFromStringException.class,
             this.getClass(), paramType, literal);
     }
 

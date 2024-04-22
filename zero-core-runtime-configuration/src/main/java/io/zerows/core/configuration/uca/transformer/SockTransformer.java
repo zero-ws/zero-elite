@@ -14,7 +14,7 @@ import io.zerows.core.configuration.zdk.Transformer;
 public class SockTransformer implements Transformer<SockOptions> {
     @Override
     public SockOptions transform(final JsonObject config) {
-        return Fn.runOr(null == config, this.tracker(), SockOptions::new, () -> {
+        return Fn.runOr(null == config, this.logger(), SockOptions::new, () -> {
             /*
              * websocket:       ( SockOptions )
              * config:          ( HttpServerOptions )

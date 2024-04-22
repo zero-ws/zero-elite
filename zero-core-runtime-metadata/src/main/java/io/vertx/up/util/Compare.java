@@ -1,13 +1,13 @@
 package io.vertx.up.util;
 
 import io.horizon.eon.em.typed.ChangeFlag;
-import io.horizon.uca.log.Annal;
 import io.modello.specification.HRecord;
 import io.vertx.core.Future;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.KName;
 import io.vertx.up.fn.Fn;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -21,6 +21,7 @@ import java.util.function.Supplier;
  */
 @SuppressWarnings("all")
 final class Compare {
+    private static final OLog LOGGER = _Log.Log.ux(Compare.class);
 
     private Compare() {
     }
@@ -52,7 +53,7 @@ final class Compare {
      * @author lang : 2024-04-19
      */
     static class J {
-        private static final Annal LOGGER = Annal.get(J.class);
+        private static final OLog LOG = _Log.Log.ux(J.class);
 
         // ------------------------- Compare Json ------------------------
         static JsonArray ruleJReduce(final JsonArray records, final JsonArray matrix) {

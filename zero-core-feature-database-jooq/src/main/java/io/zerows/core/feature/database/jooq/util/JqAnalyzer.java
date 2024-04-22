@@ -3,7 +3,6 @@ package io.zerows.core.feature.database.jooq.util;
 import io.horizon.eon.VString;
 import io.horizon.eon.VValue;
 import io.horizon.uca.cache.Cc;
-import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
@@ -13,6 +12,7 @@ import io.zerows.core.feature.database.jooq.exception.BootJooqFieldMissingExcept
 import io.zerows.core.feature.database.jooq.exception.BootJooqMergeException;
 import io.zerows.core.metadata.atom.mapping.Mirror;
 import io.zerows.core.metadata.atom.mapping.Mojo;
+import io.zerows.core.metadata.uca.logging.OLog;
 import org.jooq.*;
 import org.jooq.impl.DSL;
 
@@ -25,7 +25,7 @@ import static org.jooq.impl.DSL.row;
 @SuppressWarnings("all")
 public class JqAnalyzer {
 
-    private static final Annal LOGGER = Annal.get(JqAnalyzer.class);
+    private static final OLog LOGGER = Ut.Log.database(JqAnalyzer.class);
     private static final ConcurrentMap<Integer, JooqDsl> DAO_POOL =
         new ConcurrentHashMap<>();
 

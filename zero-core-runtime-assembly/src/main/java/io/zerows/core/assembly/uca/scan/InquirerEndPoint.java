@@ -16,7 +16,7 @@ public class InquirerEndPoint implements Inquirer<Set<Class<?>>> {
         final Set<Class<?>> endpoints = clazzes.stream()
             .filter((item) -> item.isAnnotationPresent(EndPoint.class))
             .collect(Collectors.toSet());
-        this.tracker().info(INFO.ENDPOINT, endpoints.size());
+        this.logger().info(INFO.ENDPOINT, endpoints.size());
         return endpoints;
     }
 }

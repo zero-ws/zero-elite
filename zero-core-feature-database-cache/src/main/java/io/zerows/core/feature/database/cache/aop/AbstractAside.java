@@ -1,13 +1,14 @@
 package io.zerows.core.feature.database.cache.aop;
 
-import io.horizon.uca.log.Annal;
 import io.horizon.uca.qr.Sorter;
 import io.vertx.core.json.JsonObject;
+import io.vertx.up.util.Ut;
 import io.zerows.core.feature.database.cache.hit.*;
 import io.zerows.core.feature.database.jooq.operation.ActionQr;
 import io.zerows.core.feature.database.jooq.operation.UxJooq;
 import io.zerows.core.feature.database.jooq.util.JqAnalyzer;
 import io.zerows.core.feature.database.jooq.util.JqTool;
+import io.zerows.core.metadata.uca.logging.OLog;
 import org.aspectj.lang.ProceedingJoinPoint;
 
 import java.util.*;
@@ -21,8 +22,8 @@ abstract class AbstractAside {
     /*
      * Logger that will be used in L1 cache sub-classes
      */
-    protected Annal logger() {
-        return Annal.get(this.getClass());
+    protected OLog logger() {
+        return Ut.Log.cache(this.getClass());
     }
 
     /*

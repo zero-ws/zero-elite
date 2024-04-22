@@ -1,13 +1,13 @@
 package io.zerows.core.feature.database.jooq.operation;
 
 import io.github.jklingsporn.vertx.jooq.classic.VertxDAO;
-import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.util.Ut;
 import io.zerows.core.feature.database.jooq.JooqDsl;
 import io.zerows.core.feature.database.jooq.condition.JooqCond;
 import io.zerows.core.feature.database.jooq.util.JqAnalyzer;
 import io.zerows.core.metadata.uca.environment.DevEnv;
+import io.zerows.core.metadata.uca.logging.OLog;
 import org.jooq.*;
 import org.jooq.impl.DSL;
 
@@ -46,14 +46,14 @@ public abstract class AbstractAction {
     }
 
     protected void logging(final String pattern, final Object... args) {
-        final Annal logger = Annal.get(getClass());
+        final OLog logger = Ut.Log.database(getClass());
         if (DevEnv.devJooqCond()) {
             logger.info(pattern, args);
         }
     }
 
     protected void warning(final String pattern, final Object... args) {
-        final Annal logger = Annal.get(getClass());
+        final OLog logger = Ut.Log.database(getClass());
         logger.warn(pattern, args);
     }
 

@@ -9,7 +9,7 @@ class ByteArraySaber extends AbstractSaber {
     public Object from(final Class<?> paramType,
                        final String literal) {
         return Fn.runOr(() -> Fn.runOr(Byte[].class == paramType ||
-                    byte[].class == paramType, this.getLogger(),
+                    byte[].class == paramType, this.logger(),
                 () -> literal.getBytes(VValue.DFT.CHARSET), () -> new byte[0]),
             paramType, literal);
     }

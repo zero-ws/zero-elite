@@ -19,7 +19,7 @@ public class InquirerPlugin implements Inquirer<Set<Class<?>>> {
             .subscribe(plugins::add)
             .dispose();
         // Ensure Tp Client
-        this.tracker().info(INFO.PLUGIN, plugins.size());
+        this.logger().info(INFO.PLUGIN, plugins.size());
         return plugins;
     }
 

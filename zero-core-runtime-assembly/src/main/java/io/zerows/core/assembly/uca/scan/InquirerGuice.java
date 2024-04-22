@@ -30,7 +30,7 @@ public class InquirerGuice implements Inquirer<Injector> {
     @Override
     @SuppressWarnings("all")
     public Injector scan(final Set<Class<?>> clazzes) {
-        this.tracker().info("[ DI ] The DI environment will be initialized! Total = `{0}`", String.valueOf(clazzes.size()));
+        this.logger().info("[ DI ] The DI environment will be initialized! Total = `{0}`", String.valueOf(clazzes.size()));
         /*
          * Scan start points, the condition is as following:
          * - 1. Contains member that annotated with @Inject
@@ -57,7 +57,7 @@ public class InquirerGuice implements Inquirer<Injector> {
                 }
             }
         });
-        this.tracker().info("[ DI ] 1st scanned, field = {0}, method = {1}, constructor = {2}",
+        this.logger().info("[ DI ] 1st scanned, field = {0}, method = {1}, constructor = {2}",
             String.valueOf(queueField.size()), String.valueOf(queueMethod.size()), String.valueOf(queueCon.size()));
 
         // Implementation = Interface

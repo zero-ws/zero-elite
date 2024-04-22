@@ -1,9 +1,9 @@
 package io.vertx.up.fn;
 
 import io.horizon.fn.ErrorSupplier;
-import io.horizon.uca.log.Annal;
 import io.vertx.core.Future;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 import java.util.Objects;
 import java.util.function.Consumer;
@@ -13,7 +13,7 @@ import java.util.function.Supplier;
  * @author lang : 2023/4/28
  */
 class Monad {
-    private static final Annal LOGGER = Annal.get(Monad.class);
+    private static final OLog LOGGER = Ut.Log.ux(Monad.class);
 
     private Monad() {
 

@@ -23,7 +23,7 @@ class ProcessorOfIpc implements Processor<NodeVertx, JsonArray> {
 
     @Override
     public void makeup(final NodeVertx target, final JsonArray setting) {
-        this.tracker().debug(INFO.V_BEFORE, KName.SERVER, ServerType.IPC, setting);
+        this.logger().debug(INFO.V_BEFORE, KName.SERVER, ServerType.IPC, setting);
 
         Ut.itJArray(setting, (item, index) -> {
             final JsonObject configureJ = Ut.valueJObject(item, KName.CONFIG);
@@ -33,7 +33,7 @@ class ProcessorOfIpc implements Processor<NodeVertx, JsonArray> {
             target.optionServer(serverName, options);
         });
         if (Ut.isNotNil(setting)) {
-            this.tracker().info(INFO.V_AFTER, KName.SERVER, ServerType.IPC, setting);
+            this.logger().info(INFO.V_AFTER, KName.SERVER, ServerType.IPC, setting);
         }
     }
 }

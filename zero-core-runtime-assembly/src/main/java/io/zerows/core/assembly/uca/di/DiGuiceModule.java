@@ -2,8 +2,8 @@ package io.zerows.core.assembly.uca.di;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;
-import io.horizon.uca.log.Annal;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.uca.logging.OLog;
 import jakarta.inject.Named;
 import jakarta.inject.Singleton;
 
@@ -63,7 +63,7 @@ public abstract class DiGuiceModule extends AbstractModule {
         }
     }
 
-    protected Annal logger() {
-        return Annal.get(this.getClass());
+    protected OLog logger() {
+        return Ut.Log.metadata(this.getClass());
     }
 }

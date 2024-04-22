@@ -1,9 +1,9 @@
 package io.zerows.core.feature.database.plugins;
 
 import io.horizon.runtime.Macrocosm;
-import io.horizon.uca.log.Annal;
 import io.vertx.up.eon.KName;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 import java.util.Properties;
 
@@ -11,7 +11,7 @@ import java.util.Properties;
  * @author <a href="http://www.origin-x.cn">Lang</a>
  */
 public class LiquibaseEncryption extends Properties {
-    private static final Annal LOGGER = Annal.get(LiquibaseEncryption.class);
+    private static final OLog LOGGER = Ut.Log.plugin(LiquibaseEncryption.class);
 
     public LiquibaseEncryption() {
         super.defaults = new Properties();

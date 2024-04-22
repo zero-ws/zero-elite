@@ -1,11 +1,12 @@
 package io.zerows.core.feature.database.cp.zdk;
 
 import io.horizon.uca.cache.Cc;
-import io.horizon.uca.log.Annal;
 import io.modello.atom.app.KDatabase;
+import io.vertx.up.util.Ut;
 import io.zerows.core.feature.database.atom.Database;
 import io.zerows.core.feature.database.cp.ds.DSMeta;
 import io.zerows.core.feature.database.cp.ds.HikariDataPool;
+import io.zerows.core.metadata.uca.logging.OLog;
 import org.jooq.Configuration;
 import org.jooq.ConnectionProvider;
 import org.jooq.DSLContext;
@@ -32,7 +33,7 @@ public interface DataPool {
 
     static DataPool create(final KDatabase database) {
         return CC_POOL_DYNAMIC.pick(() -> {
-            final Annal logger = Annal.get(DataPool.class);
+            final OLog logger = Ut.Log.database(DataPool.class);
             final DataPool ds = new HikariDataPool(database);
             logger.info("[ DP ] Data Pool Hash : {0}, URL: {1}",
                 String.valueOf(ds.hashCode()), database.getJdbcUrl());

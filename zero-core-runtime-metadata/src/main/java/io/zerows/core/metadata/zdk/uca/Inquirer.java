@@ -16,7 +16,7 @@ public interface Inquirer<R> {
 
     R scan(Set<Class<?>> clazzes);
 
-    default OLog tracker() {
+    default OLog logger() {
         return Ut.Log.uca(this.getClass());
     }
 }

@@ -13,7 +13,7 @@ class FileSaber extends AbstractSaber {
         return Fn.runOr(() -> {
             final File file = new File(filename);
             // Throw 400 Error
-            Fn.outWeb(!file.exists() || !file.canRead(), this.getLogger(),
+            Fn.outWeb(!file.exists() || !file.canRead(), this.logger(),
                 _400FilePathMissingException.class, this.getClass(), filename);
             return file;
         }, paramType, filename);

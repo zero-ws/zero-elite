@@ -23,7 +23,7 @@ public class InquirerQueue implements Inquirer<Set<Class<?>>> {
         final Set<Class<?>> queues = classes.stream()
             .filter((item) -> item.isAnnotationPresent(Queue.class))
             .collect(Collectors.toSet());
-        this.tracker().info(INFO.QUEUE, queues.size());
+        this.logger().info(INFO.QUEUE, queues.size());
         this.ensure(queues);
         return queues;
     }
@@ -37,7 +37,7 @@ public class InquirerQueue implements Inquirer<Set<Class<?>>> {
                 final Class<?> returnType = method.getReturnType();
                 final Class<?> parameterTypes = method.getParameterTypes()[0];
                 if (Message.class.isAssignableFrom(parameterTypes)) {
-                    Fn.outBoot(void.class != returnType && Void.class != returnType, this.tracker(),
+                    Fn.outBoot(void.class != returnType && Void.class != returnType, this.logger(),
                         BootWorkerConflictException.class, this.getClass(), method);
                 }
             })

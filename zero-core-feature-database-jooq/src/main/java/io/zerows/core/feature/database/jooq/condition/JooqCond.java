@@ -2,7 +2,6 @@ package io.zerows.core.feature.database.jooq.condition;
 
 import io.horizon.eon.VString;
 import io.horizon.eon.VValue;
-import io.horizon.uca.log.Annal;
 import io.horizon.uca.qr.Criteria;
 import io.horizon.uca.qr.Sorter;
 import io.horizon.uca.qr.syntax.Ir;
@@ -13,6 +12,7 @@ import io.vertx.up.util.Ut;
 import io.zerows.core.feature.database.jooq.exception.BootJooqCondClauseException;
 import io.zerows.core.feature.database.jooq.exception.BootJooqCondFieldException;
 import io.zerows.core.metadata.uca.environment.DevEnv;
+import io.zerows.core.metadata.uca.logging.OLog;
 import org.jooq.Condition;
 import org.jooq.Field;
 import org.jooq.Operator;
@@ -39,7 +39,7 @@ public class JooqCond {
             this.add("TO");
         }
     };
-    private static final Annal LOGGER = Annal.get(JooqCond.class);
+    private static final OLog LOGGER = Ut.Log.database(JooqCond.class);
 
     private static String applyField(final String field,
                                      final Function<String, String> fnTable) {

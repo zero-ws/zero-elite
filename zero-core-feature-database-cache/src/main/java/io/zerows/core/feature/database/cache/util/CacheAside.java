@@ -1,7 +1,8 @@
 package io.zerows.core.feature.database.cache.util;
 
-import io.horizon.uca.log.Annal;
 import io.vertx.core.Future;
+import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 import java.util.Objects;
 import java.util.function.Consumer;
@@ -13,7 +14,7 @@ import java.util.function.Supplier;
  * Cache-Aside
  */
 public class CacheAside {
-    private static final Annal LOGGER = Annal.get(CacheAside.class);
+    private static final OLog LOGGER = Ut.Log.cache(CacheAside.class);
 
     public static <T> T after(final Supplier<T> executor, final Consumer<T> consumer) {
         /*

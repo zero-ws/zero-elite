@@ -27,7 +27,7 @@ public class RequiredInsurer extends AbstractInsurer {
                 Fn.bugIt(fields, String.class, (field, index) -> {
                     // 3.Check if data contains field.
                     // Fast throw out
-                    Fn.outBug(!data.containsKey(field), this.getLogger(),
+                    Fn.outBug(!data.containsKey(field), this.logger(),
                         DaemonFieldRequiredException.class,
                         this.getClass(), data, field);
                 });

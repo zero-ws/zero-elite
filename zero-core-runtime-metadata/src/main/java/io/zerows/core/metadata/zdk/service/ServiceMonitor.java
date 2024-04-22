@@ -22,7 +22,7 @@ public interface ServiceMonitor {
      *
      * @return {@link LogModule}
      */
-    default OLog tracker() {
+    default OLog logger() {
         return Ut.Log.service(this.getClass());
     }
 }

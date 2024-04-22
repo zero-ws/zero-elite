@@ -4,9 +4,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import io.horizon.uca.log.Annal;
 import io.vertx.up.eon.KName;
 import io.vertx.up.fn.Fn;
+import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.uca.logging.OLog;
 import io.zerows.jackson.databind.ClassDeserializer;
 import io.zerows.jackson.databind.ClassSerializer;
 
@@ -29,7 +30,7 @@ import java.util.concurrent.ConcurrentMap;
  */
 public class Mojo implements Serializable {
 
-    private static final Annal LOGGER = Annal.get(Mojo.class);
+    private static final OLog LOGGER = Ut.Log.metadata(Mojo.class);
     @JsonIgnore
     private final ConcurrentMap<String, String> columns = new ConcurrentHashMap<>();
     @JsonIgnore

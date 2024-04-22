@@ -2,13 +2,13 @@ package io.zerows.core.feature.database.atom;
 
 import io.horizon.annotations.Legacy;
 import io.horizon.eon.em.EmDS;
-import io.horizon.uca.log.Annal;
 import io.modello.atom.app.KDatabase;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.configure.YmlCore;
 import io.vertx.up.util.Ut;
 import io.zerows.core.metadata.store.OZeroStore;
 import io.zerows.core.metadata.uca.environment.MatureOn;
+import io.zerows.core.metadata.uca.logging.OLog;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -40,7 +40,7 @@ import java.util.Objects;
     + "不可以直接被取消，但该类可从 KDatabase 高阶对象中继承"
 )
 public class Database extends KDatabase {
-    private static final Annal LOGGER = Annal.get(Database.class);
+    private static final OLog LOGGER = Ut.Log.database(Database.class);
     private static Database DATABASE;
 
     /* Database Connection Testing */
