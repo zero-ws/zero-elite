@@ -1,8 +1,8 @@
 package io.zerows.core.domain.uca.serialization;
 
 import io.horizon.uca.log.Annal;
-import io.vertx.up.exception.web._400ParameterFromStringException;
 import io.vertx.up.fn.Fn;
+import io.zerows.core.domain.exception._400ParameterFromStringException;
 
 public abstract class AbstractSaber implements Saber {
 

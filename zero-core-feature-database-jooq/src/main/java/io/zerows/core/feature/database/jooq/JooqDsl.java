@@ -11,8 +11,8 @@ import io.vertx.core.impl.ContextInternal;
 import io.vertx.core.impl.future.PromiseImpl;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
-import io.zerows.core.feature.database.jooq.exception.JooqClassInvalidException;
-import io.zerows.core.feature.database.jooq.exception.JooqVertxNullException;
+import io.zerows.core.feature.database.jooq.exception.BootJooqClassInvalidException;
+import io.zerows.core.feature.database.jooq.exception.BootJooqVertxNullException;
 import org.jooq.Configuration;
 import org.jooq.DSLContext;
 
@@ -46,8 +46,8 @@ public class JooqDsl {
 
     static JooqDsl init(final Vertx vertxRef, final Configuration configurationRef, final Class<?> daoCls) {
         // Checking when initializing
-        Fn.out(!Ut.isImplement(daoCls, VertxDAO.class), JooqClassInvalidException.class, JooqDsl.class, daoCls.getName());
-        Fn.outBoot(null == vertxRef, LOGGER, JooqVertxNullException.class, daoCls);
+        Fn.out(!Ut.isImplement(daoCls, VertxDAO.class), BootJooqClassInvalidException.class, JooqDsl.class, daoCls.getName());
+        Fn.outBoot(null == vertxRef, LOGGER, BootJooqVertxNullException.class, daoCls);
 
         // Calculate the key of current pool
         final String poolKey = String.valueOf(vertxRef.hashCode()) + ":" +

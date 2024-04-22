@@ -55,10 +55,10 @@ error:
   E10001: (V) - This rule require all elements of array is JsonObject, Now the index = {0} does not match, it''s {1}
   E10002: (V) - The data object {0} missed required field "{1}"
   E10003: (V) - The field {0} value is "{1}", but expected type is "{2}"
-  E10004: (V) - The cluster options is enabled, but the "{0}" vertx instance = "{1}"
+  # 移除：E10004: (V) - The cluster options is enabled, but the "{0}" vertx instance = "{1}"
   E10005: (V) - The dynamic key "{0}" missing in uniform extension configuration data {1}
   E10006: (V) - The data object {0} contains unsupported/forbidden field "{1}"
-  E10007: (V) - The dynamic key "{0}" data type must be JsonObject instead of others, but now "{1}"
+  # 移除：E10007: (V) - The dynamic key "{0}" data type must be JsonObject instead of others, but now "{1}"
 
   # ----------- Zero Infusion ( vertx-ifx ) Exception --------------------
   # 20001 - 29999
@@ -79,7 +79,7 @@ error:
   # (Runtime) Vertx start up error
   E40001: Vert.x zero boot class should not be null, please provide the entry of this application
   E40002: Vert.x zero boot class must be marked with annotation "Up", but ( name= {0} ) it''s missing
-  E40003: ZeroLauncher require input callback to handle vertx reference, but not it''s null
+  # 移除：E40003: ZeroLauncher require input callback to handle vertx reference, but not it''s null
   E40004: You have defined {0} agent {2} for server of type {1}, it''s fobbiden
   E40005: Event extractor only accept to scan class of @EndPoint, but now it''s {0}
   E40006: PathResolver could not accept null dot reference of @Path
@@ -87,34 +87,34 @@ error:
   E40008: The event handler of path {0} has not been set, please verify configuration
   E40009: Vert.x zero require class {0} contains at least one no-arg constructor, but now it''s missing
   E40010: Vert.x zero require class {0} access modifier contains PUBLIC scope, but now it couldn't be accessed
-  E40011: Vert.x zero found method parameters without any annotated, it's conflict. Effect = {0}
+  # 移除：E40011: Vert.x zero found method parameters without any annotated, it's conflict. Effect = {0}
   E40012: The address {0} does not existing in incoming address list. Position - type = {1}, method = {2}
   E40013: You want to send message to event bus, but agent method ({0}) of {1}''s return type is (void)
   E40014: Zero detected that there is no method of @Queue annotated @Address = {0}, the worker missing
-  E40015: Infusion component met error when reading option on key = {0}
+  # 移除：E40015: Infusion component met error when reading option on key = {0}
   E40016: You enabled the plugin ( key = {0} ), but this plugin has no method of ( public static void init(Vertx) )
   E40017: Worker method signature is wrong, the parameter length must be > 0. method = {0}, class = {1}
   E40018: "Async mode: return = {0}, parameter = {1}, valid - Envelop method(Envelop), void method(Message<Envelop>;)"
-  E40019: Your plugin {0} met error when starting, please check the details {1}
+  # 移除：E40019: Your plugin {0} met error when starting, please check the details {1}
   E40020: Zero system could not find the config of key = {0}, please check your configurations
-  E40021: The field "{0}" of class {1} has been annotated with Zero annotation more than once, data = {2}
-  E40023: "Zero system found field \"{0}\" of class {1} is interface with non-unique implementation, but @Qualifier missed"
-  E40024: "One of the classes \"{0}\" missed @Named annotation, because they implement the same interface {1}"
-  E40025: "All the implementation class \"{0}\" with @Named contains no value of \"{1}\""
-  E40026: "You will initialize infix = \"{0}\", but the configuration missed \"{1}\" in lime node of vertx.xml"
-  E40027: "You are trying to initialize EtcdClient, but the configuration data is empty."
+  # 移除：E40021: The field "{0}" of class {1} has been annotated with Zero annotation more than once, data = {2}
+  # 移除：E40023: "Zero system found field \"{0}\" of class {1} is interface with non-unique implementation, but @Qualifier missed"
+  # 移除：E40024: "One of the classes \"{0}\" missed @Named annotation, because they implement the same interface {1}"
+  # 移除：E40025: "All the implementation class \"{0}\" with @Named contains no value of \"{1}\""
+  # 移除：E40026: "You will initialize infix = \"{0}\", but the configuration missed \"{1}\" in lime node of vertx.xml"
+  # 移除：E40027: "You are trying to initialize EtcdClient, but the configuration data is empty."
   E40028: Duplicated implementation of interface \"{0}\" found in the system, it''s invalid
   E40029: The annotation {1} occurs {2} times in the method {0}, it''s forbidden in zero system
   E40030: The {0} parameter annotation should select one category, but now zero system detect {1}
   E40031: The {0} parameter annotation is {1}, but the java type {2} is not supported here
   E40032: You are in mode "Direct", the input index must be greatter and equal to 0, current is {0}
-  E40033: "(Database) You are trying to initialize \"Xtor\" component, but found invalid component {0} in method {1}"
-  E40034: "(Database) Your \"Xtor\" component is not ready, (client, clazz, logger, collection) could not be null"
-  E40035: "(Database) You are executing the operations in \"Xtor\" component, but met error: {0}"
+  # 移除：E40033: "(Database) You are trying to initialize \"Xtor\" component, but found invalid component {0} in method {1}"
+  # 移除：E40034: "(Database) Your \"Xtor\" component is not ready, (client, clazz, logger, collection) could not be null"
+  # 移除：E40035: "(Database) You are executing the operations in \"Xtor\" component, but met error: {0}"
   E40036: "Zero system detected event class {0} contains methods that annotated with @Codex more than once"
   E40037: (Rpc) Enabled in current environment, but remote configuration center ( Etcd ) is not prepared
   E40038: "(Security) Zero system detected duplicated \"Wall\" classes [{0}] (Path & Order) should not be the same, it''s invalid"
-  E40039: "The network configured for etcd ( host = {0}, port = {1} ) could not be reached"
+  # 移除：E40039: "The network configured for etcd ( host = {0}, port = {1} ) could not be reached"
   E40040: "(Security) You have configured key = \"{0}\" in @Wall class {1}, but it''s missing"
   E40041: "(Security) Every @Wall class must contains only one method annotated with {0}, current {1} contains more"
   E40042: "You have enabled @Address and @Ipc both on method \"{0}\" of class \"{1}\", only one channel should be valid"
@@ -126,17 +126,17 @@ error:
   E40048: "(Rpc) Zero system detect agent interface \"{0}\" only without implementation class, it''s forbidden in rpc stream workflow."
   E40049: "Zero worker method signature conflicts, method = {0}, class = {1}"
   E40050: "You''ll run zero in \"Micro Mode\", but etcd configuration is not prepared, system detected error: {0}"
-  E40051: "Your RoutingContext object reference is null, could not be getNull by getContext()."
+  # 移除：E40051: "Your RoutingContext object reference is null, could not be getNull by getContext()."
   E40052: "You defined @WebFilter \"{0}\", but it does not implement interface \"io.vertx.up.backbone.filter\"."
   E40053: "The order of @WebFilter must be greater than or equal 0 ( >= 0 ), but now \"{0}\" @Ordered value is negative number."
-  E40054: "The @WebFilter \"{0}\"could not be initialized, please check your class."
+  # 移除：E40054: "The @WebFilter \"{0}\"could not be initialized, please check your class."
   E40055: "(Jooq) The analyzed field of original \"{0}\" field is null, it means that the field is invalid"
-  E40056: "(Database) Data pool initialized met issue, jdbcUrl = {0}, exception = {1}"
+  # 移除：E40056: "(Database) Data pool initialized met issue, jdbcUrl = {0}, exception = {1}"
   E40057: "(Jooq) The method \"copyEntity(T target,T updated)\" require second argument updated must not be null. Class = {0}, Data = {1}"
   E40058: "(Jooq) The mode required is {0}, but current filters are \"{1}\", they are conflict"
   E40059: "(Jooq) The field = \"{0}\" could not be found in type = \"{1}\""
   E40060: "(Jooq) Infusion Jooq require vertx environment, but now vertx is null"
-  E40061: "(Security) You are using Zero Security Framework, but the @Wall found Security reference is null"
+  # 移除：E40061: "(Security) You are using Zero Security Framework, but the @Wall found Security reference is null"
   E40062: "(Quiz) Current mock case name = `{0}` is invalid when you enable Quiz Framework of Zero, name must end with `Tc`"
   # E40063: "Your reflect invoking does not satisfy the pre-condition, method = {0}"
   E40064: "(Act) Act specification is invalid, you could not call this api when isBatch = {0}"
@@ -165,35 +165,35 @@ error:
   # 60000 - 60001
   # (Web) Exception for web
   E60000: (400) - Request validation handler, class = {0}, method = {1}, message = {2}
-  E60001: (400) - The input content could not be converted into valid resource user {0}
+  # 移除：E60001: (400) - The input content could not be converted into valid resource user {0}
   E60002: (500) - The system detect some error in delivery on address {0}, error message = {1}
   E60003: (500) - The event bus detect some error in receiving message on address {0}, error message = {1}
   E60004: (400) - Zero system detect conversation from "{0}" to type "{1}", but it's conflict
   E60005: (400) - Request body validation handler, field = {0}, value = {1}, message = {2}
   E60006: (415) - Server could not accept the mime "{0}", expected should be one of {1}
-  E60008: (404) - Zero system detect non record in storage, no record
-  E60009: (400) - Zero system detect duplicated records in storage, size = {0}
-  E60010: (404) - The request {0} of method {1} could not be found in zero system
+  # 移除：E60008: (404) - Zero system detect non record in storage, no record
+  # 移除：E60009: (400) - Zero system detect duplicated records in storage, size = {0}
+  # 移除：E60010: (404) - The request {0} of method {1} could not be found in zero system
 
-  E60014: "(405) - The method \"{0}\" for request uri {1} is not allowed"
-  E60015: "(501) - The service ( name = {0}, address = {1}, method = {2}, class = {3} ) could not be found"
-  E60016: "(501) - The service address = {0} is wrong in name = {1}"
-  E60017: "(504) - The remote service ( location = {0}, name = {1} ) met error, details = {2}"
-  E60018: "(501) - The micro service could not find method by address = {0}, error occurs"
-  E60019: "(500) - Unexpected error found when communitting, details {0}"
-  E60020: "(424) - This call dependency Rpc remote service ( name = {0}, address = {1} ) could not be found now"
+  # 移除：E60014: "(405) - The method \"{0}\" for request uri {1} is not allowed"
+  # 移除：E60015: "(501) - The service ( name = {0}, address = {1}, method = {2}, class = {3} ) could not be found"
+  # 移除：E60016: "(501) - The service address = {0} is wrong in name = {1}"
+  # 移除：E60017: "(504) - The remote service ( location = {0}, name = {1} ) met error, details = {2}"
+  # 移除：E60018: "(501) - The micro service could not find method by address = {0}, error occurs"
+  # 移除：E60019: "(500) - Unexpected error found when communitting, details {0}"
+  # 移除：E60020: "(424) - This call dependency Rpc remote service ( name = {0}, address = {1} ) could not be found now"
   E60021: "(400) - File uploading to {0} met errors, please check"
   # Query, Search, Connect
   E60027: "(501) - (Rpc) This web flow does not support IPC continue flow. Class = {0}"
-  E60028: "(500) - (Rpc) Zero system detect unexpected exception on class = {0}, returnValue is {1}"
-  E60036: "(500) - (Rpc) Transit invoke met error, transit class = {0}, method = {1}, details = {2}"
+  # 移除：E60028: "(500) - (Rpc) Zero system detect unexpected exception on class = {0}, returnValue is {1}"
+  # 移除：E60036: "(500) - (Rpc) Transit invoke met error, transit class = {0}, method = {1}, details = {2}"
 
   # Jwt Exception
-  E60029: "(401) - (Jwt) Jwt token expired, please refresh your token. payload = {0}"
-  E60030: "(401) - (Jwt) Jwt audient \"{0}\" is invalid, please provide correct audient"
-  E60031: "(401) - (Jwt) Jwt issuer \"{0}\" is invalid, please provide correct issuer"
-  E60032: "(500) - (Jwt) Jwt runtime met errors, please check details = {0}"
-  E60033: "(401) - (Jwt) Jwt executor result is false, authorization token = {0}"
+  # 移除：E60029: "(401) - (Jwt) Jwt token expired, please refresh your token. payload = {0}"
+  # 移除：E60030: "(401) - (Jwt) Jwt audient \"{0}\" is invalid, please provide correct audient"
+  # 移除：E60031: "(401) - (Jwt) Jwt issuer \"{0}\" is invalid, please provide correct issuer"
+  # 移除：E60032: "(500) - (Jwt) Jwt runtime met errors, please check details = {0}"
+  # 移除：E60033: "(401) - (Jwt) Jwt executor result is false, authorization token = {0}"
 
   # (Web) Exception for standard third part
   E60034: "(500) - (Shared) SharedMap Error happened when do operation：{0}"
@@ -207,7 +207,7 @@ error:
   E60041: "(417) - The job `{0}` method parameter definitions are wrong"
   E60042: "(501) - The class `{0}` does not define any method annotated with @On"
   E60043: "(409) - Your session version mismatch between old = {0} and new = {1}"
-  E60044: "(500) - Your dot plugin component specification met error, config = {0}"
+  # 移除：E60044: "(500) - Your dot plugin component specification met error, config = {0}"
   E60045: "(400) - Your request missed `sigma` field, it means that your request header `X-Sigma` missing, but it's required"
   E60046: "(500) - Could not build valid `URL` for http request, please check your data: integration-request = {0}, data = {1} "
   E60047: "(501) - Sorry, the client that your bind is `null`, could not continue this operation"
@@ -218,7 +218,7 @@ error:
 
   # File attachment
   E60052: "(411) - When you upload file, the `Content-Length` must be matched, but current is {0}"
-  E60053: "(415) - The declared type {0} is not match to MIME {1}"
+  # 移除：E60053: "(415) - The declared type {0} is not match to MIME {1}"
   E60054: "(409) - Your job is \"FORMULA\", the formulat could not be parsed: {0}"
 
   # Git Exception

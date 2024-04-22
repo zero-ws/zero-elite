@@ -9,7 +9,7 @@ import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
 import io.zerows.core.feature.database.atom.Database;
 import io.zerows.core.feature.database.cp.zdk.DataPool;
-import io.zerows.core.feature.database.jooq.exception.JooqConfigurationException;
+import io.zerows.core.feature.database.jooq.exception.BootJooqConfigurationException;
 import io.zerows.core.metadata.uca.environment.MatureOn;
 import org.jooq.Configuration;
 import org.jooq.Table;
@@ -46,7 +46,7 @@ public class JooqPin {
             new ConcurrentHashMap<>();
 
         Fn.outBoot(Ut.isNil(config) || !config.containsKey(YmlCore.jooq.PROVIDER),
-            LOGGER, JooqConfigurationException.class, JooqPin.class);
+            LOGGER, BootJooqConfigurationException.class, JooqPin.class);
 
         if (Ut.isNotNil(config)) {
             /*

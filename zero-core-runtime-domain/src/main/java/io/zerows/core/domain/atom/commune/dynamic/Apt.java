@@ -7,8 +7,8 @@ import io.vertx.codegen.annotations.Fluent;
 import io.vertx.core.Future;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.exception.internal.AptParameterException;
 import io.vertx.up.util.Ut;
+import io.zerows.core.domain.exception._AptParameterException;
 
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
@@ -59,14 +59,14 @@ public class Apt {
     /* Ok for update only */
     public static Apt create(final JsonArray original, final JsonArray current, final String field) {
         if (Ut.isNil(original) && Ut.isNil(current)) {
-            throw new AptParameterException(Apt.class);
+            throw new _AptParameterException(Apt.class);
         }
         return new Apt(original, current, field);
     }
 
     public static Apt create(final JsonObject original, final JsonObject current) {
         if (Ut.isNil(original) && Ut.isNil(current)) {
-            throw new AptParameterException(Apt.class);
+            throw new _AptParameterException(Apt.class);
         }
         return new Apt(original, current);
     }

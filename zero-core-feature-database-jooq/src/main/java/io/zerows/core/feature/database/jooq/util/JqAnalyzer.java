@@ -9,8 +9,8 @@ import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
 import io.zerows.core.feature.database.jooq.JooqDsl;
 import io.zerows.core.feature.database.jooq.condition.JooqCond;
-import io.zerows.core.feature.database.jooq.exception.JooqFieldMissingException;
-import io.zerows.core.feature.database.jooq.exception.JooqMergeException;
+import io.zerows.core.feature.database.jooq.exception.BootJooqFieldMissingException;
+import io.zerows.core.feature.database.jooq.exception.BootJooqMergeException;
 import io.zerows.core.metadata.atom.mapping.Mirror;
 import io.zerows.core.metadata.atom.mapping.Mojo;
 import org.jooq.*;
@@ -290,7 +290,7 @@ public class JqAnalyzer {
     public Field column(final String field) {
         String columnField = columnName(field);
         Fn.outBoot(null == columnField, LOGGER,
-            JooqFieldMissingException.class, getClass(), field, this.entityCls);
+            BootJooqFieldMissingException.class, getClass(), field, this.entityCls);
         LOGGER.debug(INFO.JOOQ_FIELD, field, columnField);
         /*
          * Old code for field construct, following code will caurse Type/DataType missing
@@ -346,7 +346,7 @@ public class JqAnalyzer {
     }
 
     public <T> T copyEntity(final T target, final T updated) {
-        Fn.outBoot(null == updated, LOGGER, JooqMergeException.class,
+        Fn.outBoot(null == updated, LOGGER, BootJooqMergeException.class,
             getClass(), null == target ? null : target.getClass(), Ut.serialize(target));
         return Fn.runOr(null == target && null == updated, LOGGER, () -> null, () -> {
             final JsonObject targetJson = null == target ? new JsonObject() : Ut.serializeJson(target);

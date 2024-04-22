@@ -7,7 +7,6 @@ import io.horizon.util.HUt;
 import io.vertx.up.annotations.Infusion;
 import io.vertx.up.eon.KName;
 import io.vertx.up.eon.em.EmSecure;
-import io.vertx.up.eon.em.container.SessionType;
 
 /**
  * 重新规划配置部分专用，针对文件部分形成梯度配置键值，完成类似 YAML 结构的配置文件
@@ -123,7 +122,7 @@ public interface YmlCore {
      * <pre><code>
      * session:
      *     config:
-     *         category:    {@link SessionType}
+     *         category:    SessionType
      *         store:
      *         options:
      * </code></pre>

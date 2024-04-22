@@ -3,9 +3,9 @@ package io.zerows.core.metadata.uca.stable;
 import io.horizon.eon.em.typed.EmType;
 import io.horizon.exception.ProgramException;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.exception.daemon.DataTypeWrongException;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.exception.DaemonDatatypeWrongException;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -55,7 +55,7 @@ public class TypedInsurer extends AbstractInsurer {
                         final Object value = data.getValue(name);
 
                         Fn.outBug(!fnTest.apply(data.getValue(name)), this.getLogger(),
-                            DataTypeWrongException.class,
+                            DaemonDatatypeWrongException.class,
                             this.getClass(), name, value, key);
                     }
                 });

@@ -7,7 +7,7 @@ import io.vertx.up.annotations.Infusion;
 import io.vertx.up.eon.configure.YmlCore;
 import io.vertx.up.fn.Fn;
 import io.zerows.core.feature.database.cp.zdk.DataPool;
-import io.zerows.core.feature.database.jooq.exception.JooqConfigurationException;
+import io.zerows.core.feature.database.jooq.exception.BootJooqConfigurationException;
 import io.zerows.core.metadata.zdk.plugins.Infix;
 import org.jooq.Configuration;
 import org.jooq.DSLContext;
@@ -58,7 +58,7 @@ public class JooqInfix implements Infix {
     private static Configuration configSafe(final String key) {
         Objects.requireNonNull(key);
         final Configuration configuration = CONFIGURATION.get(key);
-        Fn.outBoot(Objects.isNull(configuration), LOGGER, JooqConfigurationException.class, JooqInfix.class);
+        Fn.outBoot(Objects.isNull(configuration), LOGGER, BootJooqConfigurationException.class, JooqInfix.class);
         return configuration;
     }
 

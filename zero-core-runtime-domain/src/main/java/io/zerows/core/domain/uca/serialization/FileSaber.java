@@ -1,7 +1,7 @@
 package io.zerows.core.domain.uca.serialization;
 
-import io.vertx.up.exception.web._400FilePathMissingException;
 import io.vertx.up.fn.Fn;
+import io.zerows.core.domain.exception._400FilePathMissingException;
 
 import java.io.File;
 

@@ -5,9 +5,9 @@ import io.horizon.exception.ProgramException;
 import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.exception.daemon.JObjectElementException;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.exception.DaemonJElementException;
 
 /**
  * @author lang
@@ -25,7 +25,7 @@ public abstract class AbstractInsurer implements Insurer {
                 final Object value = array.getValue(idx);
                 // 2. Call check method to confirm JsonObject
                 Fn.outBug(!Ut.isJObject(value), this.getLogger(),
-                    JObjectElementException.class,
+                    DaemonJElementException.class,
                     this.getClass(), idx, value);
 
                 final JsonObject item = (JsonObject) value;

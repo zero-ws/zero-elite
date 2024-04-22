@@ -3,9 +3,9 @@ package io.zerows.core.metadata.uca.stable;
 import io.horizon.exception.ProgramException;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.exception.daemon.RequiredFieldException;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.exception.DaemonFieldRequiredException;
 
 /**
  * Required validation
@@ -28,7 +28,7 @@ public class RequiredInsurer extends AbstractInsurer {
                     // 3.Check if data contains field.
                     // Fast throw out
                     Fn.outBug(!data.containsKey(field), this.getLogger(),
-                        RequiredFieldException.class,
+                        DaemonFieldRequiredException.class,
                         this.getClass(), data, field);
                 });
             }

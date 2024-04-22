@@ -3,9 +3,9 @@ package io.zerows.core.metadata.uca.stable;
 import io.horizon.exception.ProgramException;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.exception.daemon.ForbiddenFieldException;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.exception.DaemonFieldWrongException;
 
 public class ForbiddenInsurer extends AbstractInsurer {
     /**
@@ -24,7 +24,7 @@ public class ForbiddenInsurer extends AbstractInsurer {
                 Fn.bugIt(fields, String.class, (field, index) -> {
                     // 3. Check if data contains field.
                     Fn.outBug(data.containsKey(field), this.getLogger(),
-                        ForbiddenFieldException.class,
+                        DaemonFieldWrongException.class,
                         this.getClass(), data, field);
                 });
             }

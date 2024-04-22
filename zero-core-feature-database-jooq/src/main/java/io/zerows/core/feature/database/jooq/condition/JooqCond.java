@@ -10,8 +10,8 @@ import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
-import io.zerows.core.feature.database.jooq.exception.JooqCondClauseException;
-import io.zerows.core.feature.database.jooq.exception.JooqCondFieldException;
+import io.zerows.core.feature.database.jooq.exception.BootJooqCondClauseException;
+import io.zerows.core.feature.database.jooq.exception.BootJooqCondFieldException;
 import io.zerows.core.metadata.uca.environment.DevEnv;
 import org.jooq.Condition;
 import org.jooq.Field;
@@ -132,7 +132,7 @@ public class JooqCond {
             /*
              * When the mode is Tree, you mustn't set operator, because the operator will
              * be parsed by query tree engine, this operation is unsupported and it will
-             * throw out exception JooqModeConflictException,
+             * throw out exception BootJooqModeConflictException,
              * Ignore operator information here, because the next analyzing will ignore automatically.
              *
              * Here are all information for different usage instead of others
@@ -305,7 +305,7 @@ public class JooqCond {
 
             if (Objects.nonNull(fnAnalyze)) {
                 final Field metaField = fnAnalyze.apply(targetField);
-                Fn.outBoot(Objects.isNull(metaField), LOGGER, JooqCondFieldException.class, JooqCond.class, targetField);
+                Fn.outBoot(Objects.isNull(metaField), LOGGER, BootJooqCondFieldException.class, JooqCond.class, targetField);
 
                 /*
                  * 1) fields = ( field,op )
@@ -319,7 +319,7 @@ public class JooqCond {
                  * Clause extraction
                  */
                 final Clause clause = Clause.get(type);
-                Fn.outBoot(Objects.isNull(clause), LOGGER, JooqCondClauseException.class,
+                Fn.outBoot(Objects.isNull(clause), LOGGER, BootJooqCondClauseException.class,
                     JooqCond.class, metaField.getName(), type, targetField);
 
                 /*

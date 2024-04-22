@@ -5,9 +5,9 @@ import io.horizon.exception.BootingException;
 import io.horizon.util.HUt;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.annotations.Contract;
-import io.vertx.up.exception.booting.DuplicatedImplException;
-import io.vertx.up.exception.web._412ContractFieldException;
 import io.vertx.up.fn.Fn;
+import io.zerows.core.metadata.exception.BootDuplicatedImplException;
+import io.zerows.core.metadata.exception._412ContractFieldException;
 import io.zerows.core.metadata.store.OCacheClass;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -93,7 +93,7 @@ final class Instance {
             final int size = filtered.size();
             // Non-Unique throw error out.
             if (VValue.ONE < size) {
-                final BootingException error = new DuplicatedImplException(Instance.class, interfaceCls);
+                final BootingException error = new BootDuplicatedImplException(Instance.class, interfaceCls);
                 LOGGER.error("[T] Error occurs {}", error.getMessage());
                 throw error;
             }
