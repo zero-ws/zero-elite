@@ -4,10 +4,10 @@ import io.horizon.exception.BootingException;
 
 import java.lang.reflect.Method;
 
-public class WorkerConflictException extends BootingException {
+public class BootWorkerConflictException extends BootingException {
 
-    public WorkerConflictException(final Class<?> clazz,
-                                   final Method method) {
+    public BootWorkerConflictException(final Class<?> clazz,
+                                       final Method method) {
         super(clazz, method.getName(), method.getDeclaringClass());
     }
 

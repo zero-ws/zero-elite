@@ -21,7 +21,7 @@ import java.util.function.Function;
  * <pre><code>
  *     1. 非 OSGI 环境，只带单个包扫描组件
  *        内置 static 变量存储了所有扫描的包信息
- *     2. OSGI 环境，每个 Bundle 带有一个包扫描器
+ *     2. OSGI 环境，每个 Osgi 带有一个包扫描器
  *        内置 static 变量同样存储了所有扫描的包信息
  * </code></pre>
  * Class 对象在底层是唯一的，因此不需要考虑重复添加的问题，也可以直接移出
@@ -53,9 +53,9 @@ class OCacheClassAmbiguity extends AbstractAmbiguity implements OCacheClass {
     }
 
     /**
-     * OClassCacheInternal 已经按 Bundle 进行过区分，所以此处不会出现重复的情况
+     * OClassCacheInternal 已经按 Osgi 进行过区分，所以此处不会出现重复的情况
      *
-     * @param bundle Bundle
+     * @param bundle Osgi
      *
      * @return OCache
      */
@@ -111,12 +111,12 @@ class OCacheClassAmbiguity extends AbstractAmbiguity implements OCacheClass {
     /**
      * 全局类存储池，用于存储当前环境所有的类相关信息，此处的存储考虑几点
      * <pre><code>
-     *     提供基础存储哈希表，根据当前环境中是否存在 Bundle 对内容进行提取
+     *     提供基础存储哈希表，根据当前环境中是否存在 Osgi 对内容进行提取
      *     1. OSGI 环境
      *        DEFAULT_SCANNED = OClassCacheInternal 的全环境
      *     2. OSGI 环境
-     *        Bundle 01 = OClassCacheInternal
-     *        Bundle 02 = OClassCacheInternal
+     *        Osgi 01 = OClassCacheInternal
+     *        Osgi 02 = OClassCacheInternal
      * </code></pre>
      *
      * @author lang : 2024-04-19

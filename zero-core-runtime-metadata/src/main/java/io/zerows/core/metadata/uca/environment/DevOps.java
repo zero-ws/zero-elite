@@ -1,6 +1,5 @@
 package io.zerows.core.metadata.uca.environment;
 
-import io.horizon.eon.VMessage;
 import io.horizon.uca.log.Annal;
 import io.vertx.core.DeploymentOptions;
 import io.vertx.core.Vertx;
@@ -8,6 +7,7 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.core.shareddata.AsyncMap;
 import io.vertx.up.eon.KName;
 import io.vertx.up.eon.KWeb;
+import io.zerows.core.metadata.eon.MessageOfMeta;
 
 /**
  * @author lang : 2023/4/25
@@ -38,7 +38,7 @@ public class DevOps {
                 data.put(name, instance, result -> {
                     if (result.succeeded()) {
                         final Annal logger = Annal.get(DevOps.class);
-                        logger.info(VMessage.Measure.ADD, name,
+                        logger.info(MessageOfMeta.Measure.ADD, name,
                             String.valueOf(options.getInstances()), options.isWorker());
                     }
                 });
@@ -53,7 +53,7 @@ public class DevOps {
                 data.remove(name, result -> {
                     if (result.succeeded()) {
                         final Annal logger = Annal.get(DevOps.class);
-                        logger.info(VMessage.Measure.REMOVE, name, String.valueOf(options.getInstances()));
+                        logger.info(MessageOfMeta.Measure.REMOVE, name, String.valueOf(options.getInstances()));
                     }
                 });
             }

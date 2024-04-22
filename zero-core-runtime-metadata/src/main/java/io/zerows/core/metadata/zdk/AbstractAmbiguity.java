@@ -8,7 +8,7 @@ import org.osgi.framework.Bundle;
  *     1. {@link Bundle} == null：OSGI 环境
  *     2. {@link Bundle} != null：OSGI 环境
  * </code></pre>
- * 其中此处的 Bundle 为 OSGI 环境下的 Bundle 对象，所有服务作用于此对象所需的基类
+ * 其中此处的 Osgi 为 OSGI 环境下的 Osgi 对象，所有服务作用于此对象所需的基类
  *
  * @author lang : 2024-04-17
  */

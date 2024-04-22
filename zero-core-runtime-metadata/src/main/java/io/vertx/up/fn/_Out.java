@@ -1,9 +1,9 @@
 package io.vertx.up.fn;
 
-import io.horizon.eon.VMessage;
 import io.horizon.exception.WebException;
 import io.vertx.core.Future;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.eon.MessageOfMeta;
 
 /**
  * @author lang : 2023/4/28
@@ -36,10 +36,10 @@ class _Out extends _Of {
 
 
     public static <T> void outArgNull(final T condition, final Class<?> clazz) {
-        _Out.outArg(condition, clazz, VMessage.Fn.PROGRAM_NULL);
+        _Out.outArg(condition, clazz, MessageOfMeta.Fn.PROGRAM_NULL);
     }
 
     public static <T> void outArgQr(final T condition, final Class<?> clazz) {
-        _Out.outArg(condition, clazz, VMessage.Fn.PROGRAM_QR);
+        _Out.outArg(condition, clazz, MessageOfMeta.Fn.PROGRAM_QR);
     }
 }

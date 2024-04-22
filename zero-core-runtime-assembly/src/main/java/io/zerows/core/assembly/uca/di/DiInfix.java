@@ -1,12 +1,12 @@
 package io.zerows.core.assembly.uca.di;
 
-import io.horizon.eon.VMessage;
 import io.horizon.uca.log.Annal;
 import io.reactivex.rxjava3.core.Observable;
 import io.vertx.up.annotations.Infusion;
 import io.vertx.up.eon.KMeta;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.util.Ut;
+import io.zerows.core.assembly.eon.MessageOfDI;
 import io.zerows.core.metadata.store.OCacheClass;
 import io.zerows.core.metadata.store.OZeroStore;
 import io.zerows.core.metadata.zdk.plugins.Infix;
@@ -69,10 +69,10 @@ class DiInfix {
                         final String fieldName = field.getName();
                         Ut.field(proxy, fieldName, tpRef);
                     } else {
-                        this.logger.warn(VMessage.DiPlugin.IMPL_WRONG, infixCls.getName(), Infix.class.getName());
+                        this.logger.warn(MessageOfDI.IMPL_WRONG, infixCls.getName(), Infix.class.getName());
                     }
                 } else {
-                    this.logger.warn(VMessage.DiPlugin.IMPL_NULL, field.getType().getName(), field.getName(), type.getName());
+                    this.logger.warn(MessageOfDI.IMPL_NULL, field.getType().getName(), field.getName(), type.getName());
                 }
             })
             .dispose();

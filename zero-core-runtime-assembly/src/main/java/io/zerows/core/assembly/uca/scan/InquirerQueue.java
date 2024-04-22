@@ -5,7 +5,7 @@ import io.vertx.core.eventbus.Message;
 import io.vertx.up.annotations.Address;
 import io.vertx.up.annotations.Queue;
 import io.vertx.up.fn.Fn;
-import io.zerows.core.assembly.exception.WorkerConflictException;
+import io.zerows.core.assembly.exception.BootWorkerConflictException;
 import io.zerows.core.metadata.zdk.uca.Inquirer;
 
 import java.util.Set;
@@ -38,7 +38,7 @@ public class InquirerQueue implements Inquirer<Set<Class<?>>> {
                 final Class<?> parameterTypes = method.getParameterTypes()[0];
                 if (Message.class.isAssignableFrom(parameterTypes)) {
                     Fn.outBoot(void.class != returnType && Void.class != returnType, this.tracker(),
-                        WorkerConflictException.class, this.getClass(), method);
+                        BootWorkerConflictException.class, this.getClass(), method);
                 }
             })
             .dispose();

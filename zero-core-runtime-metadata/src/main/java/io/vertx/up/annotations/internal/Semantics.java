@@ -5,7 +5,7 @@ import io.vertx.up.eon.em.EmMonitor;
 import java.lang.annotation.*;
 
 /**
- * 语义注解，系统内部专用，用来标记哪些接口是带有 Bundle / Web 双环境切换的接口，内部扫描时很容易将相关接口直接扫描并进行监控，同时也
+ * 语义注解，系统内部专用，用来标记哪些接口是带有 Osgi / Web 双环境切换的接口，内部扫描时很容易将相关接口直接扫描并进行监控，同时也
  * 对新版底层有一个基础的重构。
  *
  * @author lang : 2024-04-17

@@ -54,7 +54,7 @@ class _Log extends _Load {
         }
 
         public static OLog bundle(final Class<?> clazz) {
-            return OLog.of(clazz, "Bundle");
+            return OLog.of(clazz, "Osgi");
         }
 
         public static OLog ux(final Class<?> clazz) {

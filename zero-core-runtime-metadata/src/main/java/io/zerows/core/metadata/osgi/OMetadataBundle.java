@@ -1,7 +1,7 @@
 package io.zerows.core.metadata.osgi;
 
-import io.vertx.up.eon.MessageOfLog;
 import io.vertx.up.util.Ut;
+import io.zerows.core.metadata.eon.MessageOfMeta;
 import io.zerows.core.metadata.eon.OCommand;
 import io.zerows.core.metadata.osgi.service.OExceptionRegistry;
 import io.zerows.core.metadata.uca.command.CommandStore;
@@ -30,7 +30,7 @@ public class OMetadataBundle extends DependencyActivatorBase {
                 .setImplementation(OExceptionRegistry.class)
             );
             Ut.Log.service(this.getClass())
-                .info(MessageOfLog.SERVICE.REGISTER, OExceptionRegistry.class, ORegistry.class);
+                .info(MessageOfMeta.Osgi.SERVICE.REGISTER, OExceptionRegistry.class, ORegistry.class);
         }
 
         // Command
@@ -39,6 +39,6 @@ public class OMetadataBundle extends DependencyActivatorBase {
                 new CommandStore(context), Ut.Bnd.command(OCommand.STORE));
         }
         Ut.Log.bundle(this.getClass())
-            .info(MessageOfLog.BUNDLE.START, bundle.getSymbolicName());
+            .info(MessageOfMeta.Osgi.BUNDLE.START, bundle.getSymbolicName());
     }
 }
