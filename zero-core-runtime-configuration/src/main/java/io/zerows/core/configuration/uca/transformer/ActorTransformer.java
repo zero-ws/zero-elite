@@ -46,31 +46,37 @@ public class ActorTransformer implements Transformer<ActorOptions> {
         this.logger().info(INFO.INFO_ROTATE, mode);
 
 
-        /* DeploymentOptions 初始化 */
-        {
-            // class = DeploymentOptions 计算
-            final JsonObject options = actorOptions.getOptions();
-            options.fieldNames().forEach((className) -> {
-                /* clazz = options ( JsonObject ) */
-                final Class<?> clazz = Ut.clazz(className);
-                final JsonObject option = Ut.valueJObject(options, className);
+        /* DeploymentOptions 初始化，class = DeploymentOptions 计算 */
+        final JsonObject options = actorOptions.getOptions();
+        options.fieldNames().forEach((className) -> {
+            /* clazz = options ( JsonObject ) */
+            final Class<?> clazz = Ut.clazz(className);
+            final JsonObject option = Ut.valueJObject(options, className);
 
 
-                /*
-                 * DeploymentOptions 初始化
-                 * 1. 从配置中构造
-                 * 2. 从类中提取 ha 和 instances 配置
-                 */
-                final Annotation annotation = this.getAnnotation(clazz);
-                final DeploymentOptions deploymentOptions = this.initOfOption(option, annotation);
+            /*
+             * DeploymentOptions 初始化
+             * 1. 从配置中构造
+             * 2. 从类中提取 ha 和 instances 配置
+             */
+            final Annotation annotation = this.getAnnotation(clazz);
+            final DeploymentOptions deploymentOptions = this.initOfOption(option, annotation);
 
 
-                /*
-                 * 在 ActorOptions 中追加相关信息
-                 */
-                actorOptions.optionDeploy(clazz, deploymentOptions);
-            });
-        }
+            if (EmDeploy.Mode.CODE == mode) {
+                // ha processing
+                final boolean ha = Ut.invoke(annotation, "ha");
+                deploymentOptions.setHa(ha);
+                // instances
+                final int instances = Ut.invoke(annotation, "instances");
+                deploymentOptions.setInstances(instances);
+            }
+            this.logger().info(INFO.INFO_VTC, deploymentOptions.getInstances(), deploymentOptions.isHa(), deploymentOptions.toJson());
+            /*
+             * 在 ActorOptions 中追加相关信息
+             */
+            actorOptions.optionDeploy(clazz, deploymentOptions);
+        });
 
 
         /* DeliveryOptions 初始化 */
@@ -115,15 +121,6 @@ public class ActorTransformer implements Transformer<ActorOptions> {
             // Agent
             deploymentOptions.setThreadingModel(ThreadingModel.EVENT_LOOP);
         }
-        {
-            // ha processing
-            final boolean ha = Ut.invoke(annotation, "ha");
-            deploymentOptions.setHa(ha);
-            // instances
-            final int instances = Ut.invoke(annotation, "instances");
-            deploymentOptions.setInstances(instances);
-        }
-        this.logger().info(INFO.INFO_VTC, deploymentOptions.getInstances(), deploymentOptions.isHa(), deploymentOptions.toJson());
         return deploymentOptions;
     }
 }
