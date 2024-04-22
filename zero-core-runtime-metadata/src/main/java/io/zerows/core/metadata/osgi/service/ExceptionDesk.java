@@ -13,4 +13,8 @@ import io.zerows.core.metadata.zdk.service.ServiceInstaller;
  * @author lang : 2024-04-22
  */
 public interface ExceptionDesk extends ServiceInstaller {
+
+    static ExceptionDesk host() {
+        return ExceptionDeskService.singleton();
+    }
 }

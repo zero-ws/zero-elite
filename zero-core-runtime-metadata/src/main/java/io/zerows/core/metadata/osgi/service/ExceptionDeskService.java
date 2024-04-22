@@ -9,10 +9,21 @@ import io.zerows.core.metadata.store.OCacheFailure;
 import io.zerows.core.metadata.store.OZeroEquip;
 import org.osgi.framework.Bundle;
 
+import java.util.Objects;
+
 /**
  * @author lang : 2024-04-17
  */
 public class ExceptionDeskService implements ExceptionDesk {
+
+    private static ExceptionDesk HOST;
+
+    static ExceptionDesk singleton() {
+        if (Objects.isNull(HOST)) {
+            HOST = new ExceptionDeskService();
+        }
+        return HOST;
+    }
 
     @Override
     public void install(final Bundle bundle) {

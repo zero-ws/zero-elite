@@ -2,9 +2,8 @@ package io.vertx.up.util;
 
 import io.vertx.core.json.JsonObject;
 import org.osgi.framework.Bundle;
+import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;
-
-import java.util.Hashtable;
 
 /**
  * @author lang : 2024-04-17
@@ -13,16 +12,9 @@ class _Bundle extends _Ai {
 
     public static class Bnd {
 
-        public static Hashtable<String, Object> command(final String scope,
-                                                        final String function) {
-            final Hashtable<String, Object> props = new Hashtable<>();
-            props.put("osgi.command.scope", scope);
-            props.put("osgi.command.function", new String[]{function});
-            return props;
-        }
-
-        public static Hashtable<String, Object> command(final String function) {
-            return command("zoi", function);
+        public static void bindCommand(final BundleContext context,
+                                       final Object... args) {
+            BundleCmd.bindCommand(context, args);
         }
 
         // OSGI 新接口

@@ -18,22 +18,10 @@ public class CommandFailure extends AbstractCommand {
         super(context);
     }
 
-    /**
-     * 命令格式
-     * <pre><code>
-     *     failure store <value>
-     *     - class：扫描的类
-     *     - error：错误和存储异常信息
-     * </code></pre>
-     *
-     * @param type 类型
-     *
-     * @return 返回值
-     */
     @Descriptor("Monitor error stored data.")
-    public String failure(@Parameter(names = OCommand.store.TYPE, absentValue = "") final String type) {
+    public String failure(@Parameter(names = CommandInfo.failure.INFO, absentValue = "") final String info) {
         // 1. 提取组件
-        final OCommander commander = CommandFactory.create(type);
+        final OCommander commander = FailureEntry.create(info);
         if (Objects.nonNull(commander)) {
             commander.execute(this.context.getBundle());
         }

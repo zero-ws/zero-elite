@@ -1,6 +1,6 @@
 package io.zerows.core.metadata.uca.callback;
 
-import io.zerows.core.metadata.zdk.service.ServiceInstaller;
+import io.zerows.core.metadata.osgi.service.ExceptionDesk;
 import org.osgi.framework.Bundle;
 
 /**
@@ -14,13 +14,17 @@ public class SettingCallback {
         this.bundle = bundle;
     }
 
-    public void start(final ServiceInstaller registry) {
+    public void start(final Object registry) {
         // 注册服务
-        registry.install(this.bundle);
+        if (registry instanceof final ExceptionDesk desk) {
+            desk.install(this.bundle);
+        }
     }
 
-    public void stop(final ServiceInstaller registry) {
+    public void stop(final Object registry) {
         // 注销服务
-        registry.uninstall(this.bundle);
+        if (registry instanceof final ExceptionDesk desk) {
+            desk.uninstall(this.bundle);
+        }
     }
 }

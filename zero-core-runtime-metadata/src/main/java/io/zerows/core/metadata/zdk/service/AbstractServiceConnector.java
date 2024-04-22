@@ -33,9 +33,11 @@ public abstract class AbstractServiceConnector implements ServiceConnector {
                                   final Supplier<Component> supplier,
                                   final Supplier<ServiceDependency> serviceSupplier) {
         dm.add(supplier.get().setImplementation(new SettingCallback(this.bundle))
-            // ExceptionDesk
-            .add(serviceSupplier.get().setService(ExceptionDesk.class)
-                .setRequired(Boolean.TRUE).setCallbacks(KName.START, KName.STOP))
+            .add(serviceSupplier.get()
+                .setService(ExceptionDesk.class)
+                .setRequired(Boolean.TRUE)
+                .setCallbacks(KName.START, KName.STOP)
+            )
         );
     }
 
