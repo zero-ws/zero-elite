@@ -50,7 +50,7 @@ class VertxProcessor implements Processor<NodeNetwork, HSetting> {
 
 
         // 集群基础配置
-        final JsonObject clusterData = Ut.valueJObject(containerJ, YmlCore.vertx.CLUSTERED);
+        final JsonObject clusterData = Ut.valueJObject(vertxData, YmlCore.vertx.CLUSTERED);
         final ClusterOptions clusterOptions = this.transformerCluster.transform(clusterData);
 
 
@@ -60,7 +60,7 @@ class VertxProcessor implements Processor<NodeNetwork, HSetting> {
             // VertxBuilder 最终构造（ClusterManager新版在 Builder 中处理）
             network.cluster(clusterOptions);
         }
-        final JsonArray instanceData = Ut.valueJArray(containerJ, YmlCore.vertx.INSTANCE);
+        final JsonArray instanceData = Ut.valueJArray(vertxData, YmlCore.vertx.INSTANCE);
         Ut.itJArray(instanceData).forEach(instanceJ -> {
 
 

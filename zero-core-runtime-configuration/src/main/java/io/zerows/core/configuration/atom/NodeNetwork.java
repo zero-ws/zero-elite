@@ -28,7 +28,8 @@ public class NodeNetwork implements Serializable {
 
     private final ConcurrentMap<String, NodeVertx> vertxOptions = new ConcurrentHashMap<>();
     private volatile NodeVertx vertxNodeRef;
-    private volatile ClusterOptions clusterOptions;
+    // Cannot invoke "io.zerows.core.configuration.atom.option.ClusterOptions.isEnabled()" because "clusterOptions" is null
+    private volatile ClusterOptions clusterOptions = new ClusterOptions();
 
     public NodeNetwork() {
     }
