@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>io.zerows</groupId>
-            <artifactId>zero-runtime-specification-ams</artifactId>
+            <artifactId>zero-core-ams-specification</artifactId>
         </dependency>
 
 
