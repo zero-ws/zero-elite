@@ -7,7 +7,7 @@
 mvn -Pdev clean package install
 # Bundle 编译
 mvn clean package install
-# 注意 Bundle 编译会直接清空 env/bin/cache 和 env/bin/logs
+# 注意 Bundle 编译会直接清空 dev/bin/cache 和 dev/bin/logs
 ```
 
 ## 2. SubModule 检查

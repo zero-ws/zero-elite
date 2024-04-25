@@ -11,7 +11,7 @@ public interface HPath {
 
     String KIND = "kind";
 
-    String ENV_DEVELOPMENT = ".env.development";
+    String ENV_DEVELOPMENT = ".dev.development";
 
     String WORKSPACE = "/var/tmp/zero-aeon/";
 

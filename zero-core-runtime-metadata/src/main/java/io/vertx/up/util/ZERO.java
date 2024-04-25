@@ -11,7 +11,7 @@ import java.util.concurrent.ConcurrentMap;
  * up.god.file,
  * json,
  * http,
- * env,
+ * dev,
  * sys,
  * directory
  */
@@ -19,7 +19,7 @@ enum StoreType {
     JSON("json"),
     FILE("file"),
     HTTP("http"),
-    ENV("env"),
+    ENV("dev"),
     SYS("sys"),
     DIRECTORY("directory"),
     EVENT_BUS("event-but");
