@@ -1,3 +1,6 @@
 [submodule "zero-core-runtime-metadata/refs/Zero.Rapid.Fabric.Runtime"]
 	path = zero-core-runtime-metadata/refs/Zero.Rapid.Fabric.Runtime
 	url = git@gitee.com:zero-ws/zero-rapid-build-runtime.git
+[submodule "zero-core-runtime-metadata/refs/Zero.Rapid.Build.Runtime"]
+	path = zero-core-runtime-metadata/refs/Zero.Rapid.Build.Runtime
+	url = git@gitee.com:zero-ws/zero-rapid-build-runtime.git
