@@ -1,0 +1,4 @@
+[submodule "Zero.Rapid.Fabric.Runtime"]
+    path = refs/Zero.Rapid.Fabric.Runtime
+    url = git@gitee.com:zero-ws/zero-rapid-build-runtime.git
+    branch = master
