@@ -1,4 +1,4 @@
-package io.zerows.core.metadata.osgi.command;
+package io.zerows.core.metadata.osgi.command.failure;
 
 import io.vertx.up.util.Ut;
 import io.zerows.core.metadata.zdk.running.OCommander;

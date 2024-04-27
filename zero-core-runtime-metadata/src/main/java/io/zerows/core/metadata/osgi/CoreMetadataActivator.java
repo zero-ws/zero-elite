@@ -2,8 +2,8 @@ package io.zerows.core.metadata.osgi;
 
 import io.vertx.up.util.Ut;
 import io.zerows.core.metadata.eon.MessageOfMeta;
-import io.zerows.core.metadata.osgi.command.CommandFailure;
 import io.zerows.core.metadata.osgi.command.CommandInfo;
+import io.zerows.core.metadata.osgi.command.failure.CommandFailure;
 import io.zerows.core.metadata.zdk.service.ServiceConnector;
 import org.apache.felix.dm.DependencyActivatorBase;
 import org.apache.felix.dm.DependencyManager;

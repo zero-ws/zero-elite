@@ -1,6 +1,8 @@
 package io.zerows.core.metadata.osgi;
 
 import io.zerows.core.metadata.eon.MessageOfMeta;
+import io.zerows.core.metadata.osgi.service.EntryConfiguration;
+import io.zerows.core.metadata.osgi.service.EntryConfigurationService;
 import io.zerows.core.metadata.osgi.service.ExceptionDesk;
 import io.zerows.core.metadata.osgi.service.ExceptionDeskService;
 import io.zerows.core.metadata.zdk.service.AbstractServiceConnector;
@@ -30,9 +32,16 @@ class CoreMetadataDependency extends AbstractServiceConnector {
             .setInterface(ExceptionDesk.class, null)
             .setImplementation(ExceptionDeskService.class)
         );
-        this.logger().info(MessageOfMeta.Osgi.SERVICE.REGISTER, ExceptionDeskService.class, ExceptionDesk.class);
+        this.logger().info(MessageOfMeta.Osgi.SERVICE.REGISTER,
+            ExceptionDeskService.class, ExceptionDesk.class);
 
 
-        // 缓存管理服务
+        // 配置提取服务，入口配置专用
+        dm.add(supplier.get()
+            .setInterface(EntryConfiguration.class, null)
+            .setImplementation(EntryConfigurationService.class)
+        );
+        this.logger().info(MessageOfMeta.Osgi.SERVICE.REGISTER,
+            EntryConfigurationService.class, EntryConfiguration.class);
     }
 }

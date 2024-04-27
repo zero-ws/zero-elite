@@ -1,6 +1,7 @@
-package io.zerows.core.metadata.osgi.command;
+package io.zerows.core.metadata.osgi.command.failure;
 
 import io.horizon.eon.VString;
+import io.zerows.core.metadata.osgi.command.CommandInfo;
 import io.zerows.core.metadata.zdk.AbstractCommand;
 import io.zerows.core.metadata.zdk.running.OCommander;
 import org.apache.felix.service.command.Descriptor;

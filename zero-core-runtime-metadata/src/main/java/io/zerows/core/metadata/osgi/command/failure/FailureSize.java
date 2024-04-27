@@ -1,4 +1,4 @@
-package io.zerows.core.metadata.osgi.command;
+package io.zerows.core.metadata.osgi.command.failure;
 
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.eon.KName;

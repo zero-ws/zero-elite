@@ -18,4 +18,9 @@ public interface CommandInfo {
         // failure info ???
         String INFO = "info";
     }
+
+    interface setting {
+        // setting key ???
+        String KEY = "key";
+    }
 }
