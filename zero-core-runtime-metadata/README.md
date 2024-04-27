@@ -4,13 +4,22 @@
 
 ## 1. 基础说明
 
+### 1.1. 环境
+
 ```bash
 # 环境初始化
 mvn -Pdev clean package install
 # 编译/调试
 mvn clean package install
-# 查看引用
+```
+
+### 1.2. 依赖
+
+```bash
+# 查看依赖
 git submodule
+# 依赖清单
+git submodule add git@gitee.com:zero-ws/zero-rapid-build-runtime.git refs/Zero.Rapid.Build.Runtime
 ```
 
 ## 2. 模块信息
